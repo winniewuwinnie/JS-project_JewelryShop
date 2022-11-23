@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+TC&family=Noto+Serif+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- google material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="stylesheet/all.css" />
+    <title>億滿春銀樓｜首頁</title>
+  </head>
+  <body>
+    <!-- 導覽列 -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-transparent mb-lg-8 mb-5"
+    >
+      <div class="container-fluid mx-5 border-bottom position-relative">
+        <a class="navbar-brand nav-link" href="index.html"
+          ><h1 class="letter-spacing-sm display-4">億滿春</h1></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav mb-2 mb-lg-0 position-absolute start-50 bg-white bg-lg-transparent"
+          >
+            <li class="nav-item">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+                >首頁</a
+              >
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link fs-4" href="#">商品專區</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link fs-4" href="#">價格資訊</a>
+            </li>
+            <li class="nav-item ms-6">
+              <a class="nav-link fs-4" href="#"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+            <li class="nav-item ms-5">
+              <a class="nav-link fs-4" href="#"
+                ><i class="fa-sharp fa-solid fa-heart"></i
+              ></a>
+            </li>
+            <li class="nav-item ms-5">
+              <a class="nav-link fs-4" href="#"
+                ><i class="fa-solid fa-bag-shopping"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- banner -->
+    <section
+      class="container mb-8"
+      style="
+        background-image: url(./images/Accessories.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      "
+    >
+      <div class="row position-lg-relative gx-5 gy-2">
+        <div class="col-12 col-lg-5">
+          <h2
+            class="letter-spacing-lg display-md-7 display-5 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
+          >
+            金品生活<span
+              class="display-md-5 h2 d-block mt-2 mt-lg-4 letter-spacing-none text-shadow-none"
+              >飾尚選擇</span
+            >
+          </h2>
+        </div>
+        <div class="col-12 col-lg-7 position-lg-relative mb-4 mb-lg-0">
+          <img
+            src="./images/banner.png"
+            alt="金品生活 飾尚選擇"
+            class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
+          />
+          <img
+            src="./images/banner-border.svg"
+            alt="金品生活 飾尚選擇"
+            class="img-fluid position-absolute bottom-18 bottom-lg-0 start-20 start-lg-2 w-75 w-lg-100"
+          />
+        </div>
+        <div class="col-12 position-lg-absolute bottom-15">
+          <div class="position-relative">
+            <input
+              type="search"
+              class="form-control bg-transparent w-100 w-lg-40 py-lg-3 ps-lg-4 text-white fs-4"
+              name="products"
+              id="products"
+              placeholder="搜尋想要的商品"
+            />
+            <a
+              href="#"
+              class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
+            >
+              <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 今日價格 -->
+    <section class="container mb-8">
+      <!-- 待修改 -->
+      <h3
+        class="fw-bold text-center d-flex align-items-center justify-content-center"
+      >
+        <span class="border rounded-pill display-5 px-2 py-3 me-2">今</span>
+        <span class="letter-spacing-lg">日價格</span>
+      </h3>
+      <p class="text-center mb-0 pb-6 border-bottom">
+        更新時間：2022/10/01 12:00
+      </p>
+      <div class="row">
+        <!-- <div class="col-6">
+          <div class="row border-end align-items-end pt-5">
+            <div class="col-4"></div>
+            <div class="col-4 fs-2 fw-bold text-secondary">黃金</div>
+            <div class="col-4 d-flex align-items-center">
+              <span class="display-5 fw-bold text-secondary me-4">4.59</span>
+              <img src="./images/up.svg" alt="上漲幅度" class="img-fluid">
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 fs-4 fw-bold text-secondary">買入</div>
+            <div class="col-4 fs-4 fw-bold text-secondary">NT $6,530/錢</div>
+            <div class="col-4"></div>
+            <div class="col-4 fs-4 fw-bold text-secondary">賣出</div>
+            <div class="col-4 fs-4 fw-bold text-secondary">NT $6,553/錢</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row align-items-end pt-5">
+            <div class="col-4 fs-2 fw-bold text-secondary">黃金</div>
+            <div class="col-4 d-flex align-items-center">
+              <span class="display-5 fw-bold text-secondary me-4">4.59</span>
+              <img src="./images/up.svg" alt="上漲幅度" class="img-fluid">
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 fs-4 fw-bold text-secondary">買入</div>
+            <div class="col-4 fs-4 fw-bold text-secondary">NT $6,530/錢</div>
+            <div class="col-4"></div>
+            <div class="col-4 fs-4 fw-bold text-secondary">賣出</div>
+            <div class="col-4 fs-4 fw-bold text-secondary">NT $6,553/錢</div>
+            <div class="col-4"></div>
+          </div> 
+        </div>-->
+      </div>
+    </section>
+
+    <!-- 熱銷商品 -->
+    <section class="container mb-8 position-relative">
+      <div
+        class="position-lg-absolute start-lg-50 top-lg-10 d-flex flex-lg-row flex-column justify-content-center align-items-center mb-4 mb-lg-0 z-10"
+      >
+        <h3
+          class="fw-bold text-center d-flex align-items-center justify-content-center me-lg-9 mb-lg-0 mb-3"
+        >
+          <span class="border rounded-pill display-5 px-2 py-3 me-2">熱</span>
+          <span class="letter-spacing-lg">銷商品</span>
+        </h3>
+        <a href="#" class="text-decoration-none noto-sans"
+          >更多商品<i class="fa-solid fa-angle-right ms-3"></i
+        ></a>
+      </div>
+      <div class="hot-products">
+        <!-- swiper-Watch slides visibility -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper align-items-end">
+            <!-- 1 -->
+            <div class="swiper-slide">
+              <div>
+                <div
+                  class="rounded-3 mb-4 swiper-img"
+                  style="
+                    background-image: url('./images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-4 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-3 fw-bold">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <p
+                  class="text-decoration-line-through text-originalPrice noto-sans text-start mb-2"
+                >
+                  NT$9,880
+                </p>
+                <div class="d-flex justify-content-between">
+                  <p class="fs-4 text-start fw-bold mb-0">NT$7,980</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill noto-sans"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="swiper-slide">
+              <div>
+                <div
+                  class="rounded-3 mb-4 swiper-img"
+                  style="
+                    background-image: url('./images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-4 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-3 fw-bold">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <p
+                  class="text-decoration-line-through text-originalPrice noto-sans text-start mb-2"
+                >
+                  NT$9,880
+                </p>
+                <div class="d-flex justify-content-between">
+                  <p class="fs-4 text-start fw-bold mb-0">NT$7,980</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill noto-sans"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div
+                  class="rounded-3 mb-4 swiper-img"
+                  style="
+                    background-image: url('./images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-4 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-3 fw-bold">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <p
+                  class="text-decoration-line-through text-originalPrice noto-sans text-start mb-2"
+                >
+                  NT$9,880
+                </p>
+                <div class="d-flex justify-content-between">
+                  <p class="fs-4 text-start fw-bold mb-0">NT$7,980</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill noto-sans"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div
+                  class="rounded-3 mb-4 swiper-img"
+                  style="
+                    background-image: url('./images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-4 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-3 fw-bold">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <p
+                  class="text-decoration-line-through text-originalPrice noto-sans text-start mb-2"
+                >
+                  NT$9,880
+                </p>
+                <div class="d-flex justify-content-between">
+                  <p class="fs-4 text-start fw-bold mb-0">NT$7,980</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill noto-sans"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div> -->
+        </div>
+        <div class="swiper-pagination d-lg-none bottom--5"></div>
+        <div class="swiper-button-next d-none d-lg-block"></div>
+        <div class="swiper-button-prev start-91 d-none d-lg-block"></div>
+      </div>
+    </section>
+
+    <!-- 熱門分類 -->
+    <section class="mb-8">
+      <h3
+        class="fw-bold mb-4 text-center d-flex align-items-center justify-content-center"
+      >
+        <span class="border rounded-pill display-5 px-2 py-3 me-2">熱</span>
+        <span class="letter-spacing-lg">門分類</span>
+      </h3>
+
+      <div class="hot-sort">
+        <!-- swiper-Freemode -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray">
+                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
+                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray">
+                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
+                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray">
+                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
+                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Pendants/sama-hosseini-uesvB32vC6U-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray">
+                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
+                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Bracelets/tania-mousinho-h7lrfoSave0-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray">
+                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
+                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute end-10"></div>
+          <div class="swiper-button-prev position-absolute start-10"></div>
+        </div>
+
+        <!-- <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mx-0">
+              <a href="#" class="card text-white border-0 rounded-0">
+                <img
+                  src="./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="card-img-overlay bg-gray">
+                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
+                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide mx-0">
+              <a href="#" class="card text-white border-0">
+                <img
+                  src="./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="card-img-overlay bg-gray">
+                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
+                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide mx-0">
+              <a href="#" class="card text-white border-0">
+                <img
+                  src="./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg"
+                  alt=""
+                />
+                <div class="card-img-overlay bg-gray">
+                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
+                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide mx-0">
+              <a href="#" class="card text-white border-0">
+                <img
+                  src="./images/products/Pendants/juan-burgos-3_XeNGVbTQA-unsplash.jpg"
+                  alt=""
+                />
+                <div class="card-img-overlay bg-gray">
+                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
+                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide mx-0">
+              <a href="#" class="card text-white border-0">
+                <img
+                  src="./images/products/Bracelets/sama-hosseini-h_ssRPj8UZo-unsplash.jpg"
+                  alt=""
+                />
+                <div class="card-img-overlay bg-gray">
+                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
+                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
+                    項鍊
+                  </h4>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute end-10"></div>
+          <div class="swiper-button-prev position-absolute start-10"></div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- 加入會員 -->
+    <section class="container mb-8">
+      <div class="row align-items-end gx-5 gy-md-0 gy-4">
+        <div class="col-3 d-none d-md-block">
+          <img src="./images/diamond-L.png" alt="加入會員" class="img-fluid" />
+        </div>
+        <div class="col-md-6 col-12 d-flex flex-column align-items-center">
+          <h3 class="fw-bold display-md-5 text-center mb-3 h4">
+            現在就加入我們吧！
+          </h3>
+          <p class="mb-6 fs-md-4 fw-md-bold text-center fs-6">
+            加入會員即可享有更多優惠折扣
+          </p>
+          <a
+            href="#"
+            class="btn btn-outline-primary rounded-pill text-center px-md-4 px-6 py-2"
+            >加入會員</a
+          >
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-6">
+              <img
+                src="./images/diamond-R.png"
+                alt="加入會員"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-lg-8 py-7 bg-footer">
+      <div class="container">
+        <div class="row gx-5 gy-lg-0 gy-6">
+          <div class="col-lg-2 col-4">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><h4>關於我們</h4></li>
+              <li class="mb-3">
+                <img src="./images/arrow.png" alt="arrow" class="img-fluid" />
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none noto-sans">品牌故事</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none noto-sans">聯絡我們</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-4">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><h4>服務項目</h4></li>
+              <li class="mb-3">
+                <img src="./images/arrow.png" alt="arrow" class="img-fluid" />
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none noto-sans">黃金商品</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none noto-sans">舊金收購</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none noto-sans">飾品客製</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-4">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><h4>常見問題</h4></li>
+              <li class="mb-3">
+                <img src="./images/arrow.png" alt="arrow" class="img-fluid" />
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none noto-sans"
+                  >付款與配送</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none noto-sans"
+                  >退換貨說明</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 d-lg-block d-none"></div>
+          <div class="col-lg-4 col-12">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><h4>億滿春</h4></li>
+              <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
+              <li class="mb-1">聯絡電話：(02)2957-1961</li>
+              <li class="mb-1">店家地址：235新北市中和區德光路86號</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- copyright -->
+    <section>
+      <p class="mb-0 bg-copyright py-4 noto-sans text-center">
+        Copyright ©yimanchwun All Rights Reserved.
+      </p>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./javascript/all.js"></script>
+  </body>
+</html>
