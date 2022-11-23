@@ -1,1 +1,1 @@
-# JS-project_JewelryShop
+# 金飾店家官方網站
