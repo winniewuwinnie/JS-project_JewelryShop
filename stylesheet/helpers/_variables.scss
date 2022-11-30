@@ -302,10 +302,10 @@ $primary:       #FFFFFF !default;//$blue !default;
 $secondary:     #F8EDE5 !default;//$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       #FE7264 !default;//$yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$dark:          #4F2B11 !default;//$gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map

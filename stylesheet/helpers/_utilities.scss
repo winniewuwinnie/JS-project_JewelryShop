@@ -111,6 +111,7 @@ $utilities: map-merge(
     // scss-docs-start utils-borders
     "border":
       (
+        responsive:true,
         property: border,
         values: (
           null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
@@ -618,6 +619,7 @@ $utilities: map-merge(
     // scss-docs-start utils-color
     "color":
       (
+        responsive:true,
         property: color,
         class: text,
         local-vars: (

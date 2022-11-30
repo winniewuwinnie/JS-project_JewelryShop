@@ -13,6 +13,57 @@ body {
 }
 
 //navbar
+.header{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header h1 a{
+  text-indent: 101%;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.header_menu{
+  display:flex;
+}
+// .header_menu li a{
+//   padding: 8px 20px;
+// }
+.header_menu li a:hover{
+  color:#ebebeb;
+}
+.header_menuMobile{
+  display:none;
+}
+@media(max-width:576px){
+  .header_menuMobile{
+    display:block;
+  }
+  .header_menu{
+    /*隱藏選單*/
+    max-height:0px;
+    overflow:hidden;
+    /*定位選單*/
+    position: absolute;
+    z-index:100;
+    /*header高度*/
+    top: 76px;
+    /*動畫效果*/
+    transition: max-height 0.5s;
+}
+  .header_menu{
+    flex-wrap:wrap;
+  }
+    /*下拉選單滿版*/
+  .header_menu li{
+    width: 100%;
+  }
+}
+
+/*jQ點擊後找到.mobileShow裡的.header_menu,讓.header_menu展開高度*/
+.mobileShow .header_menu{
+  max-height:320px;
+}
 
 //banner
 .z-10 {
@@ -38,11 +89,6 @@ body {
     color: white;
     font-size: 16px;
   }
-}
-
-.img-border {
-  border: 2px dashed white;
-  transform: rotate(45deg);
 }
 
 @include media-breakpoint-up(md) {
@@ -184,60 +230,7 @@ body {
   .swiper-button-prev {
     color: white;
   }
-
-  // .swiper {
-  //   width: 100%;
-  //   height: 100%;
-  // }
-
-  // .swiper-slide {
-  //   text-align: center;
-  //   color: #000;
-  //   background: #fff;
-
-  //   width: 0px;
-  //   height: 165px;
-
-  //   /* Center slide text vertically */
-  //   display: -webkit-box;
-  //   display: -ms-flexbox;
-  //   display: -webkit-flex;
-  //   display: flex;
-  //   // -webkit-box-pack: center;
-  //   // -ms-flex-pack: center;
-  //   // -webkit-justify-content: center;
-  //   // justify-content: center;
-  //   // -webkit-box-align: center;
-  //   // -ms-flex-align: center;
-  //   // -webkit-align-items: center;
-  //   align-items: center;
-  // }
-
-  // .swiper-slide img {
-  //   display: block;
-  //   width: 165px;
-  //   height: 165px;
-  //   object-fit: cover;
-  // }
-
-  // .swiper-button-next,
-  // .swiper-button-prev {
-  //   color: white;
-  // }
 }
-// @include media-breakpoint-up(lg) {
-//   .hot-sort {
-//     .swiper-slide {
-//       // width: 432px;
-//       height: 432px;
-//     }
-
-//     .swiper-slide img {
-//       width: 432px;
-//       height: 432px;
-//     }
-//   }
-// }
 
 //加入會員
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/diamond.ico" type="image/x-icon">
     <!-- google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +32,24 @@
   </head>
   <body style="background-image: url('./images/bg.jpg');">
     <!-- 導覽列 -->
-    <nav
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+      <div class="header pt-3 border-bottom border-primary align-items-center">
+        <h1><a href="index.html" class="text-decoration-none text-primary letter-spacing-sm display-4">億滿春</a></h1>
+        <ul class="header_menu list-unstyled bg-white bg-md-transparent rounded-2">
+          <li class="pt-3 pt-md-0 px-3 px-md-0"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0">首頁</a></li>
+          <li class="px-3 px-md-0"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0">商品專區</a></li>
+          <li class="px-3 px-md-0"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0">價格資訊</a></li>
+          <li class="d-none d-md-block"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4"><i class="fa-solid fa-user me-md-5"></i></a></li>
+          <li class="d-none d-md-block"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4"><i class="fa-sharp fa-solid fa-heart me-md-5"></i></a></li>
+          <li class="d-none d-md-block"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          <li class="d-block d-md-none px-3 px-md-0"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 border-bottom border-md-0 text-center text-md-start py-1">會員中心</a></li>
+          <li class="d-block d-md-none px-3 px-md-0"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 border-bottom border-md-0 text-center text-md-start py-1">最愛典藏</i></a></li>
+          <li class="d-block d-md-none px-3 px-md-0 pb-3"><a href="#" class="nav-link fw-bold text-dark text-md-primary fs-4 text-center text-md-start py-1">購物清單</i></a></li>
+        </ul>
+        <a class="header_menuMobile link-primary fs-1" href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </div>
+    <!-- <nav
       class="navbar navbar-expand-lg navbar-dark bg-transparent mb-lg-8 mb-5"
     >
       <div class="container-fluid mx-5 border-bottom position-relative">
@@ -82,7 +100,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- banner -->
     <section
@@ -105,7 +123,7 @@
             >
           </h2>
         </div>
-        <div class="col-12 col-lg-7 position-lg-relative mb-4 mb-lg-0">
+        <div class="col-12 col-lg-7 position-relative mb-4 mb-lg-0">
           <img
             src="./images/banner.png"
             alt="金品生活 飾尚選擇"
@@ -114,7 +132,7 @@
           <img
             src="./images/banner-border.svg"
             alt="金品生活 飾尚選擇"
-            class="img-fluid position-absolute bottom-18 bottom-lg-0 start-20 start-lg-2 w-75 w-lg-100"
+            class="img-fluid position-absolute bottom-lg-18 bottom-0 start-20 start-lg-2 w-75 w-lg-100"
           />
         </div>
         <div class="col-12 position-lg-absolute bottom-15">
@@ -438,137 +456,73 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
-                <div class="bg-gray">
-                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
-                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
+                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                  <div>
+                    <h5 class="text-white dancing-script fw-bold h4 mb-3 fw-bold">Necklaces</h5>
+                    <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                      項鍊
+                    </h4>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="text-decoration-none" style="background-image: url('./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
-                <div class="bg-gray">
-                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
-                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
+                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                  <div>
+                    <h5 class="text-white dancing-script fw-bold h4 mb-3 fw-bold">Earrings</h5>
+                    <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                      耳環
+                    </h4>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
-                <div class="bg-gray">
-                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
-                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
+                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                  <div>
+                    <h5 class="text-white dancing-script fw-bold h4 mb-3 fw-bold">Rings</h5>
+                    <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                      戒指
+                    </h4>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Pendants/sama-hosseini-uesvB32vC6U-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
-                <div class="bg-gray">
-                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
-                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
+                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                  <div>
+                    <h5 class="text-white dancing-script fw-bold h4 mb-3 fw-bold">Pendants</h5>
+                    <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                      墜飾
+                    </h4>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Bracelets/tania-mousinho-h7lrfoSave0-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
-                <div class="bg-gray">
-                  <h5 class="text-white dancing-script fw-bold h5">Necklaces</h5>
-                  <h4 class="text-white fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
+              <a href="#" class="text-decoration-none" style="background-image: url('./images/products/Bracelets/sama-hosseini-h_ssRPj8UZo-unsplash.jpg');width: 100%;height: 432px;background-size: cover;background-position: center center;background-repeat: no-repeat;">
+                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                  <div>
+                    <h5 class="text-white dancing-script fw-bold h4 mb-3 fw-bold">Bracelets</h5>
+                    <h4 class="text-white fw-bold display-5 letter-spacing-md">
+                      手鍊
+                    </h4>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
                 </div>
               </a>
             </div>
           </div>
-          <div class="swiper-button-next position-absolute end-10"></div>
-          <div class="swiper-button-prev position-absolute start-10"></div>
+          <div class="swiper-button-next position-absolute end-5"></div>
+          <div class="swiper-button-prev position-absolute start-5"></div>
         </div>
-
-        <!-- <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide mx-0">
-              <a href="#" class="card text-white border-0 rounded-0">
-                <img
-                  src="./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-                <div class="card-img-overlay bg-gray">
-                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
-                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide mx-0">
-              <a href="#" class="card text-white border-0">
-                <img
-                  src="./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-                <div class="card-img-overlay bg-gray">
-                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
-                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide mx-0">
-              <a href="#" class="card text-white border-0">
-                <img
-                  src="./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg"
-                  alt=""
-                />
-                <div class="card-img-overlay bg-gray">
-                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
-                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide mx-0">
-              <a href="#" class="card text-white border-0">
-                <img
-                  src="./images/products/Pendants/juan-burgos-3_XeNGVbTQA-unsplash.jpg"
-                  alt=""
-                />
-                <div class="card-img-overlay bg-gray">
-                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
-                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide mx-0">
-              <a href="#" class="card text-white border-0">
-                <img
-                  src="./images/products/Bracelets/sama-hosseini-h_ssRPj8UZo-unsplash.jpg"
-                  alt=""
-                />
-                <div class="card-img-overlay bg-gray">
-                  <h5 class="card-text dancing-script fw-bold h6">Necklaces</h5>
-                  <h4 class="card-title fw-bold display-5 letter-spacing-md">
-                    項鍊
-                  </h4>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-button-next position-absolute end-10"></div>
-          <div class="swiper-button-prev position-absolute start-10"></div>
-        </div> -->
       </div>
     </section>
 
@@ -683,7 +637,7 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./javascript/all.js"></script>

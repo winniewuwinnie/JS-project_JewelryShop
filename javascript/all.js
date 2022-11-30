@@ -1,3 +1,14 @@
+//nav
+$("document").ready(function () {
+  $(".header_menuMobile").click(function (event) {
+    event.preventDefault();
+    // 在.header上加上.mobileShow,以執行後續的class    
+    $(".header").toggleClass("mobileShow");
+  });
+});
+
+
+
 //swiper
 var swiper = new Swiper(".hot-products .mySwiper", {
   slidesPerView: 3,
@@ -34,7 +45,7 @@ var swiper = new Swiper(".hot-sort .mySwiper", {
   },
   breakpoints: {
     375: {
-      slidesPerView: 2,      
+      slidesPerView: 1,      
       spaceBetween: 0,
     },
     768: {
