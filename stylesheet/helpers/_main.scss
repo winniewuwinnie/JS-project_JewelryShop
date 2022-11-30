@@ -13,56 +13,56 @@ body {
 }
 
 //navbar
-.header{
-  display:flex;
+
+.header {
+  display: flex;
   justify-content: space-between;
   position: relative;
 }
-.header h1 a{
+.header h1 a {
   text-indent: 101%;
-  overflow:hidden;
-  white-space:nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.header_menu{
-  display:flex;
+.header_menu {
+  display: flex;
 }
-// .header_menu li a{
-//   padding: 8px 20px;
-// }
-.header_menu li a:hover{
-  color:#ebebeb;
+
+.header_menu li a:hover {
+  color: #ebebeb;
 }
-.header_menuMobile{
-  display:none;
+.header_menuMobile {
+  display: none;
 }
-@media(max-width:576px){
-  .header_menuMobile{
-    display:block;
+@media (max-width: 576px) {
+  .header_menuMobile {
+    display: block;
   }
-  .header_menu{
+  .header_menu {
     /*隱藏選單*/
-    max-height:0px;
-    overflow:hidden;
+    max-height: 0px;
+    overflow: hidden;
     /*定位選單*/
     position: absolute;
-    z-index:100;
+    z-index: 100;
     /*header高度*/
     top: 76px;
     /*動畫效果*/
     transition: max-height 0.5s;
-}
-  .header_menu{
-    flex-wrap:wrap;
   }
-    /*下拉選單滿版*/
-  .header_menu li{
+  .header_menu {
+    flex-wrap: wrap;
+  }
+  /*下拉選單滿版*/
+  .header_menu li {
     width: 100%;
   }
 }
+// @include media-breakpoint-up(md) { }
 
 /*jQ點擊後找到.mobileShow裡的.header_menu,讓.header_menu展開高度*/
-.mobileShow .header_menu{
-  max-height:320px;
+.mobileShow .header_menu {
+  max-height: 320px;
 }
 
 //banner
@@ -91,12 +91,21 @@ body {
   }
 }
 
-@include media-breakpoint-up(md) {
-  .display-md-7 {
-    font-size: 160px;
+@include media-breakpoint-up(md){
+  .display-md-3{
+    font-size: 4rem;
   }
-  .display-md-5 {
-    font-size: 48px;
+  .display-md-5{
+    font-size: 3rem;
+  }
+} 
+
+@include media-breakpoint-up(lg) {
+  .display-lg-7 {
+    font-size: 10rem;
+  }
+  .display-lg-5 {
+    font-size: 3rem;
   }
   .form-control {
     &::placeholder {
@@ -118,6 +127,14 @@ body {
       font-size: 24px;
     }
   }
+}
+
+//今日價格
+.line {
+  width: 1px;
+  max-height: 100%;
+  background-color: white;
+  margin: 0 auto;
 }
 
 //熱銷商品
@@ -185,9 +202,9 @@ body {
   background-color: rgba(#000000, 0.3);
   width: 100%;
   height: 432px;
-  &:hover{
+  &:hover {
     background-color: rgba(#000000, 0.2);
-    transition: background-color,1s;
+    transition: background-color, 1s;
   }
   // background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
 }
@@ -244,4 +261,11 @@ body {
 //copyright
 .bg-copyright {
   background-color: rgba(#000000, 0.85);
+}
+
+
+//priceInformation
+//線上黃金回收試算
+.bg-brown{
+  background-color: rgba(79, 43, 17, 0.1);
 }
