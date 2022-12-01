@@ -1,3 +1,4 @@
+//layout
 //nav
 $("document").ready(function () {
   $(".header_menuMobile").click(function (event) {
@@ -7,8 +8,8 @@ $("document").ready(function () {
   });
 });
 
-
-
+//首頁
+//熱銷商品
 //swiper
 var swiper = new Swiper(".hot-products .mySwiper", {
   slidesPerView: 3,
@@ -35,6 +36,7 @@ var swiper = new Swiper(".hot-products .mySwiper", {
   },
 });
 
+//熱門分類
 var swiper = new Swiper(".hot-sort .mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -58,3 +60,11 @@ var swiper = new Swiper(".hot-sort .mySwiper", {
     },
   },
 });
+
+//priceInformation
+//黃金回收試算
+const goldWeight=document.querySelector(".goldWeight");
+const goldPrice=document.querySelector(".goldPrice");
+goldWeight.addEventListener("keyup",function(e){
+  goldPrice.value=parseInt(goldWeight.value)*6530;
+})
