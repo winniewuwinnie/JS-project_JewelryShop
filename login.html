@@ -28,7 +28,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="stylesheet/all.css" />
-    <title>價格資訊｜億滿春銀樓</title>
+    <title>會員登入｜億滿春銀樓</title>
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
@@ -66,7 +66,9 @@
             >
           </li>
           <li class="d-none d-md-block">
-            <a href="login.html" class="nav-link fw-bold text-dark text-md-primary fs-4"
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-4"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
@@ -108,9 +110,10 @@
       </div>
     </div>
 
+    <div class="container">
     <!-- banner -->
     <section
-      class="container mb-8 banner"
+      class="mb-8 banner"
       style="
         background-image: url(./images/Accessories.svg);
         background-size: contain;
@@ -161,221 +164,38 @@
       </div>
     </section>
 
-    <div class="container"> 
-      <!-- 今日價格 -->
-      <section class="mb-md-8 mb-7">
-        <h3
-          class="fw-bold text-center d-flex align-items-center justify-content-center"
-        >
-          <span class="border rounded-pill display-5 px-2 py-3 me-2">今</span>
-          <span class="letter-spacing-lg">日價格</span>
-        </h3>
-        <p class="text-center mb-0 pb-6 border-bottom border-primary">
-          更新時間：2022/10/01 12:00
-        </p>
-        <div class="row gx-0 border-bottom border-primary mx-0">
-          <div class="col-lg-5 col-12">
-            <div class="row">
-              <div
-                class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto"
-              >
-                <table class="table text-primary mt-4 mb-5">
-                  <thead>
-                    <tr>
-                      <th scope="col" width="45%" class="border-0 fs-2 fw-bold">
-                        黃金
-                      </th>
-                      <th
-                        scope="col"
-                        width="40%"
-                        class="border-0 display-5 fw-bold"
-                      >
-                        4.59
-                      </th>
-                      <th scope="col" width="15%" class="border-0 text-center">
-                        <i class="fa-sharp fa-solid fa-arrow-up fs-1 mb-1"></i>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row" class="border-0 fw-bold fs-4">買入</th>
-                      <td colspan="2" class="border-0 fw-bold fs-4 text-end">
-                        NT $6,530/錢
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="border-0 fw-bold fs-4">賣出</th>
-                      <td colspan="2" class="border-0 fw-bold fs-4 text-end">
-                        NT$6,553/錢
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+    <!-- login -->
+    <section>
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <div class="card border-0 shadow-lg text-dark fw-bold rounded-3 mb-8">
+            <div class="card-title">會員登入</div>
+            <form>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-12 line text-primary text-opacity-0">|</div>
-          <div class="col-lg-5 col-12">
-            <div class="row">
-              <div
-                class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto"
-              >
-                <table class="table text-primary mt-4 mb-5">
-                  <thead>
-                    <tr>
-                      <th scope="col" width="45%" class="border-0 fs-2 fw-bold">
-                        白金
-                      </th>
-                      <th
-                        scope="col"
-                        width="40%"
-                        class="border-0 display-5 fw-bold"
-                      >
-                        37.10
-                      </th>
-                      <th scope="col" width="15%" class="border-0 text-center">
-                        <i class="fa-sharp fa-solid fa-arrow-up fs-1 mb-1"></i>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row" class="border-0 fw-bold fs-4">買入</th>
-                      <td colspan="2" class="border-0 fw-bold fs-4 text-end">
-                        NT $3,542/錢
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="border-0 fs-4 fw-bold">賣出</th>
-                      <td colspan="2" class="border-0 fs-4 fw-bold text-end">
-                        NT$3,588/錢
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
               </div>
-            </div>
+            </form>
           </div>
+          
         </div>
-      </section>
+      </div>
 
-      <!-- 回收試算 -->
-      <section>
-        <h3
+        <!-- <h3
           class="fw-bold text-center d-flex align-items-center justify-content-center mb-4"
         >
           <span class="border rounded-pill display-5 px-2 py-3 me-2">回</span>
           <span class="letter-spacing-lg">收試算</span>
         </h3>
-        <div class="card border-0 shadow-lg text-dark fw-bold rounded-3 mb-8">
-          <div
-            class="card-header bg-brown border-0 d-flex flex-column align-items-center p-5 pb-1 pt-md-4 px-md-4"
-          >
-            <h4 class="card-title text-center fw-bold mb-4">試算說明</h4>
-            <ul class="mb-0">
-              <li class="fs-5">
-                此為黃金回收價格試算，實際兌換金額依現場實際檢驗後，現場實際秤重報價為主。
-              </li>
-              <li class="fs-5">黃金回收價格每日更新，試算金額僅供當日參考。</li>
-            </ul>
-          </div>
-          <div class="card-body bg-brown p-md-5 p-4">
-            <div class="row">
-              <div class="col-md-10 col-12 mx-auto">
-                <div class="row gx-5 gy-3">
-                  <div class="col-md-5 col-12">
-                    <label for="weight" class="form-label fs-5">重量：</label>
-                    <div class="d-flex align-items-end">
-                      <input
-                        type="number"
-                        class="form-control me-2"
-                        id="weight"
-                        placeholder="請輸入黃金重量"
-                      />
-                      <span class="text-nowrap">臺錢</span>
-                    </div>
-                  </div>
-                  <div class="col-md-7 col-12">
-                    <label for="value" class="form-label fs-5"
-                      >預估金額(新台幣)：</label
-                    >
-                    <div class="d-flex align-items-end">
-                      <input
-                        type="number"
-                        class="form-control me-2"
-                        id="value"
-                        disabled
-                      />
-                      <span class="text-nowrap">元</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 單位換算 -->
-      <section>
-        <h3
-          class="fw-bold text-center d-flex align-items-center justify-content-center mb-4"
-        >
-          <span class="border rounded-pill display-5 px-2 py-3 me-2">單</span>
-          <span class="letter-spacing-lg">位換算</span>
-        </h3>
-        <div class="card border-0 shadow-lg text-dark fw-bold rounded-3 mb-8">
-          <div
-            class="card-header bg-brown border-0 d-flex flex-column align-items-center p-5 pb-1 pt-md-4 px-md-4"
-          >
-            <h4 class="card-title text-center fw-bold mb-4">試算說明</h4>
-            <ul class="mb-0">
-              <li class="fs-5">臺灣常見黃金重量計算單位為「兩錢分厘」。</li>
-              <li class="fs-5">1兩＝10錢｜1錢＝10分｜1分＝10厘。</li>
-            </ul>
-          </div>
-          <div class="card-body bg-brown p-md-5 p-4">
-            <div class="row">
-              <div class="col-11 mx-auto">
-                <div class="row gx-4 gy-3">
-                  <div class="col">
-                    <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2" />
-                      <span class="text-nowrap">公克(g)</span>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2" />
-                      <span class="text-nowrap">公斤(kg)</span>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2" />
-                      <span class="text-nowrap">臺錢</span>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2" />
-                      <span class="text-nowrap">臺兩</span>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2" />
-                      <span class="text-nowrap">盎司(oz)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        <div class="card border-0 shadow-lg text-dark fw-bold rounded-3 mb-8 border-0">
+123
+        </div> -->
+    </section>
+  </div>
 
     <!-- footer -->
     <footer class="py-lg-8 py-7 bg-footer">
