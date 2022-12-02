@@ -68,3 +68,15 @@ const goldPrice=document.querySelector(".goldPrice");
 goldWeight.addEventListener("keyup",function(e){
   goldPrice.value=parseInt(goldWeight.value)*6530;
 })
+
+function testGet(){
+  axios.get("http://localhost:3000/products")
+  .then(function(response){
+    console.log(response)
+  })
+  .catch(function(error){
+    console.log(error)
+  })
+}
+
+testGet()
