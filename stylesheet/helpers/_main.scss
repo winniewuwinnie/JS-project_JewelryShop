@@ -90,11 +90,13 @@ body {
     font-size: 16px;
   }
 }
-
+.display-sm-5{
+  font-size: 3rem;
+}
 @include media-breakpoint-up(md){
-  .display-md-3{
-    font-size: 4rem;
-  }
+  // .display-md-3{
+  //   font-size: 4rem;
+  // }
   .display-md-5{
     font-size: 3rem;
   }
@@ -102,7 +104,7 @@ body {
 
 @include media-breakpoint-up(lg) {
   .display-lg-7 {
-    font-size: 10rem;
+    font-size: 7.5rem;
   }
   .display-lg-5 {
     font-size: 3rem;
@@ -112,19 +114,19 @@ body {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: white;
       opacity: 1; /* Firefox */
-      font-size: 24px;
+      font-size: 18px;
     }
 
     &::-ms-input-placeholder {
       /* Internet Explorer 10-11 */
       color: white;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     &::-ms-input-placeholder {
       /* Microsoft Edge */
       color: white;
-      font-size: 24px;
+      font-size: 18px;
     }
   }
 }
@@ -150,11 +152,11 @@ body {
   // Slide-ALL
   .swiper-slide {
     //圖片+文字高度
-    height: 465px;
+    height: 426px;
     text-align: center;
     //圖片高度
     .swiper-img {
-      height: 312px;
+      height: 259.25px;
     }
   }
 
@@ -180,11 +182,11 @@ body {
     //Slide-1
     .swiper-slide-active {
       //圖片+文字高度
-      height: 710px;
+      height: 608px;
     }
     //圖片高度
     .swiper-slide-active .swiper-img {
-      height: 555px;
+      height: 442px;
       transition: height 0.2s;
     }
 
@@ -192,7 +194,7 @@ body {
     .swiper-button-prev {
       color: white;
       width: auto;
-      top: 28%;
+      top: 25%;
     }
   }
 }

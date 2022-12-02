@@ -188,9 +188,11 @@ $utilities: map-merge(
         class: w,
         values: (
           25: 25%,
-          40:40%,
+          40: 40%,
+          55: 55%,
           50: 50%,
           75: 75%,
+          80: 80%,
           100: 100%,
           auto: auto,
         ),
@@ -763,7 +765,7 @@ $utilities: map-merge(
         class: letter-spacing,
         values: (
           none: 0em,
-          null: 0.16em,
+          null: 0.26em,
           sm: 0.2em,
           md:0.4em,
           large: 0.6em,

@@ -383,6 +383,7 @@ $spacers: (
   7: $spacer * 3,
   8: $spacer * 5,
   9: $spacer * 6.5,
+  10:$spacer*0.75,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -398,11 +399,13 @@ $position-values: (
   2:2%,
   4:4%,
   5:5%,
+  8:8%,
   10:10%,
   15:15%,
   18:18%,
   19:19%,
   20:20%,
+  43:43%,
   50: 50%,
   61: 61%,
   75:75%,
@@ -584,11 +587,13 @@ $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h2-font-size:                $font-size-base * 2.25 !default;
+$h3-font-size:                $font-size-base * 2 !default;
+$h4-font-size:                $font-size-base * 1.75 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$h7-font-size:                $font-size-base * 1.125 !default;
+$h8-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -598,7 +603,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -619,7 +626,7 @@ $display-font-sizes: (
   4: 3.5rem,
   5: 3rem,
   6: 2.5rem,
-  7:10rem,
+  7: 7.5rem,
 ) !default;
 
 $display-font-family: null !default;
