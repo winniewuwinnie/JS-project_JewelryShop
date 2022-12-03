@@ -1,3 +1,4 @@
+const baseUrl="https://json-server-vercel-ebon.vercel.app/";
 //首頁
 //初始化畫面
 function init(){
@@ -12,7 +13,7 @@ let hotSalesProductsData;
 //取得熱銷商品資料
 function getHotSalesProductsData() {
   axios
-    .get("http://localhost:3000/hotSalesProducts")
+    .get(`${baseUrl}hotSalesProducts`)
     .then(function (response) {
       hotSalesProductsData=response.data;
       renderHotSalesProductsData();

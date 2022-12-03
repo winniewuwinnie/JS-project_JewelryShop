@@ -1,4 +1,4 @@
-const baseUrl="http://localhost:3000/products";
+const baseUrl="https://json-server-vercel-ebon.vercel.app/";
 
 //初始化畫面
 function init(){
@@ -15,7 +15,7 @@ const productsList=document.querySelector(".products-list");
 //取得全部商品
 let allProductsData;
 function getAllProductsData(){
-  axios.get(baseUrl)
+  axios.get(`${baseUrl}products`)
   .then(function(response){
     allProductsData=response.data;
     renderProductsData(allProductsData);

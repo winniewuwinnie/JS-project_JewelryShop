@@ -1,135 +1,19 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "email": "dev@admin.me",
-      "password": "$2a$10$vvpTDyLSJVXoxp9yURfDUe0lTv7GKh5COn6yEKA/D.7Cn1bFdYQKG",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "email": "sample@dev",
-      "password": "$2a$10$Vviu.6gs/PIqwcX4VDakNuWn/EmKieUH8FNlskgKmQfvDnvqplCmu",
-      "role": "user"
-    },
-    {
-      "id": 3,
-      "email": "ggg@gg.com",
-      "password": "$2a$10$ZVZI2VbUReGNLfkWiOyCteRqwKRtbDiRw4KL86eS6/hVSkgCBCDyi",
-      "role": "user"
-    },
-    {
-      "email": "g1@dev",
-      "password": "$2a$10$.9GGO9BfJi6s1mNmMVMryekKU8FYrC/OaxlT86dxz9QyzWH8Y8UKG",
-      "id": 4,
-      "role": "user"
-    },
-    {
-      "email": "g6@dev",
-      "password": "$2a$10$pBAKhPdFpfb03Ei9hcIaNu2tJqynGID0BUEPoGE.rQIpzG9GAp646",
-      "id": 5
-    }
-  ],
   "posts": [
     {
       "id": 1,
-      "title": "《PUI PUI DRIVING SCHOOL》",
-      "body": "<figure class=\"image\"><img src=\"https://i.imgur.com/MVwCIdy.jpg\"></figure><figure class=\"image\"><img></figure><p>&nbsp;</p>",
-      "plainText": "\n\n\nimage widget",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "title": "第 2 季慶祝",
-      "body": "月曆開賣囉",
-      "userId": 1
-    },
-    {
-      "id": 3,
-      "title": "車車路跑緊急公告",
-      "body": "由於疫情升溫，決定暫緩舉辦本次活動",
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "title": "test",
-      "body": "<p>Here goes the initial content of the editor.</p><figure class=\"image\"><img src=\"https://i.imgur.com/FxuIhDr.jpg\"></figure>",
-      "plainText": "Here goes the initial content of the editor.\n\nimage widget",
-      "userId": 3
+      "title": "json-server",
+      "author": "typicode"
     }
   ],
-  "bookmarks": [
-    {
-      "userId": 1,
-      "postId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "postId": "2",
-      "id": 2
-    }
-  ],
-  "products": [
+  "comments": [
     {
       "id": 1,
-      "title": "深沈盛夏多層次頸鏈",
-      "imgUrl":"https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg?raw=true",
-      "originPrice":9980,
-      "price": 7980,
-      "category":"項鍊",
-    },
-    {
-      "id": 2,
-      "title": "愛的輪廓鎖鏈手鍊",
-      "imgUrl":"https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
-      "originPrice":9980,
-      "price": 7980,
-      "category":"手鍊",
-    },
-    {
-      "id": 3,
-      "title": "流淌時光戒指組合",
-      "imgUrl":"https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg?raw=true",
-      "originPrice":9980,
-      "price": 7980,
-      "category":"戒指",
+      "body": "some comment",
+      "postId": 1
     }
   ],
-  "carts": [
-    {
-      "userId": "1",
-      "productId": "2",
-      "qty": 1,
-      "id": 1
-    }
-  ],
-  "orders": [
-    {
-      "createdAt": 1669186792906,
-      "info": {
-        "email": "dev@admin.me",
-        "username": "",
-        "address": ""
-      },
-      "items": [
-        {
-          "productId": "1",
-          "qty": 7,
-          "title": "帶你無痛提升 JavaScript 面試力",
-          "price": 230
-        },
-        {
-          "productId": "2",
-          "qty": 5,
-          "title": "8 天重新認識 JavaScript！",
-          "price": 290
-        }
-      ],
-      "payment": 3060,
-      "hasDelivered": false,
-      "userId": "1",
-      "id": 1
-    }
-  ]
+  "profile": {
+    "name": "typicode"
+  }
 }
