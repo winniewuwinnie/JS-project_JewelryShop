@@ -1,10 +1,19 @@
 const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+// const baseUrl = "http://localhost:3000/";
+
 //首頁
 //初始化畫面
 function init() {
   getHotSalesProductsData();
 }
 init();
+
+// loading
+$(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+  $("#status").delay(4000).fadeOut(3000); //delay --> 延遲幾秒才fadeOut
+  $("#preloader").delay(5000).fadeOut(3000);
+})
+
 
 //取得當前日期(年-月-日)
 let Today = new Date(); //Sun Dec 04 2022 00:26:30 GMT+0800 (台北標準時間)
@@ -50,11 +59,11 @@ function getCurrentGoldPriceData() {
         currentGoldPriceData.length === 1 &&
         currentGoldPriceData[0].Price > 7
       ) {
-        console.log("報價異常");
+        // console.log("報價異常");
         getNearGoldPriceData();
       }else{
         currentGoldPriceData.forEach(function (item, index) {
-          let targetTime=`${beforeDateStr} 09:00:00`;
+          let targetTime=`${beforeDateStr} 10:00:00`;
           if (item.date === targetTime) {
             currentGoldPrice = item.Price;
             renderGoldPrice(currentGoldPrice);
@@ -76,10 +85,11 @@ function getNearGoldPriceData() {
     .then(function (response) {
       currentGoldPriceData = response.data.data;
       currentGoldPriceData.forEach(function (item, index) {
-        let targetTime=`${beforeDateStr} 09:00:00`;
+        let targetTime=`${beforeDateStr} 10:00:00`;
         if (item.date === targetTime) {
           currentGoldPrice = item.Price;
           renderGoldPrice(currentGoldPrice,exchangeRate);
+          renderGetPriceTime(beforeDateStr);
         }
       });
     })
@@ -107,15 +117,20 @@ function getBeforeExchangeRate(beforeDateStr){
 }
 
 //渲染當前金價
-const test=document.querySelector(".render-test");
-console.log(test)
+const buyPrice=document.querySelector(".buy-price");
+const soldPrice=document.querySelector(".sold-price");
 function renderGoldPrice(price,exchangeRate){
   // console.log(price,exchangeRate)
-  console.log(price*exchangeRate)
+  // console.log(price*exchangeRate)
   let GoldPrice=((price*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
-  test.textContent=GoldPrice;
+  buyPrice.textContent=`NT$${GoldPrice+390}/錢`;
+  soldPrice.textContent=`NT$${GoldPrice-210}/錢`;
 }
-
+//渲染更新時間
+const refreshTime=document.querySelector(".refresh-time")
+function renderGetPriceTime(beforeDateStr){
+  refreshTime.textContent=`更新時間：${beforeDateStr} 10:00`
+}
 
 
 //熱銷商品
@@ -242,3 +257,11 @@ var swiper = new Swiper(".hot-sort .mySwiper", {
     },
   },
 });
+//轉址
+// const hotSortSwiper=document.querySelector(".hot-sort-swiper");
+
+// console.log(hotSortSwiper)
+// hotSortSwiper.addEventListener("click",function(e){
+//   // e.preventDefault();
+//   console.log(e.target.dataset.category)
+// })

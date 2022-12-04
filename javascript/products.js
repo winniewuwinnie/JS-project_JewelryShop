@@ -1,4 +1,5 @@
-const baseUrl="https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+// const baseUrl = "http://localhost:3000/";
 
 //初始化畫面
 function init(){
@@ -67,6 +68,7 @@ function renderProductsData(data){
 menu.addEventListener("click",function(e){
   e.preventDefault();
   let targetText=e.target.textContent
+  // location.href="products.html?category=necklace";
   if(targetText==="全部"){
     getAllProductsData()
   }else if(targetText==="熱銷商品"){

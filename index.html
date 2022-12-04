@@ -31,7 +31,14 @@
     <title>首頁｜億滿春銀樓</title>
   </head>
   <body style="background-image: url('./images/bg.jpg')">
-    <span class="render-test">123</span>
+    <!-- loading -->
+    <div id="preloader">
+      <div id="status" class="d-flex flex-column align-items-center justify-content-center">
+        <img src="./images/loading.gif" width="100px" height="100px" />
+        <p class="text-dark fw-bold text-center">loading...</p>
+      </div>
+    </div>
+
     <!-- navbar -->
     <div class="container-fluid px-md-5 mb-lg-8 mb-5">
       <div class="header pt-3 border-bottom border-primary align-items-center">
@@ -222,17 +229,19 @@
         class="fw-bold text-center d-flex align-items-center justify-content-center"
       >
         <span class="border rounded-pill fs-2 px-2 py-3 me-2">今</span>
-        <span class="letter-spacing-lg fs-2">日價格</span>
+        <span class="letter-spacing-lg fs-2">日金價</span>
       </h3>
-      <p class="text-center mb-0 pb-6 border-bottom border-primary">
+      <p
+        class="text-center mb-0 pb-6 border-bottom border-primary refresh-time"
+      >
         更新時間：2022/10/01 12:00
       </p>
       <div class="row gx-0 border-bottom border-primary mx-0">
-        <div class="col-lg-5 col-12">
+        <div class="col-4 mx-auto">
           <div class="row">
-            <div class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto">
+            <div class="col">
               <table class="table text-primary mt-4 mb-5">
-                <thead>
+                <!-- <thead>
                   <tr>
                     <th scope="col" width="45%" class="border-0 fs-3 fw-bold">
                       黃金
@@ -248,18 +257,24 @@
                       <i class="fa-sharp fa-solid fa-arrow-up fs-1 mb-1"></i>
                     </th>
                   </tr>
-                </thead>
+                </thead> -->
                 <tbody>
                   <tr>
                     <th scope="row" class="border-0 fw-bold fs-5">買入</th>
-                    <td colspan="2" class="border-0 fw-bold fs-5 text-end">
-                      NT$6,530/錢
+                    <td
+                      colspan="2"
+                      class="border-0 fw-bold fs-5 text-end buy-price"
+                    >
+                      <!-- NT$6,530/錢 -->
                     </td>
                   </tr>
                   <tr>
                     <th scope="row" class="border-0 fw-bold fs-5">賣出</th>
-                    <td colspan="2" class="border-0 fw-bold fs-5 text-end">
-                      NT$6,553/錢
+                    <td
+                      colspan="2"
+                      class="border-0 fw-bold fs-5 text-end sold-price"
+                    >
+                      <!-- NT$6,553/錢 -->
                     </td>
                   </tr>
                 </tbody>
@@ -267,7 +282,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-12 line text-primary text-opacity-0">|</div>
+        <!-- <div class="col-lg-2 col-12 line text-primary text-opacity-0">|</div>
         <div class="col-lg-5 col-12">
           <div class="row">
             <div class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto">
@@ -306,7 +321,7 @@
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -545,10 +560,10 @@
       <div class="hot-sort">
         <!-- swiper-Freemode -->
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+          <div class="swiper-wrapper hot-sort-swiper">
+            <div class="swiper-slide necklace">
               <a
-                href="#"
+                href="products.html?category=necklace"
                 class="text-decoration-none"
                 style="
                   background-image: url('./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg');
@@ -558,25 +573,36 @@
                   background-position: center center;
                   background-repeat: no-repeat;
                 "
+                data-category="necklace"
               >
-                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                <div
+                  class="bg-gray d-flex flex-column justify-content-evenly"
+                  data-category="necklace"
+                >
                   <div>
                     <h5
                       class="text-white dancing-script fw-bold h5 mb-3 fw-bold"
+                      data-category="necklace"
                     >
                       Necklaces
                     </h5>
-                    <h4 class="text-white fw-bold display-6 letter-spacing-md">
+                    <h4
+                      class="text-white fw-bold display-6 letter-spacing-md"
+                      data-category="necklace"
+                    >
                       項鍊
                     </h4>
                   </div>
-                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
+                  <i
+                    class="fa-sharp fa-solid fa-plus text-primary fs-3"
+                    data-category="necklace"
+                  ></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a
-                href="#"
+                href="products.html?category=earing"
                 class="text-decoration-none"
                 style="
                   background-image: url('./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg');
@@ -585,25 +611,36 @@
                   background-size: cover;
                   background-repeat: no-repeat;
                 "
+                data-category="earing"
               >
-                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                <div
+                  class="bg-gray d-flex flex-column justify-content-evenly"
+                  data-category="earing"
+                >
                   <div>
                     <h5
                       class="text-white dancing-script fw-bold h5 mb-3 fw-bold"
+                      data-category="earing"
                     >
                       Earrings
                     </h5>
-                    <h4 class="text-white fw-bold display-6 letter-spacing-md">
+                    <h4
+                      class="text-white fw-bold display-6 letter-spacing-md"
+                      data-category="earing"
+                    >
                       耳環
                     </h4>
                   </div>
-                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
+                  <i
+                    class="fa-sharp fa-solid fa-plus text-primary fs-3"
+                    data-category="earing"
+                  ></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a
-                href="#"
+                href="products.html?category=ring"
                 class="text-decoration-none"
                 style="
                   background-image: url('./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg');
@@ -613,25 +650,36 @@
                   background-position: center center;
                   background-repeat: no-repeat;
                 "
+                data-category="ring"
               >
-                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                <div
+                  class="bg-gray d-flex flex-column justify-content-evenly"
+                  data-category="ring"
+                >
                   <div>
                     <h5
                       class="text-white dancing-script fw-bold h5 mb-3 fw-bold"
+                      data-category="ring"
                     >
                       Rings
                     </h5>
-                    <h4 class="text-white fw-bold display-6 letter-spacing-md">
+                    <h4
+                      class="text-white fw-bold display-6 letter-spacing-md"
+                      data-category="ring"
+                    >
                       戒指
                     </h4>
                   </div>
-                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
+                  <i
+                    class="fa-sharp fa-solid fa-plus text-primary fs-3"
+                    data-category="ring"
+                  ></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a
-                href="#"
+                href="products.html?category=pendant"
                 class="text-decoration-none"
                 style="
                   background-image: url('./images/products/Pendants/sama-hosseini-uesvB32vC6U-unsplash.jpg');
@@ -641,25 +689,36 @@
                   background-position: center center;
                   background-repeat: no-repeat;
                 "
+                data-category="pendant"
               >
-                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                <div
+                  class="bg-gray d-flex flex-column justify-content-evenly"
+                  data-category="pendant"
+                >
                   <div>
                     <h5
                       class="text-white dancing-script fw-bold h5 mb-3 fw-bold"
+                      data-category="pendant"
                     >
                       Pendants
                     </h5>
-                    <h4 class="text-white fw-bold display-6 letter-spacing-md">
+                    <h4
+                      class="text-white fw-bold display-6 letter-spacing-md"
+                      data-category="pendant"
+                    >
                       墜飾
                     </h4>
                   </div>
-                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
+                  <i
+                    class="fa-sharp fa-solid fa-plus text-primary fs-3"
+                    data-category="pendant"
+                  ></i>
                 </div>
               </a>
             </div>
             <div class="swiper-slide">
               <a
-                href="#"
+                href="products.html?category=bracelet"
                 class="text-decoration-none"
                 style="
                   background-image: url('./images/products/Bracelets/tania-mousinho-h7lrfoSave0-unsplash.jpg');
@@ -668,19 +727,30 @@
                   background-size: cover;
                   background-repeat: no-repeat;
                 "
+                data-category="bracelet"
               >
-                <div class="bg-gray d-flex flex-column justify-content-evenly">
+                <div
+                  class="bg-gray d-flex flex-column justify-content-evenly"
+                  data-category="bracelet"
+                >
                   <div>
                     <h5
                       class="text-white dancing-script fw-bold h5 mb-3 fw-bold"
+                      data-category="bracelet"
                     >
                       Bracelets
                     </h5>
-                    <h4 class="text-white fw-bold display-6 letter-spacing-md">
+                    <h4
+                      class="text-white fw-bold display-6 letter-spacing-md"
+                      data-category="bracelet"
+                    >
                       手鍊
                     </h4>
                   </div>
-                  <i class="fa-sharp fa-solid fa-plus text-primary fs-3"></i>
+                  <i
+                    class="fa-sharp fa-solid fa-plus text-primary fs-3"
+                    data-category="bracelet"
+                  ></i>
                 </div>
               </a>
             </div>
@@ -732,7 +802,11 @@
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">關於我們</h4></li>
               <li class="mb-2">
-                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-50" />
+                <img
+                  src="./images/arrow.png"
+                  alt="arrow"
+                  class="img-fluid w-50"
+                />
               </li>
               <li class="mb-2">
                 <a href="#" class="text-decoration-none">品牌故事</a>
@@ -749,7 +823,11 @@
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">服務項目</h4></li>
               <li class="mb-2">
-                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-50" />
+                <img
+                  src="./images/arrow.png"
+                  alt="arrow"
+                  class="img-fluid w-50"
+                />
               </li>
               <li class="mb-2">
                 <a href="#" class="text-decoration-none">黃金商品</a>
@@ -783,7 +861,7 @@
           <div class="col-lg-2 d-lg-block d-none"></div>
           <div class="col-lg-4 col-12">
             <ul class="list-unstyled mb-0">
-              <li class="mb-3"><h4 class="h5">億滿春</h4></li>
+              <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
               <li class="mb-1">聯絡電話：(02)2957-1961</li>
               <li class="mb-1">店家地址：235新北市中和區德光路86號</li>
@@ -809,7 +887,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"
+    ></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./javascript/all.js"></script>
