@@ -1,5 +1,5 @@
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 //首頁
 //初始化畫面
@@ -63,7 +63,7 @@ function getCurrentGoldPriceData() {
         getNearGoldPriceData();
       }else{
         currentGoldPriceData.forEach(function (item, index) {
-          let targetTime=`${beforeDateStr} 10:00:00`;
+          let targetTime=`${beforeDateStr} 00:00:00`;
           if (item.date === targetTime) {
             currentGoldPrice = item.Price;
             renderGoldPrice(currentGoldPrice);
@@ -85,7 +85,7 @@ function getNearGoldPriceData() {
     .then(function (response) {
       currentGoldPriceData = response.data.data;
       currentGoldPriceData.forEach(function (item, index) {
-        let targetTime=`${beforeDateStr} 10:00:00`;
+        let targetTime=`${beforeDateStr} 00:00:00`;
         if (item.date === targetTime) {
           currentGoldPrice = item.Price;
           renderGoldPrice(currentGoldPrice,exchangeRate);

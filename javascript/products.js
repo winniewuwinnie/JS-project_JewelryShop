@@ -1,5 +1,5 @@
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 //初始化畫面
 function init(){
@@ -65,6 +65,7 @@ function renderProductsData(data){
 }
 
 //點選側選單
+// const category=location.href.split("=")[category];
 menu.addEventListener("click",function(e){
   e.preventDefault();
   let targetText=e.target.textContent
@@ -84,6 +85,13 @@ menu.addEventListener("click",function(e){
   }else if(targetText==="日常配戴"){
     return;
   }else if(targetText==="項鍊"){
+    // axios.get(`${baseUrl}/products?category=${category}`)
+    // .then(function(response){
+    //   console.log(response);
+    // })
+    // .catch(function(error){
+    //   console.log(error)
+    // })
     let necklacesData=allProductsData.filter(function(item){
       return item.category==="necklace";
     })
