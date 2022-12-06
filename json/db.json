@@ -1,47 +1,5 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "email": "dev@admin.me",
-      "password": "$2a$10$vvpTDyLSJVXoxp9yURfDUe0lTv7GKh5COn6yEKA/D.7Cn1bFdYQKG",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "email": "sample@dev",
-      "password": "$2a$10$Vviu.6gs/PIqwcX4VDakNuWn/EmKieUH8FNlskgKmQfvDnvqplCmu",
-      "role": "user"
-    },
-    {
-      "id": 3,
-      "email": "ggg@gg.com",
-      "password": "$2a$10$ZVZI2VbUReGNLfkWiOyCteRqwKRtbDiRw4KL86eS6/hVSkgCBCDyi",
-      "role": "user"
-    },
-    {
-      "email": "g1@dev",
-      "password": "$2a$10$.9GGO9BfJi6s1mNmMVMryekKU8FYrC/OaxlT86dxz9QyzWH8Y8UKG",
-      "id": 4,
-      "role": "user"
-    },
-    {
-      "email": "g6@dev",
-      "password": "$2a$10$pBAKhPdFpfb03Ei9hcIaNu2tJqynGID0BUEPoGE.rQIpzG9GAp646",
-      "id": 5
-    },
-    {
-      "email": "tzuhsuan1999@gmail.com",
-      "password": "$2a$10$BDj9h5RbijTczXWvhDZlCOxzE4ApPc39oTZoUEG0DmW0ZAVVX6FL6",
-      "userName": "Winnie",
-      "id": 6
-    },
-    {
-      "email": "tzuhsuan1998@gmail.com",
-      "password": "$2a$10$SMOKlIDLIbkicsmP1v.CYORrg5.Ewha3SPsEFLojWG7.jzP.eV/QC",
-      "userName": "Bob",
-      "id": 7
-    }
-  ],
+  "users": [],
   "hotSalesProducts": [
     {
       "id": 1,

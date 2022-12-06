@@ -92,9 +92,9 @@
       <!-- login -->
       <section>
         <div class="row">
-          <div class="col-lg-8 col-md-9 col-10 mx-auto">
+          <div class="col-lg-8 col-md-9 col-12 mx-auto">
             <div
-              class="card shadow-lg rounded-2 bg-transparent border-0 pt-2 pb-3"
+              class="card shadow-md-lg rounded-2 bg-transparent border-0 pt-2 pb-3"
             >
               <div class="card-title mb-0">
                 <h3
@@ -113,59 +113,62 @@
                       <div class="form-floating mb-3">
                         <input
                           type="text"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary username"
-                          id="帳號名稱"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary username"
+                          id="username" name="帳號名稱"
                           placeholder="請輸入帳號名稱"
                         />
-                        <label for="帳號名稱">請輸入帳號名稱</label>
+                        <label for="username">請輸入帳號名稱</label>
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="帳號名稱"></p>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="email"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary email"
-                          id="電子信箱"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary email"
+                          id="email" name="電子信箱"
                           placeholder="請輸入電子信箱"
                         />
                         <label for="email">請輸入電子信箱</label>
-                        <!-- <p class="mb-0 mt-1"><i class="bi bi-exclamation-circle me-1"></i>必填</p> -->
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="電子信箱"></p>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="tel"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary tel"
-                          id="聯絡電話"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary tel"
+                          id="tel" name="聯絡電話"
                           placeholder="請輸入聯絡電話"
                         />
-                        <label for="聯絡電話">請輸入聯絡電話</label>
-                        <!-- <p class="mb-0 mt-1"><i class="bi bi-exclamation-circle me-1"></i>必填</p> -->
+                        <label for="tel">請輸入聯絡電話</label>
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="聯絡電話"></p>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="text"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary address"
-                          id="通訊地址"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary address"
+                          id="address" name="通訊地址"
                           placeholder="請輸入通訊地址"
                         />
-                        <label for="通訊地址">請輸入通訊地址</label>
-                        <!-- <p class="mb-0 mt-1"><i class="bi bi-exclamation-circle me-1"></i>必填</p> -->
+                        <label for="address">請輸入通訊地址</label>
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="通訊地址"></p>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="password"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary password"
-                          id="帳號密碼"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary password"
+                          id="password" name="帳號密碼"
                           placeholder="請輸入帳號密碼"
                         />
-                        <label for="帳號密碼">請輸入帳號密碼</label>
+                        <label for="password">請輸入帳號密碼</label>
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="帳號密碼"></p>
                       </div>
                       <div class="form-floating mb-4">
                         <input
                           type="password"
-                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary checkPassword"
-                          id="再次確認帳號密碼"
+                          class="form-control bg-transparent border-0 border-bottom rounded-0 border-primary text-primary checkPassword"
+                          id="checkPassword" name="兩次帳號密碼"
                           placeholder="請再次確認帳號密碼"
                         />
-                        <label for="再次確認帳號密碼">請再次確認密碼</label>
+                        <label for="checkPassword">請再次確認密碼</label>
+                        <p class="mb-0 mt-1 error-message text-dark" data-msg="兩次帳號密碼"></p>
                       </div>
                       <div class="form-check mb-2">
                         <input
@@ -176,13 +179,8 @@
                           >我願意接收億滿春銀樓的最新消息、優惠及服務推廣相關資訊</label
                         >
                       </div>
-                      <div class="form-check mb-3">
-                        <input
-                          type="checkbox"
-                          class="form-check-input bg-transparent border-primary"
-                        />
-                        <label class="form-check-label" for="exampleCheck1"
-                          >我同意
+                        <p class="mb-0">
+                        * 註冊即同意
                           <!-- Button trigger modal -->
                           <a
                             href="#"
@@ -295,14 +293,14 @@
                             </div>
                           </div></label
                         >
-                      </div>
+                      </p>
                       <div class="d-flex flex-column align-items-center">
-                        <button
+                        <a
                           type="submit"
                           class="btn btn-dark px-6 py-2 mb-2 w-100 register-btn"
                         >
                           立即加入！
-                        </button>
+                        </a>
                       </div>
                     </form>
                   </div>
