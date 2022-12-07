@@ -121,6 +121,7 @@ $utilities: map-merge(
         ),
       ),
     "border-top": (
+      responsive: true,
       property: border-top,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
@@ -129,6 +130,7 @@ $utilities: map-merge(
       ),
     ),
     "border-end": (
+      responsive: true,
       property: border-right,
       class: border-end,
       values: (
@@ -138,6 +140,7 @@ $utilities: map-merge(
       ),
     ),
     "border-bottom": (
+      responsive: true,
       property: border-bottom,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
@@ -146,6 +149,7 @@ $utilities: map-merge(
       ),
     ),
     "border-start": (
+      responsive: true,
       property: border-left,
       class: border-start,
       values: (
