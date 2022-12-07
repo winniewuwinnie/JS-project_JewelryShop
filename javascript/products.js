@@ -1,5 +1,5 @@
-// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-const baseUrl = "http://localhost:3000/";
+const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+// const baseUrl = "http://localhost:3000/";
 
 //初始化畫面
 function init(){
