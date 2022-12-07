@@ -50,7 +50,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -69,42 +69,60 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
+            <a
+              href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
             <a
               href="login.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
+          <li class="d-none">
             <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
+          <li class="d-none">
             <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
               href="login.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
               href="#"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
               href="#"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
@@ -173,12 +191,9 @@
     <div class="container">
       <!-- banner -->
       <section
-        class="mb-8 banner"
+        class="mb-8 banner bg-size-contain bg-repeat-none bg-position-center"
         style="
           background-image: url(./images/Accessories.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center center;
         "
       >
         <div class="row position-lg-relative gx-4 gy-2">
@@ -238,7 +253,7 @@
           更新時間：2022/10/01 12:00
         </p>
         <div class="row gx-0 border-bottom border-primary mx-0">
-          <div class="col-4 mx-auto">
+          <div class="col-md-4 col-8 mx-auto">
             <div class="row">
               <div class="col">
                 <table class="table text-primary mt-4 mb-5">
@@ -566,14 +581,11 @@
             <div class="swiper-slide necklace">
               <a
                 href="products.html?category=necklace"
-                class="text-decoration-none"
+                class="text-decoration-none bg-position-center bg-size-cover bg-repeat-none"
                 style="
                   background-image: url('./images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg');
                   width: 100%;
                   height: 432px;
-                  background-size: cover;
-                  background-position: center center;
-                  background-repeat: no-repeat;
                 "
                 data-category="necklace"
               >
@@ -605,13 +617,11 @@
             <div class="swiper-slide">
               <a
                 href="products.html?category=earing"
-                class="text-decoration-none"
+                class="text-decoration-none bg-size-cover bg-repeat-none"
                 style="
                   background-image: url('./images/products/EarRings/kateryna-hliznitsova-P6NiFTyI294-unsplash.jpg');
                   width: 100%;
                   height: 432px;
-                  background-size: cover;
-                  background-repeat: no-repeat;
                 "
                 data-category="earing"
               >
@@ -643,14 +653,11 @@
             <div class="swiper-slide">
               <a
                 href="products.html?category=ring"
-                class="text-decoration-none"
+                class="text-decoration-none bg-position-center bg-size-cover bg-repeat-none"
                 style="
                   background-image: url('./images/products/Rings/tyler-nix-fo83GD_AARE-unsplash.jpg');
                   width: 100%;
                   height: 432px;
-                  background-size: cover;
-                  background-position: center center;
-                  background-repeat: no-repeat;
                 "
                 data-category="ring"
               >
@@ -682,14 +689,11 @@
             <div class="swiper-slide">
               <a
                 href="products.html?category=pendant"
-                class="text-decoration-none"
+                class="text-decoration-none bg-position-center bg-size-cover bg-repeat-none"
                 style="
                   background-image: url('./images/products/Pendants/sama-hosseini-uesvB32vC6U-unsplash.jpg');
                   width: 100%;
                   height: 432px;
-                  background-size: cover;
-                  background-position: center center;
-                  background-repeat: no-repeat;
                 "
                 data-category="pendant"
               >
@@ -721,13 +725,11 @@
             <div class="swiper-slide">
               <a
                 href="products.html?category=bracelet"
-                class="text-decoration-none"
+                class="text-decoration-none bg-size-cover bg-repeat-none"
                 style="
                   background-image: url('./images/products/Bracelets/tania-mousinho-h7lrfoSave0-unsplash.jpg');
                   width: 100%;
                   height: 432px;
-                  background-size: cover;
-                  background-repeat: no-repeat;
                 "
                 data-category="bracelet"
               >

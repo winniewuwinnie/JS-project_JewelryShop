@@ -1,5 +1,30 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "tzuhsuan1999@gmail.com",
+      "password": "$2a$10$CQbn.6IQCpwTPzLoogNNHeS.NtxyBxDeQ0qk.hJz4acRHNuu6XJGq",
+      "username": "winnie",
+      "tel": "0909000000",
+      "address": "test",
+      "id": 1
+    },
+    {
+      "email": "2@gmail.com",
+      "password": "$2a$10$MEh2TVj3KIK9BbZV46ffw.1Yb5mKuIdWan.8gOu.96dHFvjBwKSDe",
+      "username": "2",
+      "tel": "22222222",
+      "address": "22222222",
+      "id": 2
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$EZ/tOTHGvzVITfYWZUSrreAasPWIuwSn.zdqLz1Jfpt2spvKEWFrq",
+      "username": "test",
+      "tel": "0909000000",
+      "address": "test",
+      "id": 3
+    }
+  ],
   "hotSalesProducts": [
     {
       "id": 1,

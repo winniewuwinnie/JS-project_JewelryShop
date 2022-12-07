@@ -1,7 +1,7 @@
 
 
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 
 //modal
@@ -100,7 +100,7 @@ function showErrors(errors) {
 }
 
 function addUser(userData){
-  axios.post(`${baseUrl}users`,userData)
+  axios.post(`${baseUrl}register`,userData)
   .then(function(response){
     location.href="login.html";
     alert("註冊成功！")

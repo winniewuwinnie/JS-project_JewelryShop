@@ -1,5 +1,5 @@
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 //首頁
 //初始化畫面
@@ -156,23 +156,14 @@ function renderHotSalesProductsData() {
     str += `<div class="swiper-slide">
     <div>
       <div
-        class="rounded-3 mb-3 swiper-img"
-        style="
-          background-image: url('${item.imgUrl}');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-        "
+        class="rounded-3 mb-3 swiper-img bg-position-center bg-size-cover bg-repeat-none"
+        style="background-image: url('${item.imgUrl}');"
       >
         <div class="d-flex align-items-center mx-3 py-2">
           <span
-            class="fs-6 p-3 text-nowrap me-3"
+            class="fs-6 p-3 text-nowrap me-3 bg-position-center bg-size-cover bg-repeat-none"
             style="
-              background-image: url('./images/hotSales.svg');
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: center center;
-            "
+              background-image: url('./images/hotSales.svg');"
             >熱銷</span
           >
           <img

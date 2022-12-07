@@ -1,5 +1,5 @@
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 //初始化畫面
 function init(){
@@ -31,15 +31,11 @@ function renderProductsData(data){
   data.forEach(function(item){
     str+=`<div class="col-lg-4 col-md-6">
     <div
-    class="rounded-3 mb-3 position-relative"
+    class="rounded-3 mb-3 position-relative bg-position-center bg-size-cover bg-repeat-none"
     style="
     background-image: url('${item.imgUrl}');
     max-width: 100%;
-    height: 312px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    "
+    height: 312px;"
     ><a href="#" title="加入為收藏！" class="position-absolute end-5 top-5"
     ><i class="fa-regular fa-heart fs-6"></i
     ></a>
