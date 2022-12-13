@@ -216,23 +216,25 @@
     </section>
 
     <div class="container">
-    <!-- 今日價格 -->
-    <section class="container mb-md-8 mb-7">
-      <h3
-        class="fw-bold text-center d-flex align-items-center justify-content-center"
-      >
-        <span class="border rounded-pill fs-2 px-2 py-3 me-2">今</span>
-        <span class="letter-spacing-lg fs-2">日價格</span>
-      </h3>
-      <p class="text-center mb-0 pb-6 border-bottom border-primary">
-        更新時間：2022/10/01 12:00
-      </p>
-      <div class="row gx-0 border-bottom border-primary mx-0">
-        <div class="col-lg-5 col-12">
-          <div class="row">
-            <div class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto">
-              <table class="table text-primary mt-4 mb-5">
-                <thead>
+      <!-- 今日價格 -->
+      <section class="mb-md-8 mb-7">
+        <h3
+          class="fw-bold text-center d-flex align-items-center justify-content-center"
+        >
+          <span class="border rounded-pill fs-2 px-2 py-3 me-2">今</span>
+          <span class="letter-spacing-lg fs-2">日金價</span>
+        </h3>
+        <p
+          class="text-center mb-0 pb-6 border-bottom border-primary refresh-time"
+        >
+          更新時間：2022/10/01 12:00
+        </p>
+        <div class="row gx-0 border-bottom border-primary mx-0">
+          <div class="col-md-4 col-8 mx-auto">
+            <div class="row">
+              <div class="col">
+                <table class="table text-primary mt-4 mb-5">
+                  <!-- <thead>
                   <tr>
                     <th scope="col" width="45%" class="border-0 fs-3 fw-bold">
                       黃金
@@ -248,26 +250,32 @@
                       <i class="fa-sharp fa-solid fa-arrow-up fs-1 mb-1"></i>
                     </th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="border-0 fw-bold fs-5">買入</th>
-                    <td colspan="2" class="border-0 fw-bold fs-5 text-end">
-                      NT$6,530/錢
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border-0 fw-bold fs-5">賣出</th>
-                    <td colspan="2" class="border-0 fw-bold fs-5 text-end">
-                      NT$6,553/錢
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                </thead> -->
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="border-0 fw-bold fs-5">買入</th>
+                      <td
+                        colspan="2"
+                        class="border-0 fw-bold fs-5 text-end buy-price"
+                      >
+                        <!-- NT$6,530/錢 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-0 fw-bold fs-5">賣出</th>
+                      <td
+                        colspan="2"
+                        class="border-0 fw-bold fs-5 text-end sold-price"
+                      >
+                        <!-- NT$6,553/錢 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-12 line text-primary text-opacity-0">|</div>
+          <!-- <div class="col-lg-2 col-12 line text-primary text-opacity-0">|</div>
         <div class="col-lg-5 col-12">
           <div class="row">
             <div class="col-lg-9 col-md-8 col-12 d-flex me-lg-auto mx-md-auto">
@@ -306,9 +314,9 @@
               </table>
             </div>
           </div>
+        </div> -->
         </div>
-      </div>
-    </section>
+      </section>
 
 
       <!-- 回收試算 -->

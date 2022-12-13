@@ -186,8 +186,8 @@
           </ol>
         </nav> -->
         <!-- productInfo -->
-        <div class="card bg-transparent border-0 shadow-lg rounded-3 p-5">
-          <div class="row gy-0">
+        <div class="card bg-transparent border-0 shadow-lg rounded-3 p-5 product-info">
+          <!-- <div class="row gy-0">
             <div
               class="col-md-5 col-12 bg-position-center bg-size-cover"
               style="
@@ -202,28 +202,28 @@
                 </h4>
                 <p class="mb-0 text-primary fs-6 mb-2">黃金重量：約0.7-0.8錢</p>
                 <p class="text-primary fs-6 mb-1">數量：</p>
-                <div class="input-group w-md-50 mb-3">
-                  <button type="button" class="btn btn-outline-primary">
-                    <i class="bi bi-plus fw-bold fs-6"></i>
+                <div class="input-group w-md-50 mb-3 order-num">
+                  <button type="button" class="btn btn-outline-primary" data-btn="plus">
+                    <i class="bi bi-plus fw-bold fs-6" data-btn="plus"></i>
                   </button>
                   <input
                     type="text"
-                    class="form-control border-primary bg-transparent text-primary text-center"
-                    placeholder="請輸入數量"
+                    class="form-control border-primary bg-transparent text-primary text-center order-num-input"
+                    placeholder="0"
                     aria-label="Input group example"
                     aria-describedby="btnGroupAddon"
                   />
-                  <button type="button" class="btn btn-outline-primary">
-                    <i class="bi bi-dash fw-bold fs-6"></i>
+                  <button type="button" class="btn btn-outline-primary" data-btn="minus">
+                    <i class="bi bi-dash fw-bold fs-6" data-btn="minus"></i>
                   </button>
                 </div>
                 <div class="mb-8">
                   <span class="fs-4 text-start fw-bold me-2 text-primary"
-                    >NT$7,980</span
+                  >NT$7,980</span
                   >
                   <span
-                    class="fs-6 text-decoration-line-through text-primary text-start"
-                    >NT$9,880</span
+                  class="fs-6 text-decoration-line-through text-primary text-start"
+                  >NT$9,880</span
                   >
                 </div>
                 <div class="d-flex flex-column flex-md-row">
@@ -234,14 +234,14 @@
                   ></a>
                   <a
                     href="#"
-                    class="btn btn-outline-primary rounded-pill w-md-50 w-100 fs-6"
+                    class="btn btn-outline-primary rounded-pill w-md-50 w-100 fs-6 add-cart"
                     title="心動不如馬上行動！"
                     >加入購物車<i class="bi bi-bag ms-1"></i>
                   </a>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>
@@ -572,6 +572,6 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./javascript/all.js"></script>
-    <script src="./javascript/products.js"></script>
+    <script src="./javascript/productInfo.js"></script>
   </body>
 </html>

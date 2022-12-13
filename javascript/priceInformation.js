@@ -1,16 +1,88 @@
-//priceInformation
+//取得當天日期
+let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
+let year = today.getFullYear(); //年
+let month = today.getMonth() + 1; //月
+let date = today.getDate(); //日
+if (date.toString().length === 1) {
+  date = `0${date}`;
+}
+let todayStr=`${year}-${month}-${date}`;//2022-12-13
+const refreshTime=document.querySelector(".refresh-time");
+if(today.getHours()>=10){
+  refreshTime.textContent=`更新時間：${year}/${month}/${date} 10:00`
+}else if(today.getHours()<10){
+  refreshTime.textContent=`更新時間：${year}/${month}/${date-1} 10:00`
+}
+
+
+//初始化畫面
+function init() {
+  getGoldPrice();
+  getExchangeRate();
+}
+init();
+
+//取得最新黃金價格(美元)
+let goldPriceData;
+let goldPrice;
+function getGoldPrice() {
+  axios.get(
+    `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=2022-12-01&end_date=${todayStr}`
+  )
+  .then(function(response){
+    goldPriceData=response.data.data;
+    goldPrice=goldPriceData[goldPriceData.length-2].Price;
+    renderGoldPrice(goldPrice,exchangeRate)
+  })
+  .catch(function(error){
+    console.log(error)
+  })
+}
+
+//取得最新的美金兌換台幣匯率
+let exchangeRateData;
+let exchangeRate;
+function getExchangeRate() {
+  axios
+    .get(
+      "https://api.finmindtrade.com/api/v3/data?dataset=TaiwanExchangeRate&data_id=USD&date=2022-12-01"
+    )
+    .then(function (response) {
+      exchangeRateData = response.data.data;
+      exchangeRate = exchangeRateData[exchangeRateData.length - 1].spot_buy;
+      renderGoldPrice(goldPrice,exchangeRate)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+//渲染最新金價
+const buyPrice=document.querySelector(".buy-price");
+const soldPrice=document.querySelector(".sold-price");
+let newestPrice;
+function renderGoldPrice(goldPrice,exchangeRate){
+  if(goldPrice&&exchangeRate){ 
+  newestPrice=((goldPrice*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
+  buyPrice.textContent=`NT$${newestPrice+360}/錢`;
+  soldPrice.textContent=`NT$${newestPrice-240}/錢`;
+  }
+}
+
+
 //黃金回收試算
-const goldWeight = document.querySelector(".goldWeight");
-const goldPrice = document.querySelector(".goldPrice");
-goldWeight.addEventListener("keyup", function (e) {
-  if (goldWeight.value < 0) {
+const calGoldWeight = document.querySelector(".goldWeight");
+const calGoldPrice = document.querySelector(".goldPrice");
+calGoldWeight.addEventListener("keyup", function (e) {
+  if (calGoldWeight.value < 0) {
     alert("請輸入正確數值");
-    goldWeight.value = "";
+    calGoldWeight.value = "";
     return;
   } else {
-    goldPrice.value = (Number(goldWeight.value) * 6530).toFixed();
+    calGoldPrice.value = (Number(calGoldWeight.value) * (newestPrice-240)).toFixed();
   }
 });
+
 
 //單位換算
 const unit = document.querySelector(".unit");

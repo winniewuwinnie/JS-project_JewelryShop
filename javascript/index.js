@@ -1,9 +1,27 @@
 const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
 
-//首頁
+
+//取得當天日期
+let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
+let year = today.getFullYear(); //年
+let month = today.getMonth() + 1; //月
+let date = today.getDate(); //日
+if (date.toString().length === 1) {
+  date = `0${date}`;
+}
+let todayStr=`${year}-${month}-${date}`;//2022-12-13
+const refreshTime=document.querySelector(".refresh-time");
+if(today.getHours()>=10){
+  refreshTime.textContent=`更新時間：${year}/${month}/${date} 10:00`
+}else if(today.getHours()<10){
+  refreshTime.textContent=`更新時間：${year}/${month}/${date-1} 10:00`
+}
+
 //初始化畫面
 function init() {
+  getGoldPrice();
+  getExchangeRate();
   getHotSalesProductsData();
 }
 init();
@@ -15,121 +33,53 @@ init();
 // })
 
 
-//取得當前日期(年-月-日)
-let Today = new Date(); //Sun Dec 04 2022 00:26:30 GMT+0800 (台北標準時間)
-let year = Today.getFullYear(); //年
-let month = Today.getMonth() + 1; //月
-let date = Today.getDate(); //日
-let week = Today.getDay(); //星期日:0
-let currentDateStr;
-let beforeDateStr;
-function getCurrentDate() {
-  //如果是禮拜日、禮拜六則取得禮拜五的報價
-  if (week === 0) {
-    date -= 2;
-  } else if (week === 1) {
-    date -= 1;
-  }
-  let dayBeforeDate=date-1;//前一日
-  if (date.toString().length === 1) {
-    date = `0${date}`;
-    dayBeforeDate=`0${dayBeforeDate}`;
-  } else {
-    return;
-  }
-  currentDateStr = `${year}-${month}-${date}`;
-  beforeDateStr=`${year}-${month}-${dayBeforeDate}`;  
-  getCurrentGoldPriceData(currentDateStr);
-  getBeforeExchangeRate(beforeDateStr);
-}
-getCurrentDate();
-
-//取得當日金價(美元)
-let currentGoldPriceData;
-let currentGoldPrice="";
-function getCurrentGoldPriceData() {
-  axios
-    .get(
-      `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=${currentDateStr}&end_date=${currentDateStr}`
-    )
-    .then(function (response) {
-      currentGoldPriceData = response.data.data;
-      //如果當天報價異常
-      if (
-        currentGoldPriceData.length === 1 &&
-        currentGoldPriceData[0].Price > 7
-      ) {
-        // console.log("報價異常");
-        getNearGoldPriceData();
-      }else{
-        currentGoldPriceData.forEach(function (item, index) {
-          let targetTime=`${beforeDateStr} 00:00:00`;
-          if (item.date === targetTime) {
-            currentGoldPrice = item.Price;
-            renderGoldPrice(currentGoldPrice);
-          }
-        });
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-
-//取得前日金價(美元)
-function getNearGoldPriceData() {
-  axios
-    .get(
-      `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=${beforeDateStr}&end_date=${beforeDateStr}`
-    )
-    .then(function (response) {
-      currentGoldPriceData = response.data.data;
-      currentGoldPriceData.forEach(function (item, index) {
-        let targetTime=`${beforeDateStr} 00:00:00`;
-        if (item.date === targetTime) {
-          currentGoldPrice = item.Price;
-          renderGoldPrice(currentGoldPrice,exchangeRate);
-          renderGetPriceTime(beforeDateStr);
-        }
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-
-let exchangeRate;
-//取得當前的美金兌換台幣匯率
-function getBeforeExchangeRate(beforeDateStr){
-  axios.get("https://api.finmindtrade.com/api/v3/data?dataset=TaiwanExchangeRate&data_id=USD&date=2022-12-01")
+//取得最新黃金價格(美元)
+let goldPriceData;
+let goldPrice;
+function getGoldPrice() {
+  axios.get(
+    `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=2022-12-01&end_date=${todayStr}`
+  )
   .then(function(response){
-    exchangeRate=response.data.data;
-    exchangeRate.forEach(function(item){
-      if(item.date===beforeDateStr){
-        exchangeRate=item.spot_buy;        
-        renderGoldPrice(currentGoldPrice,exchangeRate);
-      }
-    })
+    goldPriceData=response.data.data;
+    goldPrice=goldPriceData[goldPriceData.length-2].Price;
+    // console.log(goldPrice)
+    renderGoldPrice(goldPrice,exchangeRate)
   })
   .catch(function(error){
-    console.log(error);
+    console.log(error)
   })
 }
 
-//渲染當前金價
+//取得最新的美金兌換台幣匯率
+let exchangeRateData;
+let exchangeRate;
+function getExchangeRate() {
+  axios
+    .get(
+      "https://api.finmindtrade.com/api/v3/data?dataset=TaiwanExchangeRate&data_id=USD&date=2022-12-01"
+    )
+    .then(function (response) {
+      exchangeRateData = response.data.data;
+      exchangeRate = exchangeRateData[exchangeRateData.length - 1].spot_buy;
+      // console.log(exchangeRate)
+      renderGoldPrice(goldPrice,exchangeRate)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+//渲染最新金價
 const buyPrice=document.querySelector(".buy-price");
 const soldPrice=document.querySelector(".sold-price");
-function renderGoldPrice(price,exchangeRate){
-  // console.log(price,exchangeRate)
-  // console.log(price*exchangeRate)
-  let GoldPrice=((price*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
-  buyPrice.textContent=`NT$${GoldPrice+390}/錢`;
-  soldPrice.textContent=`NT$${GoldPrice-210}/錢`;
-}
-//渲染更新時間
-const refreshTime=document.querySelector(".refresh-time")
-function renderGetPriceTime(beforeDateStr){
-  refreshTime.textContent=`更新時間：${beforeDateStr} 10:00`
+function renderGoldPrice(goldPrice,exchangeRate){
+  if(goldPrice&&exchangeRate){ 
+  let newestPrice=((goldPrice*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
+  // console.log(newestPrice)
+  buyPrice.textContent=`NT$${newestPrice+360}/錢`;
+  soldPrice.textContent=`NT$${newestPrice-240}/錢`;
+  }
 }
 
 
@@ -256,3 +206,112 @@ var swiper = new Swiper(".hot-sort .mySwiper", {
 //   // e.preventDefault();
 //   console.log(e.target.dataset.category)
 // })
+
+
+//<----------- TRY ----------->
+// function renderGoldPrice(price,exchangeRate){
+//   // console.log(price,exchangeRate)
+//   // console.log(price*exchangeRate)
+//   let GoldPrice=((price*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
+//   buyPrice.textContent=`NT$${GoldPrice+390}/錢`;
+//   soldPrice.textContent=`NT$${GoldPrice-210}/錢`;
+// }
+
+//取得當前日期(年-月-日)
+// let Today = new Date(); //Sun Dec 04 2022 00:26:30 GMT+0800 (台北標準時間)
+// let year = Today.getFullYear(); //年
+// let month = Today.getMonth() + 1; //月
+// let date = Today.getDate(); //日
+// let week = Today.getDay(); //星期日:0
+// let currentDateStr;
+// let beforeDateStr;
+// function getCurrentDate() {
+//   //如果是禮拜日、禮拜六則取得禮拜五的報價
+//   if (week === 0) {
+//     date -= 2;
+//   } else if (week === 1) {
+//     date -= 1;
+//   }
+//   let dayBeforeDate=date-1;//前一日
+//   if (date.toString().length === 1) {
+//     date = `0${date}`;
+//     dayBeforeDate=`0${dayBeforeDate}`;
+//   } else {
+//     return;
+//   }
+//   currentDateStr = `${year}-${month}-${date}`;
+//   beforeDateStr=`${year}-${month}-${dayBeforeDate}`;
+//   getCurrentGoldPriceData(currentDateStr);
+//   getBeforeExchangeRate(beforeDateStr);
+// }
+// getCurrentDate();
+
+//取得當日金價(美元)
+// let currentGoldPriceData;
+// let currentGoldPrice="";
+// function getCurrentGoldPriceData() {
+//   axios
+//     .get(
+//       `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=${currentDateStr}&end_date=${currentDateStr}`
+//     )
+//     .then(function (response) {
+//       currentGoldPriceData = response.data.data;
+//       //如果當天報價異常
+//       if (
+//         currentGoldPriceData.length === 1 &&
+//         currentGoldPriceData[0].Price > 7
+//       ) {
+//         // console.log("報價異常");
+//         getNearGoldPriceData();
+//       }else{
+//         currentGoldPriceData.forEach(function (item, index) {
+//           let targetTime=`${beforeDateStr} 00:00:00`;
+//           if (item.date === targetTime) {
+//             currentGoldPrice = item.Price;
+//             renderGoldPrice(currentGoldPrice);
+//           }
+//         });
+//       }
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
+
+//取得前日金價(美元)
+// function getNearGoldPriceData() {
+//   axios
+//     .get(
+//       `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=${beforeDateStr}&end_date=${beforeDateStr}`
+//     )
+//     .then(function (response) {
+//       currentGoldPriceData = response.data.data;
+//       currentGoldPriceData.forEach(function (item, index) {
+//         let targetTime=`${beforeDateStr} 00:00:00`;
+//         if (item.date === targetTime) {
+//           currentGoldPrice = item.Price;
+//           renderGoldPrice(currentGoldPrice,exchangeRate);
+//           renderGetPriceTime(beforeDateStr);
+//         }
+//       });
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
+
+//渲染當前金價
+// const buyPrice=document.querySelector(".buy-price");
+// const soldPrice=document.querySelector(".sold-price");
+// function renderGoldPrice(price,exchangeRate){
+//   // console.log(price,exchangeRate)
+//   // console.log(price*exchangeRate)
+//   let GoldPrice=((price*exchangeRate/8.29426).toFixed()/10).toFixed()*10;
+//   buyPrice.textContent=`NT$${GoldPrice+390}/錢`;
+//   soldPrice.textContent=`NT$${GoldPrice-210}/錢`;
+// }
+//渲染更新時間
+// const refreshTime=document.querySelector(".refresh-time")
+// function renderGetPriceTime(beforeDateStr){
+//   refreshTime.textContent=`更新時間：${beforeDateStr} 10:00`
+// }

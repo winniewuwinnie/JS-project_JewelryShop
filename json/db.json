@@ -82,8 +82,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "necklace",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 2,
@@ -91,8 +92,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "bracelet",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 3,
@@ -100,8 +102,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "ring",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 4,
@@ -109,8 +112,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "earing",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 5,
@@ -118,8 +122,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/cat-han-Ks6wd1Zyf1o-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "necklace",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 6,
@@ -127,8 +132,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "earing",
-      "remark": "hotSales"
+      "remark": "熱銷"
     },
     {
       "id": 7,
@@ -136,8 +142,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/alyssa-strohmann-qOIGvGoVNtc-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "earing",
-      "remark": "new"
+      "remark": "新品"
     },
     {
       "id": 8,
@@ -145,8 +152,9 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/jasmin-chew-MIyo2hqbAzk-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "pendant",
-      "remark": "new"
+      "remark": "新品"
     },
     {
       "id": 9,
@@ -154,6 +162,7 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/natalie-sysko-0IOY1_3d-r0-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "pendant",
       "remark": ""
     },
@@ -163,6 +172,7 @@
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/jasmin-chew-WKD2vIe8Rb0-unsplash.jpg?raw=true",
       "originPrice": 9980,
       "price": 7980,
+      "weight": 1,
       "category": "pendant",
       "remark": ""
     }
@@ -174,7 +184,61 @@
       "id": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "carts": [
+    {
+      "quantity": "數量 (Number)",
+      "id": 1,
+      "productId": 3
+    },
+    {
+      "quantity": 1,
+      "productId": "2",
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "productId": "2",
+      "id": 3
+    },
+    {
+      "quantity": 1,
+      "productId": "2",
+      "id": 4
+    },
+    {
+      "quantity": 1,
+      "productId": "2#",
+      "id": 5
+    },
+    {
+      "quantity": 1,
+      "productId": "2#",
+      "id": 6
+    },
+    {
+      "quantity": 1,
+      "productId": "2#",
+      "id": 7
+    },
+    {
+      "quantity": 1,
+      "productId": "2",
+      "id": 8
+    },
+    {
+      "quantity": 1,
+      "productId": "4",
+      "id": 9
+    },
+    {
+      "quantity": 1,
+      "productId": "4",
+      "id": 10
+    },
+    {
+      "quantity": 1,
+      "productId": "4",
+      "id": 11
+    }
+  ]
 }
