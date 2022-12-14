@@ -32,7 +32,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
       <div class="header pt-3 border-bottom border-primary align-items-center">
         <h1>
           <a
@@ -42,7 +42,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -61,44 +61,62 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
             <a
               href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
+            <a
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
-              href="login.html"
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
-              href="#"
+              href="favorite.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
-              href="#"
+              href="cart.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
               >購物清單</a
             >
@@ -318,7 +336,6 @@
         </div>
       </section>
 
-
       <!-- 回收試算 -->
       <section>
         <h3
@@ -401,31 +418,51 @@
                 <div class="row gx-lg-4 gx-md-3 gy-3 unit">
                   <div class="col-md">
                     <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2 g" data-unit="g" />
+                      <input
+                        type="number"
+                        class="form-control me-2 g"
+                        data-unit="g"
+                      />
                       <span class="text-nowrap">公克(g)</span>
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2 kg" data-unit="kg"/>
+                      <input
+                        type="number"
+                        class="form-control me-2 kg"
+                        data-unit="kg"
+                      />
                       <span class="text-nowrap">公斤(kg)</span>
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2 tkg" data-unit="tkg"/>
+                      <input
+                        type="number"
+                        class="form-control me-2 tkg"
+                        data-unit="tkg"
+                      />
                       <span class="text-nowrap">臺錢</span>
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2 tl" data-unit="tl"/>
+                      <input
+                        type="number"
+                        class="form-control me-2 tl"
+                        data-unit="tl"
+                      />
                       <span class="text-nowrap">臺兩</span>
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-end">
-                      <input type="number" class="form-control me-2 oz" data-unit="oz"/>
+                      <input
+                        type="number"
+                        class="form-control me-2 oz"
+                        data-unit="oz"
+                      />
                       <span class="text-nowrap">盎司(oz)</span>
                     </div>
                   </div>
@@ -445,7 +482,11 @@
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">關於我們</h4></li>
               <li class="mb-2">
-                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-50" />
+                <img
+                  src="./images/arrow.png"
+                  alt="arrow"
+                  class="img-fluid w-50"
+                />
               </li>
               <li class="mb-2">
                 <a href="#" class="text-decoration-none">品牌故事</a>
@@ -462,7 +503,11 @@
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">服務項目</h4></li>
               <li class="mb-2">
-                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-50" />
+                <img
+                  src="./images/arrow.png"
+                  alt="arrow"
+                  class="img-fluid w-50"
+                />
               </li>
               <li class="mb-2">
                 <a href="#" class="text-decoration-none">黃金商品</a>
@@ -525,6 +570,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/priceInformation.js"></script>
   </body>

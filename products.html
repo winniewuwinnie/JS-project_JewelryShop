@@ -32,7 +32,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
       <div class="header pt-3 border-bottom border-primary align-items-center">
         <h1>
           <a
@@ -42,7 +42,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -61,42 +61,60 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
             <a
               href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
+            <a
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
+          <li class="d-none">
             <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
-              href="login.html"
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
-              href="#"
+              href="favorite.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
               href="cart.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
@@ -239,9 +257,15 @@
                       height: 312px;
                     "
                   ></a>
-                  <div class="d-flex justify-content-between align-items-center position-absolute top-0 w-100 p-2 pe-3">
-                    <p class="fs-6 text-nowrap bg-size-contain bg-repeat-none bg-position-center mb-0 p-3"
-                        style="background-image: url('./images/hotSales.svg');">熱銷</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center position-absolute top-0 w-100 p-2 pe-3"
+                  >
+                    <p
+                      class="fs-6 text-nowrap bg-size-contain bg-repeat-none bg-position-center mb-0 p-3"
+                      style="background-image: url('./images/hotSales.svg')"
+                    >
+                      熱銷
+                    </p>
                     <a href="#" title="加入為收藏！"
                       ><i class="fa-regular fa-heart fs-6"></i
                     ></a>
@@ -279,7 +303,10 @@
                       height: 312px;
                     "
                   ></a>
-                  <a href="#" title="加入為收藏！" class="position-absolute top-0 end-0 m-4 me-3"
+                  <a
+                    href="#"
+                    title="加入為收藏！"
+                    class="position-absolute top-0 end-0 m-4 me-3"
                     ><i class="fa-regular fa-heart fs-6"></i
                   ></a>
                 </div>
@@ -555,6 +582,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/products.js"></script>
   </body>

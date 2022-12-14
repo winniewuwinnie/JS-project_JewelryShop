@@ -37,7 +37,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
       <div class="header pt-3 border-bottom border-primary align-items-center">
         <h1>
           <a
@@ -47,7 +47,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -66,44 +66,62 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
             <a
               href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
+            <a
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
-              href="login.html"
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
-              href="#"
+              href="favorite.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
-              href="#"
+              href="cart.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
               >購物清單</a
             >
@@ -325,11 +343,25 @@
                   </div>
                   <div class="mb-5">
                     <label for="pay" class="form-label fw-bold">備註說明</label>
-                    <textarea name="remark" id="remark" cols="5" rows="3" class="resize-none form-control"></textarea>
+                    <textarea
+                      name="remark"
+                      id="remark"
+                      cols="5"
+                      rows="3"
+                      class="resize-none form-control"
+                    ></textarea>
                   </div>
                   <div class="card-footer border-0 p-0 d-flex w-100">
-                      <a href="cart.html" class="btn btn-outline-dark rounded-pill px-7 py-2 me-2 w-50">返回前頁</a>
-                      <a href="confirmOrder.html" class="btn btn-dark rounded-pill px-7 py-2 w-50">確認填寫</a>
+                    <a
+                      href="cart.html"
+                      class="btn btn-outline-dark rounded-pill px-7 py-2 me-2 w-50"
+                      >返回前頁</a
+                    >
+                    <a
+                      href="confirmOrder.html"
+                      class="btn btn-dark rounded-pill px-7 py-2 w-50"
+                      >確認填寫</a
+                    >
                   </div>
                 </form>
               </div>
@@ -491,6 +523,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- 地址 twzipcode JS -->
     <script src="https://code.essoduke.org/js/twzipcode/twzipcode.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/customerInfo.js"></script>
   </body>

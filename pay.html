@@ -37,7 +37,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
       <div class="header pt-3 border-bottom border-primary align-items-center">
         <h1>
           <a
@@ -47,7 +47,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -66,44 +66,62 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
             <a
               href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
+            <a
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
-              href="login.html"
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
-              href="#"
+              href="favorite.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
-              href="#"
+              href="cart.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
               >購物清單</a
             >
@@ -195,10 +213,18 @@
       <section class="mb-8">
         <div class="card border-0 shadow-lg text-dark rounded-3 mb-8">
           <div class="card-body text-center p-6">
-            <h3 class="fw-bold mb-3 h2">付款成功<i class="bi bi-check-circle-fill ms-2"></i></h3>
+            <h3 class="fw-bold mb-3 h2">
+              付款成功<i class="bi bi-check-circle-fill ms-2"></i>
+            </h3>
             <p class="mb-2 fs-6 fw-bold">謝謝您的選購！歡迎再次光臨！</p>
-            <p class="mb-3">商品預計於七個工作天內出貨（不含例假日及國定假日）<br>再請留意到貨通知</p>
-            <a href="products.html" class="btn btn-dark rounded-pill px-7 py-2 fs-7">繼續購物</a>
+            <p class="mb-3">
+              商品預計於七個工作天內出貨（不含例假日及國定假日）<br />再請留意到貨通知
+            </p>
+            <a
+              href="products.html"
+              class="btn btn-dark rounded-pill px-7 py-2 fs-7"
+              >繼續購物</a
+            >
           </div>
         </div>
       </section>
@@ -356,6 +382,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- 地址 twzipcode JS -->
     <script src="https://code.essoduke.org/js/twzipcode/twzipcode.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/customerInfo.js"></script>
   </body>

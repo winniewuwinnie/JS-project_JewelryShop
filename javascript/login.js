@@ -56,9 +56,16 @@ function login(loginData) {
   axios
     .post(`${baseUrl}login`, loginData)
     .then(function (response) {
-      // console.log(response);
-      alert("登入成功");
-      location.href="index.html";
+      console.log(response);
+      let token=response.data.accessToken;
+      localStorage.setItem("token",token);
+      swal({
+        title: "登入成功!",
+        text: "3秒後返回首頁",
+        icon: "success",
+      });
+      setTimeout(function(){
+        location.href="index.html"},3000);
     })
     .catch(function (error) {
       // console.log(error)

@@ -37,7 +37,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5">
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
       <div class="header pt-3 border-bottom border-primary align-items-center">
         <h1>
           <a
@@ -47,7 +47,7 @@
           >
         </h1>
         <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2"
+          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
         >
           <li class="pt-3 pt-md-0 px-3 px-md-0">
             <a
@@ -66,44 +66,62 @@
           <li class="px-3 px-md-0">
             <a
               href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-7 py-1 py-md-0"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
               >價格資訊</a
             >
           </li>
-          <li class="d-none d-md-block">
+          <!-- 登入-PC版 -->
+          <li class="d-none d-md-block px-3 px-md-0">
             <a
               href="login.html"
+              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
+              >登入</a
+            >
+          </li>
+          <!-- 登入-moblie版 -->
+          <li class="d-block pb-3 d-md-none px-3 px-md-0">
+            <a
+              href="login.html"
+              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
+              >登入會員</a
+            >
+          </li>
+          <!-- 登入會員後顯示-PC版 -->
+          <li class="d-none">
+            <a
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-user me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
             ></a>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#" class="nav-link fw-bold text-dark text-md-primary fs-7"
+          <li class="d-none">
+            <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <!-- 登入會員後顯示-moblie版 -->
+          <li class="d-none px-3 px-md-0">
             <a
-              href="login.html"
+              href="member.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >會員中心</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0">
+          <li class="d-none px-3 px-md-0">
             <a
-              href="#"
+              href="favorite.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
               >最愛典藏</a
             >
           </li>
-          <li class="d-block d-md-none px-3 px-md-0 pb-3">
+          <li class="d-none px-3 px-md-0 pb-3">
             <a
-              href="#"
+              href="cart.html"
               class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
               >購物清單</a
             >
@@ -186,7 +204,9 @@
           </ol>
         </nav> -->
         <!-- productInfo -->
-        <div class="card bg-transparent border-0 shadow-lg rounded-3 p-5 product-info">
+        <div
+          class="card bg-transparent border-0 shadow-lg rounded-3 p-5 product-info"
+        >
           <!-- <div class="row gy-0">
             <div
               class="col-md-5 col-12 bg-position-center bg-size-cover"
@@ -246,252 +266,253 @@
       </section>
     </div>
 
-      <!-- 四大保證 -->
-      <section class="mb-8 border-top border-bottom border-primary border-3">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-4 gy-5 gy-md-0">
-            <div class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-5">
-              <img
-                src="./images/品質保證.png"
-                alt="品質保證"
-                class="img-fluid mb-md-4"
-              />
+    <!-- 四大保證 -->
+    <section class="mb-8 border-top border-bottom border-primary border-3">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 gy-5 gy-md-0">
+          <div
+            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-5"
+          >
+            <img
+              src="./images/品質保證.png"
+              alt="品質保證"
+              class="img-fluid mb-md-4"
+            />
+            <div>
+              <h4 class="mb-3">品質保證</h4>
+              <p class="mb-0 lh-md">
+                9999純金保證<br />
+                購買商品即附有保單
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+          >
+            <img
+              src="./images/售後服務.png"
+              alt="售後服務"
+              class="img-fluid mb-md-4"
+            />
+            <div>
+              <h4 class="mb-3">售後服務</h4>
+              <p class="mb-0 lh-md">
+                配戴久了我們幫您清潔<br />
+                損壞了我們幫您想辦法
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+          >
+            <img
+              src="./images/安心出貨.png"
+              alt="安心出貨"
+              class="img-fluid mb-md-4"
+            />
+            <div>
+              <h4 class="mb-3">安心出貨</h4>
+              <p class="mb-0 lh-md">
+                出貨全程錄影<br />
+                我們用心只為讓您放心
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+          >
+            <img
+              src="./images/實體店面.png"
+              alt="實體店面"
+              class="img-fluid mb-md-4"
+            />
+            <div>
+              <h4 class="mb-3">實體店面</h4>
+              <p class="mb-0 lh-md">
+                售後不怕找不到人<br />
+                實體店面隨時歡迎您
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 推薦商品 -->
+    <section class="container mb-8 position-relative">
+      <h3
+        class="fw-bold mb-4 text-center d-flex align-items-center justify-content-center"
+      >
+        <span class="border rounded-pill fs-2 px-2 py-3 me-2">推</span>
+        <span class="letter-spacing-lg fs-2">薦商品</span>
+      </h3>
+      <div class="hot-products">
+        <!-- swiper-Watch slides visibility -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper align-items-end hotSales-products-list">
+            <div class="swiper-slide">
               <div>
-                <h4 class="mb-3">品質保證</h4>
-                <p class="mb-0 lh-md">
-                  9999純金保證<br />
-                  購買商品即附有保單
-                </p>
+                <div
+                  class="rounded-3 mb-3 swiper-img"
+                  style="
+                    background-image: url('./images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-6 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart fs-6"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <div class="d-flex justify-content-between align-items-end">
+                  <div>
+                    <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
+                    <span
+                      class="text-decoration-line-through text-originalPrice text-start mb-2"
+                      >NT$9,880</span
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5">
-              <img
-                src="./images/售後服務.png"
-                alt="售後服務"
-                class="img-fluid mb-md-4"
-              />
+            <div class="swiper-slide">
               <div>
-                <h4 class="mb-3">售後服務</h4>
-                <p class="mb-0 lh-md">
-                  配戴久了我們幫您清潔<br />
-                  損壞了我們幫您想辦法
-                </p>
+                <div
+                  class="rounded-3 mb-3 swiper-img"
+                  style="
+                    background-image: url('./images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-6 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart fs-6"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <div class="d-flex justify-content-between align-items-end">
+                  <div>
+                    <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
+                    <span
+                      class="text-decoration-line-through text-originalPrice text-start mb-2"
+                      >NT$9,880</span
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5">
-              <img
-                src="./images/安心出貨.png"
-                alt="安心出貨"
-                class="img-fluid mb-md-4"
-              />
-              <div>
-                <h4 class="mb-3">安心出貨</h4>
-                <p class="mb-0 lh-md">
-                  出貨全程錄影<br />
-                  我們用心只為讓您放心
-                </p>
-              </div>
-            </div>
-            <div class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5">
-              <img
-                src="./images/實體店面.png"
-                alt="實體店面"
-                class="img-fluid mb-md-4"
-              />
-              <div>
-                <h4 class="mb-3">實體店面</h4>
-                <p class="mb-0 lh-md">
-                  售後不怕找不到人<br />
-                  實體店面隨時歡迎您
-                </p>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div
+                  class="rounded-3 mb-3 swiper-img"
+                  style="
+                    background-image: url('./images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                >
+                  <div class="d-flex align-items-center mx-3 py-2">
+                    <span
+                      class="fs-6 p-3 text-nowrap me-3"
+                      style="
+                        background-image: url('./images/hotSales.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                      "
+                      >熱銷</span
+                    >
+                    <img
+                      src="./images/arrow.png"
+                      alt="arrow"
+                      class="me-2 img-fluid"
+                    />
+                    <a href="#" title="加入為收藏！"
+                      ><i class="fa-regular fa-heart fs-6"></i
+                    ></a>
+                  </div>
+                </div>
+                <h4 class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5">
+                  深沈盛夏多層次頸鏈
+                </h4>
+                <div class="d-flex justify-content-between align-items-end">
+                  <div>
+                    <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
+                    <span
+                      class="text-decoration-line-through text-originalPrice text-start mb-2"
+                      >NT$9,880</span
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary rounded-pill"
+                    title="心動不如馬上行動！"
+                    >加入購物車</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- 推薦商品 -->
-      <section class="container mb-8 position-relative">
-        <h3
-          class="fw-bold mb-4 text-center d-flex align-items-center justify-content-center"
-        >
-          <span class="border rounded-pill fs-2 px-2 py-3 me-2">推</span>
-          <span class="letter-spacing-lg fs-2">薦商品</span>
-        </h3>
-        <div class="hot-products">
-          <!-- swiper-Watch slides visibility -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper align-items-end hotSales-products-list">
-              <div class="swiper-slide">
-                <div>
-                  <div
-                    class="rounded-3 mb-3 swiper-img"
-                    style="
-                      background-image: url('./images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg');
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-position: center center;
-                    "
-                  >
-                    <div class="d-flex align-items-center mx-3 py-2">
-                      <span
-                        class="fs-6 p-3 text-nowrap me-3"
-                        style="
-                          background-image: url('./images/hotSales.svg');
-                          background-size: contain;
-                          background-repeat: no-repeat;
-                          background-position: center center;
-                        "
-                        >熱銷</span
-                      >
-                      <img
-                        src="./images/arrow.png"
-                        alt="arrow"
-                        class="me-2 img-fluid"
-                      />
-                      <a href="#" title="加入為收藏！"
-                        ><i class="fa-regular fa-heart fs-6"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <h4
-                    class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5"
-                  >
-                    深沈盛夏多層次頸鏈
-                  </h4>
-                  <div class="d-flex justify-content-between align-items-end">
-                    <div>
-                      <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
-                      <span
-                        class="text-decoration-line-through text-originalPrice text-start mb-2"
-                        >NT$9,880</span
-                      >
-                    </div>
-                    <a
-                      href="#"
-                      class="btn btn-outline-primary rounded-pill"
-                      title="心動不如馬上行動！"
-                      >加入購物車</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div>
-                  <div
-                    class="rounded-3 mb-3 swiper-img"
-                    style="
-                      background-image: url('./images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg');
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-position: center center;
-                    "
-                  >
-                    <div class="d-flex align-items-center mx-3 py-2">
-                      <span
-                        class="fs-6 p-3 text-nowrap me-3"
-                        style="
-                          background-image: url('./images/hotSales.svg');
-                          background-size: contain;
-                          background-repeat: no-repeat;
-                          background-position: center center;
-                        "
-                        >熱銷</span
-                      >
-                      <img
-                        src="./images/arrow.png"
-                        alt="arrow"
-                        class="me-2 img-fluid"
-                      />
-                      <a href="#" title="加入為收藏！"
-                        ><i class="fa-regular fa-heart fs-6"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <h4
-                    class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5"
-                  >
-                    深沈盛夏多層次頸鏈
-                  </h4>
-                  <div class="d-flex justify-content-between align-items-end">
-                    <div>
-                      <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
-                      <span
-                        class="text-decoration-line-through text-originalPrice text-start mb-2"
-                        >NT$9,880</span
-                      >
-                    </div>
-                    <a
-                      href="#"
-                      class="btn btn-outline-primary rounded-pill"
-                      title="心動不如馬上行動！"
-                      >加入購物車</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper-slide">
-                  <div
-                    class="rounded-3 mb-3 swiper-img"
-                    style="
-                      background-image: url('./images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg');
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-position: center center;
-                    "
-                  >
-                    <div class="d-flex align-items-center mx-3 py-2">
-                      <span
-                        class="fs-6 p-3 text-nowrap me-3"
-                        style="
-                          background-image: url('./images/hotSales.svg');
-                          background-size: contain;
-                          background-repeat: no-repeat;
-                          background-position: center center;
-                        "
-                        >熱銷</span
-                      >
-                      <img
-                        src="./images/arrow.png"
-                        alt="arrow"
-                        class="me-2 img-fluid"
-                      />
-                      <a href="#" title="加入為收藏！"
-                        ><i class="fa-regular fa-heart fs-6"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <h4
-                    class="border-bottom border-primary pb-2 mb-2 fw-bold fs-5"
-                  >
-                    深沈盛夏多層次頸鏈
-                  </h4>
-                  <div class="d-flex justify-content-between align-items-end">
-                    <div>
-                      <span class="fs-6 text-start fw-bold me-2">NT$7,980</span>
-                      <span
-                        class="text-decoration-line-through text-originalPrice text-start mb-2"
-                        >NT$9,880</span
-                      >
-                    </div>
-                    <a
-                      href="#"
-                      class="btn btn-outline-primary rounded-pill"
-                      title="心動不如馬上行動！"
-                      >加入購物車</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination d-lg-none bottom-5"></div>
-          <div class="swiper-button-next d-none d-lg-block"></div>
-          <div class="swiper-button-prev start-91 d-none d-lg-block"></div>
-        </div>
-      </section>
-
+        <div class="swiper-pagination d-lg-none bottom-5"></div>
+        <div class="swiper-button-next d-none d-lg-block"></div>
+        <div class="swiper-button-prev start-91 d-none d-lg-block"></div>
+      </div>
+    </section>
 
     <!-- footer -->
     <footer class="py-lg-8 py-7 bg-footer">
@@ -571,6 +592,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/productInfo.js"></script>
   </body>

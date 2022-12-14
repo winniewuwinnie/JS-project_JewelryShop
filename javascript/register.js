@@ -48,7 +48,7 @@ let constraints = {
       message: "長度須至少6個字元",
     },
   },
-  兩次帳號密碼: {
+  再次確認帳號密碼: {
     presence: {
       message: "必填",
     },
@@ -100,8 +100,15 @@ function showErrors(errors) {
 function addUser(userData){
   axios.post(`${baseUrl}register`,userData)
   .then(function(response){
-    location.href="login.html";
-    alert("註冊成功！")
+    // location.href="login.html";
+    swal({
+      title: "登入成功!",
+      text: "3秒後返回首頁",
+      icon: "success",
+    });
+    setTimeout(function(){
+      location.href="index.html"},3000);
+    // alert("註冊成功！")
     // if(response.status===201){
     //   console.log(response)
     //   alert("註冊成功！")
