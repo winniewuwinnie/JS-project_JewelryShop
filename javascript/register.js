@@ -1,6 +1,4 @@
-
-
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
 
 

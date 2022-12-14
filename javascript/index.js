@@ -1,6 +1,5 @@
-const baseUrl = "https://json-server-vercel-ebon.vercel.app/";
+const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
-
 
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
