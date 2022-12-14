@@ -202,7 +202,7 @@ const category=location.href.split("=")[1];
 if(location.href.split("=")[1])
 axios.get(`${baseUrl}products?category=${category}`)
 .then(function(response){
-  console.log(response.data)
+  // console.log(response.data)
   renderProductsData(response.data)
 })
 .catch(function(error){

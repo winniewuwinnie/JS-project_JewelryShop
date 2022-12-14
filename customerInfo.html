@@ -33,7 +33,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="stylesheet/all.css" />
-    <title>購物列表｜億滿春銀樓</title>
+    <title>顧客資料｜億滿春銀樓</title>
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
@@ -174,10 +174,10 @@
         <div class="position-relative">
           <hr class="w-25 opacity-100 position-absolute z-0 m-0 start-50 top-50 translate-middle">
           <ul class="d-flex list-unstyled justify-content-center">
-            <li class="bg-primary text-dark rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
               購物<br />明細
             </li>
-            <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-primary text-dark rounded-circle px-4 py-3 z-10 mx-3">
               顧客<br />資料
             </li>
             <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
@@ -190,90 +190,126 @@
         </div>
       </section>
 
-      <!-- 購物明細 -->
       <section class="mb-8">
-        <div class="card border-0 shadow-lg text-dark rounded-3 mb-8">
-          <div class="card-body p-0">
-            <table class="table align-middle text-dark fw-bold mb-0">
-              <thead>
-                <tr>
-                  <th scope="col" class="px-3 py-3" width="45%">商品名稱</th>
-                  <th scope="col" class="px-3 py-3" width="15%">單價</th>
-                  <th scope="col" class="px-3 py-3" width="15%">數量</th>
-                  <th scope="col" class="px-3 py-3" width="20%">小計</th>
-                  <th scope="col" class="px-3 py-3" width="5%"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" class="d-flex align-items-center p-3">
-                    <img
-                      src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
-                      alt=""
-                      width="120px"
-                      height="120px"
-                      class="rounded-3 me-3"
-                    />
-                    <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
-                  </th>
-                  <td class="p-3">NT$7,980</td>
-                  <td class="p-3">
-                    <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
-                    <span class="me-3">1</span>
-                    <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
-                  </td>
-                  <td class="p-3">NT$7,980</td>
-                  <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="d-flex align-items-center p-3">
-                    <img
-                      src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
-                      alt=""
-                      width="120px"
-                      height="120px"
-                      class="rounded-3 me-3"
-                    />
-                    <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
-                  </th>
-                  <td class="p-3">NT$7,980</td>
-                  <td class="p-3">
-                    <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
-                    <span class="me-3">1</span>
-                    <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
-                  </td>
-                  <td class="p-3">NT$7,980</td>
-                  <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="d-flex align-items-center p-3">
-                    <img
-                      src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
-                      alt=""
-                      width="120px"
-                      height="120px"
-                      class="rounded-3 me-3"
-                    />
-                    <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
-                  </th>
-                  <td class="p-3">NT$7,980</td>
-                  <td class="p-3">
-                    <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
-                    <span class="me-3">1</span>
-                    <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
-                  </td>
-                  <td class="p-3">NT$7,980</td>
-                  <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="row">
+          <!-- 訂單明細 -->
+          <div class="col">
+            <div class="card border-0 shadow-lg text-dark rounded-3 mb-8">
+              <div class="card-header bg-brown">訂單明細</div>
+              <div class="card-body p-0">
+                <table class="table align-middle text-dark fw-bold mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="px-3 py-3" width="45%">商品名稱</th>
+                      <th scope="col" class="px-3 py-3" width="15%">單價</th>
+                      <th scope="col" class="px-3 py-3" width="15%">數量</th>
+                      <th scope="col" class="px-3 py-3" width="20%">小計</th>
+                      <th scope="col" class="px-3 py-3" width="5%"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="d-flex align-items-center p-3">
+                        <img
+                          src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
+                          alt=""
+                          width="120px"
+                          height="120px"
+                          class="rounded-3 me-3"
+                        />
+                        <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
+                      </th>
+                      <td class="p-3">NT$7,980</td>
+                      <td class="p-3">
+                        <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
+                        <span class="me-3">1</span>
+                        <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
+                      </td>
+                      <td class="p-3">NT$7,980</td>
+                      <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="d-flex align-items-center p-3">
+                        <img
+                          src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
+                          alt=""
+                          width="120px"
+                          height="120px"
+                          class="rounded-3 me-3"
+                        />
+                        <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
+                      </th>
+                      <td class="p-3">NT$7,980</td>
+                      <td class="p-3">
+                        <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
+                        <span class="me-3">1</span>
+                        <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
+                      </td>
+                      <td class="p-3">NT$7,980</td>
+                      <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="d-flex align-items-center p-3">
+                        <img
+                          src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
+                          alt=""
+                          width="120px"
+                          height="120px"
+                          class="rounded-3 me-3"
+                        />
+                        <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
+                      </th>
+                      <td class="p-3">NT$7,980</td>
+                      <td class="p-3">
+                        <a href="#" class="link-dark"><i class="fa-solid fa-plus me-3"></i></a>
+                        <span class="me-3">1</span>
+                        <a href="#" class="link-dark"><i class="fa-solid fa-minus"></i></a>
+                      </td>
+                      <td class="p-3">NT$7,980</td>
+                      <td><a href="#" class="link-dark"><i class="bi bi-trash fs-6"></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer bg-brown text-end fw-bold border-0 p-4">
+                <p class="mb-2">商品數量：總共 3 件</p>
+                <p class="mb-4">總金額：NT$29,820</p>
+                <div class="d-flex justify-content-end">
+                  <a href="cart.html" class="btn btn-outline-dark rounded-pill px-7 py-2 me-2">返回前頁</a>
+                  <a href="customerInfo.html" class="btn btn-dark rounded-pill px-7 py-2">確認訂單</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer bg-brown text-end fw-bold border-0 p-4">
-            <p class="mb-2">商品數量：總共 3 件</p>
-            <p class="mb-4">總金額：NT$29,820</p>
-            <div class="d-flex justify-content-end">
-              <a href="productInfo.html" class="btn btn-outline-dark rounded-pill px-7 py-2 me-2">返回前頁</a>
-              <a href="customerInfo.html" class="btn btn-dark rounded-pill px-7 py-2">確認訂單</a>
+          <!-- 顧客資料 -->
+          <div class="col">
+            <div class="card border-0 shadow-lg text-dark rounded-3 mb-8">
+              <div class="card-header bg-brown">顧客資料</div>
+              <div class="card-body p-0">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">訂購人姓名</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="請輸入訂購人姓名">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">電子信箱</label>
+                    <input type="email" class="form-control" id="email" placeholder="請輸入電子信箱">
+                  </div>
+                  <div class="mb-3">
+                    <label for="tel" class="form-label">聯絡電話</label>
+                    <input type="tel" class="form-control" id="tel" placeholder="請輸入聯絡電話">
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">收件地址</label>
+                    <select name="address" id="address" class="form-select"></select>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
