@@ -1,5 +1,5 @@
-const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 
 //modal
@@ -102,12 +102,12 @@ function addUser(userData){
   .then(function(response){
     // location.href="login.html";
     swal({
-      title: "登入成功!",
-      text: "3秒後返回首頁",
+      title: "註冊成功!",
+      text: "3秒後返回登入頁面",
       icon: "success",
     });
     setTimeout(function(){
-      location.href="index.html"},3000);
+      location.href="login.html"},3000);
     // alert("註冊成功！")
     // if(response.status===201){
     //   console.log(response)

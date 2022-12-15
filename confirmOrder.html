@@ -37,101 +37,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
-      <div class="header pt-3 border-bottom border-primary align-items-center">
-        <h1>
-          <a
-            href="index.html"
-            class="text-decoration-none text-primary letter-spacing-sm"
-            >億滿春</a
-          >
-        </h1>
-        <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
-        >
-          <li class="pt-3 pt-md-0 px-3 px-md-0">
-            <a
-              href="index.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >首頁</a
-            >
-          </li>
-          <li class="px-3 px-md-0">
-            <a
-              href="products.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >商品專區</a
-            >
-          </li>
-          <li class="px-3 px-md-0">
-            <a
-              href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >價格資訊</a
-            >
-          </li>
-          <!-- 登入-PC版 -->
-          <li class="d-none d-md-block px-3 px-md-0">
-            <a
-              href="login.html"
-              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
-              >登入</a
-            >
-          </li>
-          <!-- 登入-moblie版 -->
-          <li class="d-block pb-3 d-md-none px-3 px-md-0">
-            <a
-              href="login.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
-              >登入會員</a
-            >
-          </li>
-          <!-- 登入會員後顯示-PC版 -->
-          <li class="d-none">
-            <a
-              href="user.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-solid fa-user me-md-5"></i
-            ></a>
-          </li>
-          <li class="d-none">
-            <a href="favorite.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
-            ></a>
-          </li>
-          <li class="d-none">
-            <a href="cart.html" class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-solid fa-bag-shopping"></i
-            ></a>
-          </li>
-          <!-- 登入會員後顯示-moblie版 -->
-          <li class="d-none px-3 px-md-0">
-            <a
-              href="user.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
-              >會員中心</a
-            >
-          </li>
-          <li class="d-none px-3 px-md-0">
-            <a
-              href="favorite.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
-              >最愛典藏</a
-            >
-          </li>
-          <li class="d-none px-3 px-md-0 pb-3">
-            <a
-              href="cart.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
-              >購物清單</a
-            >
-          </li>
-        </ul>
-        <a class="header_menuMobile link-primary fs-1" href="#"
-          ><i class="fa-solid fa-bars"></i
-        ></a>
-      </div>
-    </div>
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
 
     <div class="container">
       <!-- banner -->
@@ -191,19 +97,19 @@
       <section class="mb-6">
         <div class="position-relative">
           <hr
-            class="w-25 opacity-100 position-absolute z-0 m-0 start-50 top-50 translate-middle border-dark"
+            class="w-25 w-75 opacity-100 position-absolute z-0 m-0 start-50 top-50 translate-middle border-dark"
           />
           <ul class="d-flex list-unstyled justify-content-center">
-            <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-dark text-primary rounded-circle px-md-4 px-3 py-md-3 py-2 z-10 mx-2">
               購物<br />明細
             </li>
-            <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-dark text-primary rounded-circle px-md-4 px-3 py-md-3 py-2 z-10 mx-2">
               顧客<br />資料
             </li>
-            <li class="bg-primary text-dark rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-primary text-dark rounded-circle px-md-4 px-3 py-md-3 py-2 z-10 mx-2">
               確認<br />訂單
             </li>
-            <li class="bg-dark text-primary rounded-circle px-4 py-3 z-10 mx-3">
+            <li class="bg-dark text-primary rounded-circle px-md-4 px-3 py-md-3 py-2 z-10 mx-2">
               完成<br />訂購
             </li>
           </ul>
@@ -217,14 +123,15 @@
             <div class="card border-0 shadow-lg text-dark rounded-3 mb-8">
               <div class="card-header bg-brown fw-bold fs-6">訂單明細</div>
               <div class="card-body p-0">
+                <div class="table-responsive">
                 <table class="table align-middle text-dark fw-bold mb-0">
                   <thead>
                     <tr>
-                      <th scope="col" class="px-3 py-2" width="65%">
+                      <th scope="col" class="px-3 py-2 text-nowrap" width="65%">
                         商品名稱
                       </th>
-                      <th scope="col" class="px-3 py-2" width="15%">數量</th>
-                      <th scope="col" class="px-3 py-2" width="20%">小計</th>
+                      <th scope="col" class="px-3 py-2 text-nowrap" width="15%">數量</th>
+                      <th scope="col" class="px-3 py-2 text-nowrap" width="20%">小計</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -237,7 +144,7 @@
                           height="120px"
                           class="rounded-3 me-3"
                         />
-                        <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
+                        <h3 class="h6 fw-bold text-nowrap">深沈盛夏多層次頸鏈</h3>
                       </th>
                       <td class="p-3">1</td>
                       <td class="p-3">NT$7,980</td>
@@ -251,7 +158,7 @@
                           height="120px"
                           class="rounded-3 me-3"
                         />
-                        <h3 class="h6 fw-bold">深沈盛夏多層次頸鏈</h3>
+                        <h3 class="h6 fw-bold text-nowrap">深沈盛夏多層次頸鏈</h3>
                       </th>
                       <td class="p-3">1</td>
                       <td class="p-3">NT$7,980</td>
@@ -273,6 +180,7 @@
                   </tbody>
                 </table>
               </div>
+              </div>
               <div
                 class="card-footer bg-brown text-end fw-bold border-0 px-3 py-4"
               >
@@ -289,39 +197,39 @@
               <div class="card-body p-3">
                 <table class="table mb-0 text-dark">
                   <tr>
-                    <th scope="row">下單日期</th>
+                    <th scope="row" class="text-nowrap">下單日期</th>
                     <td>2022/1010 10:10</td>
                   </tr>
                   <tr>
-                    <th scope="row">訂單編號</th>
+                    <th scope="row" class="text-nowrap">訂單編號</th>
                     <td>CC001010</td>
                   </tr>
                   <tr>
-                    <th scope="row">訂購人姓名</th>
+                    <th scope="row" class="text-nowrap">訂購人姓名</th>
                     <td>王小明</td>
                   </tr>
                   <tr>
-                    <th scope="row">電子信箱</th>
+                    <th scope="row" class="text-nowrap">電子信箱</th>
                     <td>mingwang@gmail.com</td>
                   </tr>
                   <tr>
-                    <th scope="row">聯絡電話</th>
+                    <th scope="row" class="text-nowrap">聯絡電話</th>
                     <td>0912-345-678</td>
                   </tr>
                   <tr>
-                    <th scope="row">收件地址</th>
+                    <th scope="row" class="text-nowrap">收件地址</th>
                     <td>新北市板橋區中山路一段161號</td>
                   </tr>
                   <tr>
-                    <th scope="row">付款方式</th>
+                    <th scope="row" class="text-nowrap">付款方式</th>
                     <td>Line Pay</td>
                   </tr>
                   <tr>
-                    <th scope="row">備註說明</th>
+                    <th scope="row" class="text-nowrap">備註說明</th>
                     <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">總金額</th>
+                    <th scope="row" class="text-nowrap">總金額</th>
                     <td class="fw-bold">NT$29,880</td>
                   </tr>
                 </table>
@@ -329,12 +237,12 @@
               <div class="card-footer border-0 p-3 d-flex w-100">
                 <a
                   href="customerInfo.html"
-                  class="btn btn-outline-dark rounded-pill px-7 py-2 me-2 w-50"
+                  class="btn btn-outline-dark rounded-pill py-2 me-2 w-50"
                   >返回前頁</a
                 >
                 <a
                   href="pay.html"
-                  class="btn btn-dark rounded-pill px-7 py-2 w-50"
+                  class="btn btn-dark rounded-pill py-2 w-50"
                   >確認付款</a
                 >
               </div>

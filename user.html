@@ -37,105 +37,7 @@
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar">
-      <div class="header pt-3 border-bottom border-primary align-items-center">
-        <h1>
-          <a
-            href="index.html"
-            class="text-decoration-none text-primary letter-spacing-sm"
-            >億滿春</a
-          >
-        </h1>
-        <ul
-          class="header_menu list-unstyled bg-white bg-md-transparent rounded-2 align-items-center"
-        >
-          <li class="pt-3 pt-md-0 px-3 px-md-0">
-            <a
-              href="index.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >首頁</a
-            >
-          </li>
-          <li class="px-3 px-md-0">
-            <a
-              href="products.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >商品專區</a
-            >
-          </li>
-          <li class="px-3 px-md-0">
-            <a
-              href="priceInformation.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start me-md-4 py-1 py-md-0"
-              >價格資訊</a
-            >
-          </li>
-          <!-- 登入-PC版 -->
-          <li class="d-none d-md-block px-3 px-md-0">
-            <a
-              href="login.html"
-              class="btn btn-outline-primary rounded-pill px-4 fw-bold fs-7 text-center text-md-start py-1 py-md-1"
-              >登入</a
-            >
-          </li>
-          <!-- 登入-moblie版 -->
-          <li class="d-block pb-3 d-md-none px-3 px-md-0">
-            <a
-              href="login.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start me-md-4 py-1 py-md-0"
-              >登入會員</a
-            >
-          </li>
-          <!-- 登入會員後顯示-PC版 -->
-          <li class="d-none">
-            <a
-              href="user.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-solid fa-user me-md-5"></i
-            ></a>
-          </li>
-          <li class="d-none">
-            <a
-              href="favorite.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-sharp fa-solid fa-heart me-md-5"></i
-            ></a>
-          </li>
-          <li class="d-none">
-            <a
-              href="cart.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7"
-              ><i class="fa-solid fa-bag-shopping"></i
-            ></a>
-          </li>
-          <!-- 登入會員後顯示-moblie版 -->
-          <li class="d-none px-3 px-md-0">
-            <a
-              href="user.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
-              >會員中心</a
-            >
-          </li>
-          <li class="d-none px-3 px-md-0">
-            <a
-              href="favorite.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 border-bottom border-md-0 text-center text-md-start py-1"
-              >最愛典藏</a
-            >
-          </li>
-          <li class="d-none px-3 px-md-0 pb-3">
-            <a
-              href="cart.html"
-              class="nav-link fw-bold text-dark text-md-primary fs-7 text-center text-md-start py-1"
-              >購物清單</a
-            >
-          </li>
-        </ul>
-        <a class="header_menuMobile link-primary fs-1" href="#"
-          ><i class="fa-solid fa-bars"></i
-        ></a>
-      </div>
-    </div>
+    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
 
     <!-- banner -->
     <section
@@ -216,7 +118,7 @@
                   <a href="historyOrders.html" class="list-group-item list-group-item-action fw-bold text-center link-dark"
                     >歷史訂單<i class="fa-regular fa-rectangle-list ms-1"></i></a
                   >
-                  <a href="#" class="list-group-item list-group-item-action fw-bold text-center link-dark">登出<i class="fa-solid fa-arrow-right-from-bracket ms-1"></i></a>
+                  <a href="#" class="list-group-item list-group-item-action fw-bold text-center link-dark logout">登出<i class="fa-solid fa-arrow-right-from-bracket ms-1"></i></a>
                 </div>
               </div>
               <div class="col-10">
@@ -227,10 +129,9 @@
                     >
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control name"
                       id="name"
                       aria-describedby="name"
-                      value="王小明"
                     />
                   </div>
                   <div class="mb-3">
@@ -239,9 +140,8 @@
                     >
                     <input
                       type="email"
-                      class="form-control"
+                      class="form-control email"
                       id="email"
-                      value="mingwang@gmail.com"
                     />
                   </div>
                   <div class="mb-3">
@@ -270,39 +170,32 @@
                     <label for="tel" class="form-label fw-bold">聯絡電話</label>
                     <input
                       type="tel"
-                      class="form-control"
+                      class="form-control tel"
                       id="tel"
-                      value="0912-345-678"
                     />
                   </div>
                   <div class="mb-3">
                     <label for="address" class="form-label fw-bold"
                       >聯絡地址</label
                     >
-                    <div class="twzipcode-container mb-2">
-                      <div class="twzipcode"></div>
-                    </div>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control address"
                       id="address"
-                      value="中山路一段161號"
                     />
                   </div>
                   <div class="mb-5 form-check">
                     <input type="checkbox" class="form-check-input border-dark" id="push" checked>
                     <label class="form-check-label" for="push">我願意接收億滿春銀樓的最新消息、優惠及服務推廣相關資訊</label>
                   </div>
-                  <div class="card-footer border-0 p-0 d-flex w-100">
-                    <a
-                      href="#"
-                      class="btn btn-outline-dark rounded-pill px-7 py-2 me-2 w-50"
-                      >取消修改</a
+                  <div class="card-footer border-0 p-0 d-flex w-100 revise-btn">
+                    <button
+                      class="btn btn-outline-dark rounded-pill px-7 py-2 me-2 w-50" data-btn="no-revise"
+                      >取消修改</button
                     >
-                    <a
-                      href="#"
-                      class="btn btn-dark rounded-pill px-7 py-2 w-50"
-                      >確認修改</a
+                    <button
+                      class="btn btn-dark rounded-pill px-7 py-2 w-50" data-btn="revise"
+                      >確認修改</button
                     >
                   </div>
                 </form>

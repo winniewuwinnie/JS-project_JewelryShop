@@ -1,28 +1,20 @@
 {
   "users": [
     {
-      "email": "tzuhsuan1999@gmail.com",
-      "password": "$2a$10$CQbn.6IQCpwTPzLoogNNHeS.NtxyBxDeQ0qk.hJz4acRHNuu6XJGq",
-      "username": "winnie",
-      "tel": "0909000000",
-      "address": "test",
+      "email": "winnie@gmail.com",
+      "password": "$2a$10$QjbzJXnRPdhEgTiDxwaqDO6/MVuMU7NnXjrVLWB7HRTVtazm2Bv8q",
+      "username": "WinnieWu",
+      "tel": "0912345678",
+      "address": "新北市板橋區中山路一段161號",
       "id": 1
     },
     {
-      "email": "2@gmail.com",
-      "password": "$2a$10$MEh2TVj3KIK9BbZV46ffw.1Yb5mKuIdWan.8gOu.96dHFvjBwKSDe",
-      "username": "2",
-      "tel": "22222222",
-      "address": "22222222",
+      "email": "mingwang@gmail.com",
+      "password": "$2a$10$izTRzOMouJ6Wemv3CVOGxeiHGSOUqXb6Avl7foSYA0552Avttv9o.",
+      "username": "王大明",
+      "tel": "0912-345-678",
+      "address": "新北市板橋區中山路一段161號",
       "id": 2
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "$2a$10$EZ/tOTHGvzVITfYWZUSrreAasPWIuwSn.zdqLz1Jfpt2spvKEWFrq",
-      "username": "test",
-      "tel": "0909000000",
-      "address": "test",
-      "id": 3
     }
   ],
   "hotSalesProducts": [
@@ -186,59 +178,9 @@
   ],
   "carts": [
     {
-      "quantity": "數量 (Number)",
-      "id": 1,
-      "productId": 3
-    },
-    {
       "quantity": 1,
-      "productId": "2",
-      "id": 2
-    },
-    {
-      "quantity": 1,
-      "productId": "2",
-      "id": 3
-    },
-    {
-      "quantity": 1,
-      "productId": "2",
-      "id": 4
-    },
-    {
-      "quantity": 1,
-      "productId": "2#",
-      "id": 5
-    },
-    {
-      "quantity": 1,
-      "productId": "2#",
-      "id": 6
-    },
-    {
-      "quantity": 1,
-      "productId": "2#",
-      "id": 7
-    },
-    {
-      "quantity": 1,
-      "productId": "2",
-      "id": 8
-    },
-    {
-      "quantity": 1,
-      "productId": "4",
-      "id": 9
-    },
-    {
-      "quantity": 1,
-      "productId": "4",
-      "id": 10
-    },
-    {
-      "quantity": 1,
-      "productId": "4",
-      "id": 11
+      "productId": "1",
+      "id": 1
     }
   ]
 }
