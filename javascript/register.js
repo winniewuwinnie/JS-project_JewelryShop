@@ -1,5 +1,5 @@
-// const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
-const baseUrl = "http://localhost:3000/";
+const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
+// const baseUrl = "http://localhost:3000/";
 
 
 //modal
@@ -101,14 +101,15 @@ function addUser(userData){
   axios.post(`${baseUrl}register`,userData)
   .then(function(response){
     // location.href="login.html";
-    swal({
-      title: "註冊成功!",
-      text: "3秒後返回登入頁面",
-      icon: "success",
-    });
-    setTimeout(function(){
-      location.href="login.html"},3000);
-    // alert("註冊成功！")
+    // swal({
+    //   title: "註冊成功!",
+    //   text: "3秒後返回登入頁面",
+    //   icon: "success",
+    // });
+    // setTimeout(function(){
+    //   location.href="login.html"},3000);
+    // alert("註冊成功！");
+    location.href="login.html";
     // if(response.status===201){
     //   console.log(response)
     //   alert("註冊成功！")
