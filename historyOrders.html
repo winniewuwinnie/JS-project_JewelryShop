@@ -39,59 +39,6 @@
     <!-- navbar -->
     <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
 
-    <!-- banner -->
-    <section
-      class="container mb-8 banner"
-      style="
-        background-image: url(./images/Accessories.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-      "
-    >
-      <div class="row position-lg-relative gx-4 gy-2">
-        <div class="col-12 col-lg-5">
-          <h2
-            class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
-          >
-            金品生活<span
-              class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
-              >飾尚選擇</span
-            >
-          </h2>
-        </div>
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-          <img
-            src="./images/banner.png"
-            alt="金品生活 飾尚選擇"
-            class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
-          />
-          <!-- <img
-            src="./images/banner-border.svg"
-            alt="金品生活 飾尚選擇"
-            class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 start-lg-43 start-15 w-lg-55 w-80"
-          /> -->
-        </div>
-        <div class="col-12 position-lg-absolute bottom-15">
-          <div class="position-relative">
-            <input
-              type="text"
-              class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary"
-              name="products"
-              id="products"
-              placeholder="搜尋想要的商品"
-            />
-            <a
-              href="#"
-              class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
-            >
-              <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <div class="container">
       <!-- 會員中心 -->
       <section class="mb-8">
@@ -101,8 +48,14 @@
           <span class="border rounded-pill fs-2 px-2 py-3 me-2">會</span>
           <span class="letter-spacing-lg fs-2">員中心</span>
         </h3>
+        <ul class="d-block d-md-none list-unstyled d-flex justify-content-between">
+          <li><a class="text-decoration-none btn btn-outline-primary" href="user.html">個人資料</a></li>
+          <li><a class="text-decoration-none btn btn-outline-primary" href="favorite.html">最愛典藏</a></li>
+          <li><a class="text-decoration-none btn btn-dark link-primary" href="historyOrders.html">歷史訂單</a></li>
+          <li><a class="text-decoration-none btn btn-outline-primary logout" href="#">登出</a></li>
+        </ul>
         <div class="row gx-5">
-          <div class="col-2">
+          <div class="col-2 d-none d-md-block">
             <div class="list-group sticky-top top-5">
               <a
                 href="user.html"
@@ -127,47 +80,61 @@
               ></a>
             </div>
           </div>
-          <div class="col-10">
+          <div class="col-md-10 col-12">
             <div class="card rounded-3 border-0">
-              <div class="card-body">
-                <table class="table text-dark">
-                  <thead>
-                    <tr>
-                      <th scope="col" width="15%">訂單編號</th>
-                      <th scope="col" width="15%">訂單日期</th>
-                      <th scope="col" width="30%">商品名稱</th>
-                      <th scope="col" width="15%">訂購數量</th>
-                      <th scope="col" width="15%">商品金額</th>
-                      <th scope="col" width="10%">訂購狀態</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">TH006688</th>
-                      <td>2022/10/08</td>
-                      <td>貔貅串珠開運手鍊</td>
-                      <td>2</td>
-                      <td>NT$15,960</td>
-                      <td>確認中</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">AZ007936</th>
-                      <td>2022/10/02</td>
-                      <td>彌月手鍊－小博士<br>彌月手鍊－金湯匙</td>
-                      <td>1<br>1</td>
-                      <td>NT$3,680</td>
-                      <td>運送中</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">XY008668</th>
-                      <td>2022/05/06</td>
-                      <td>流線女戒</td>
-                      <td>1</td>
-                      <td>NT$13,860</td>
-                      <td>已完成</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card-body py-1">
+                <div class="table-responsive">
+                  <table class="table text-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-nowrap" width="15%">
+                          訂單編號
+                        </th>
+                        <th scope="col" class="text-nowrap" width="15%">
+                          訂單日期
+                        </th>
+                        <th scope="col" class="text-nowrap" width="30%">
+                          商品名稱
+                        </th>
+                        <th scope="col" class="text-nowrap" width="15%">
+                          訂購數量
+                        </th>
+                        <th scope="col" class="text-nowrap" width="15%">
+                          商品金額
+                        </th>
+                        <th scope="col" class="text-nowrap" width="10%">
+                          訂購狀態
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-nowrap" scope="row">TH006688</th>
+                        <td class="text-nowrap">2022/10/08</td>
+                        <td class="text-nowrap">貔貅串珠開運手鍊</td>
+                        <td class="text-nowrap">2</td>
+                        <td class="text-nowrap">NT$15,960</td>
+                        <td class="text-nowrap">確認中</td>
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap" scope="row">AZ007936</th>
+                        <td class="text-nowrap">2022/10/02</td>
+                        <td class="text-nowrap">彌月手鍊－小博士<br />彌月手鍊－金湯匙</td>
+                        <td class="text-nowrap">1<br />1</td>
+                        <td class="text-nowrap">NT$3,680</td>
+                        <td class="text-nowrap">運送中</td>
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap" scope="row">XY008668</th>
+                        <td class="text-nowrap">2022/05/06</td>
+                        <td class="text-nowrap">流線女戒</td>
+                        <td class="text-nowrap">1</td>
+                        <td class="text-nowrap">NT$13,860</td>
+                        <td class="text-nowrap">已完成</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

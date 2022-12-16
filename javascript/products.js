@@ -1,11 +1,13 @@
 const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
 
-// //初始化畫面
-// function init(){
-//   getAllProductsData();
-// };
-// init();
+
+let userId=parseInt(localStorage.getItem("userId"));
+//初始化畫面
+function init() {
+  getAllProductsData();
+}
+init();
 
 const menu = document.querySelector(".menu");
 const productsList = document.querySelector(".products-list");
@@ -16,7 +18,6 @@ if (location.href.split("=")[1]) {
   axios
     .get(`${baseUrl}products?category=${category}`)
     .then(function (response) {
-      // console.log(response.data)
       renderProductsData(response.data);
     })
     .catch(function (error) {
@@ -25,6 +26,7 @@ if (location.href.split("=")[1]) {
 } else {
   getAllProductsData();
 }
+
 
 //取得全部商品
 let allProductsData;
@@ -57,7 +59,7 @@ function renderProductsData(data) {
           "
         ></a>
         <a href="#" title="加入為收藏！" class="position-absolute top-0 end-0 m-4 me-3"
-          ><i class="fa-regular fa-heart fs-6"></i
+          ><i class="fa-regular fa-heart fs-6" data-btn="favorite" data-productid="${item.id}"></i
         ></a>
       </div>
       <h4
@@ -96,7 +98,7 @@ function renderProductsData(data) {
           <p class="fs-6 text-nowrap bg-size-contain bg-repeat-none bg-position-center mb-0 p-3"
               style="background-image: url('./images/hotSales.svg');">${item.remark}</p>
           <a href="#" title="加入為收藏！"
-            ><i class="fa-regular fa-heart fs-6"></i
+            ><i class="fa-regular fa-heart fs-6" data-btn="favorite" data-productid="${item.id}"></i
           ></a>
         </div>
       </div>
@@ -136,7 +138,7 @@ function renderProductsData(data) {
           <p class="fs-6 text-nowrap bg-size-contain bg-repeat-none bg-position-center mb-0 p-3"
               style="background-image: url('./images/hotSales.svg');">${item.remark}</p>
           <a href="#" title="加入為收藏！"
-            ><i class="fa-regular fa-heart fs-6"></i
+            ><i class="fa-regular fa-heart fs-6" data-btn="favorite" data-productid="${item.id}"></i
           ></a>
         </div>
       </div>
@@ -211,28 +213,72 @@ menu.addEventListener("click", function (e) {
   }
 });
 
+//收藏商品
+productsList.addEventListener("click",function(e){
+  let target=e.target.dataset;
+  if(target.btn==="favorite"){
+    //登出狀態
+    if(localStorage.getItem("token") === null){
+      swal({
+        title: "請先登入會員",
+        text: "3秒後跳轉至登入頁面",
+      });
+      setTimeout(function () {
+        location.href = "login.html";
+      }, 3000);
+    }
+    //登入狀態
+    else{
+      let favoriteItem={
+        "userId": parseInt(localStorage.getItem("userId")),
+        "productId": parseInt(target.productid),
+      }
+      favoriteProduct(favoriteItem);
+      e.target.setAttribute("class","fa-sharp fa-solid fa-heart fs-6")
+    }
+  }
+})
+
+//點選收藏
+function favoriteProduct(favoriteItem){
+  axios.post(`${baseUrl}bookmarks`,favoriteItem)
+  .then(function(response){
+    console.log(response);
+    alert("已加入收藏！")
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+}
+
+
 //點選加入購物車
 let cartsData;
 productsList.addEventListener("click", function (e) {
   let target = e.target.dataset;
-  //登出狀態
-  if (localStorage.getItem("token") === null) {
-    swal({
-      title: "請先登入會員",
-      text: "3秒後瑱轉至登入頁面",
-    });
-    setTimeout(function () {
-      location.href = "login.html";
-    }, 3000);
-  }
-  //登入狀態
-  else {
-    if (target.btn === "add-cart") {
-      getCartsData(target);
+  if (target.btn === "add-cart") {
+    //登出狀態
+    if (localStorage.getItem("token") === null) {
+      swal({
+        title: "請先登入會員",
+        text: "3秒後跳轉至登入頁面",
+      });
+      setTimeout(function () {
+        location.href = "login.html";
+      }, 3000);
     }
+    //登入狀態
+    else {
+      if (target.btn === "add-cart") {
+        getCartsData(target);
+      }
+    }
+  }else{
+    return;
   }
 });
 
+let cartObj = {};
 function getCartsData(target) {
   axios
     .get(`${baseUrl}carts`)
@@ -240,33 +286,39 @@ function getCartsData(target) {
       cartsData = response.data;
       let cartItem = {
         quantity: 1,
-        productId: target.id,
+        productId: parseInt(target.id),
+        userId:userId,
       };
-      //如果購物車內原本為空
-      if (cartsData.length === 0) {
-        addCart(cartItem);
-      }
-      //如果購物車內原本有產品
-      else {
-        let obj = {};
-        cartsData.forEach(function (item) {
-          //加入的商品購物車內原本沒有
-          if (obj[item.productId] === undefined) {
-            obj[item.productId] = 1;
-            //加入的商品購物車內原本有
-          } else {
-            obj[item.productId]+=1;
-          }
-        });
-        console.log(obj);
-        console.log(obj[cartItem.productId])
-        // if (obj[cartItem.productId] === undefined) {
-        //   addCart(cartItem);
-        // } else if (obj[cartItem.productId]) {
-        //   quantity=obj[cartItem.productId];
-        //   patchCart(quantity);
-        // }
-      }
+      addCart(cartItem);
+      // //如果購物車內原本為空
+      // if (cartsData.length === 0) {
+      //   addCart(cartItem);
+      // }
+      // //如果購物車內原本有產品
+      // else {
+      //   console.log(cartItem.productId)
+      //   cartsData.forEach(function (item) {
+      //     console.log(item.id)
+      //     //準備要加入的商品購物車內原本沒有
+      //     if (cartObj[cartItem.productId] === undefined) {
+      //       cartObj[cartItem.productId] = 1;
+      //       // cartObj.cartId=item.id;
+      //       //準備要加入的商品購物車內原本有
+      //     } else if(cartObj[cartItem.productId]) {
+      //       cartObj[cartItem.productId] += 1;
+      //     }
+      //     // console.log(obj[item.productId]);
+      //   });
+      //   console.log(cartObj);
+      //   if (cartObj[cartItem.productId] === undefined) {
+      //     addCart(cartItem);
+      //   } else if (cartObj[cartItem.productId]) {
+      //     productId=cartItem.productId;
+      //     quantity=cartObj[cartItem.productId];
+      //     console.log(quantity)
+      //     patchCart(quantity);
+      //   }
+      // }
     })
     .catch(function (error) {
       console.log(error);
@@ -279,62 +331,22 @@ function addCart(cartItem) {
     .post(`${baseUrl}carts`, cartItem)
     .then(function (response) {
       console.log(response);
+      alert("成功加入購物車！")
     })
     .catch(function (error) {
       console.log(error);
     });
 }
 
-//修改購物車內產品數量
-function patchCart(quantity) {
-  axios
-    .patch(`${baseUrl}carts/${item.id}`, quantity)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-
-// function addCart(cartItem) {
-//   axios.get(`${baseUrl}carts`)
-//   .then(function(response){
-//     cartData=response.data;
-//     //購物車內原本沒有任何商品
-//     if(cartData===[]){
-//       axios
-//       .post(`${baseUrl}carts`, cartItem)
-//       .then(function (response) {
-//         console.log(response);
-//         alert("成功加入購物車！");
-//         // swal({
-//         //   title: "成功加入購物車!",
-//         //   icon: "success",
-//         // });
-//       })
-//       .catch(function (error) {
-//         console.log(error);
-//       });
-//     }
-//     //購物車內原本有商品
-//     else{
-//       cartData.forEach(function(item){
-//         //判斷要加入的商品是否是購物車內原本有的
-//         if(cartItem.productId===item.productId){
-//           item.quantity++;
-//           axios.patch(`${baseUrl}carts/${item.id}`,item)
-//           .then(function(response){
-//             console.log(response);
-//           })
-//           .catch(function(error){
-//             console.log(error);
-//           })
-//         }
-//       })
-//     }
-//   })
-//   .catch(function(error){
-//     console.log(error);
-//   })
+// //修改購物車內產品數量
+// function patchCart(quantity) {
+//   axios
+//     .patch(`${baseUrl}carts/1`, {"quantity":quantity})
+//     .then(function (response) {
+//       console.log(response);
+//       alert("成功加入購物車")
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
 // }

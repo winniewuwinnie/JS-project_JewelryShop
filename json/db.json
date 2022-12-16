@@ -172,15 +172,58 @@
   "bookmarks": [
     {
       "userId": 1,
+      "productId": 2,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "userId": 1,
       "productId": 1,
-      "id": 1
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "productId": 3,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "id": 8
     }
   ],
   "carts": [
     {
       "quantity": 1,
-      "productId": "1",
-      "id": 1
+      "productId": 1,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "quantity": 3,
+      "productId": 5,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "quantity": 1,
+      "productId": 8,
+      "userId": 1,
+      "id": 7
     }
   ]
 }

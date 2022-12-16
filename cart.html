@@ -127,12 +127,12 @@
                   <th scope="col" class="px-3 py-3 text-nowrap" width="45%">商品名稱</th>
                   <th scope="col" class="px-3 py-3 text-nowrap" width="15%">單價</th>
                   <th scope="col" class="px-3 py-3 text-nowrap" width="15%">數量</th>
-                  <th scope="col" class="px-3 py-3 text-nowrap" width="20%">小計</th>
-                  <th scope="col" class="px-3 py-3 text-nowrap" width="5%"></th>
+                  <th scope="col" class="px-3 py-3 text-nowrap" width="15">小計</th>
+                  <th scope="col" class="px-3 py-3 text-nowrap" width="10%"></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
+              <tbody class="cart-list">
+                <!-- <tr>
                   <th scope="row" class="d-flex align-items-center p-3">
                     <img
                       src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
@@ -215,14 +215,14 @@
                       ><i class="bi bi-trash fs-6"></i
                     ></a>
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
           </div>
           <div class="card-footer bg-brown text-end fw-bold border-0 px-5 py-4">
-            <p class="mb-2">商品數量：總共 3 件</p>
-            <p class="mb-4">總金額：NT$29,820</p>
+            <p class="mb-2 cart-total-num">商品數量：總共 3 件</p>
+            <p class="mb-4 cart-total-price">總金額：NT$29,820</p>
             <a
               href="customerInfo.html"
               class="btn btn-dark rounded-pill px-md-8 px-6 py-2"
@@ -386,5 +386,6 @@
     <!-- Sweet Alert JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
+    <script src="./javascript/cart.js"></script>
   </body>
 </html>
