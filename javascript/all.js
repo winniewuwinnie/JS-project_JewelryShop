@@ -69,7 +69,7 @@ if(localStorage.getItem("token")===null){
 </div>`;
 }
 else if(localStorage.getItem("token")){
-  console.log("登入狀態");
+  // console.log("登入狀態");
   str=`<div class="header pt-3 border-bottom border-primary align-items-center">
   <h1>
     <a

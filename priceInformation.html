@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="stylesheet/all.css" />
     <title>價格資訊｜億滿春銀樓</title>
   </head>
@@ -34,62 +36,60 @@
     <!-- navbar -->
     <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
 
-    <!-- banner -->
-    <section
-      class="container mb-8 banner"
-      style="
-        background-image: url(./images/Accessories.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-      "
-    >
-      <div class="row position-lg-relative gx-4 gy-2">
-        <div class="col-12 col-lg-5">
-          <h2
-            class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
-          >
-            金品生活<span
-              class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
-              >飾尚選擇</span
-            >
-          </h2>
-        </div>
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-          <img
-            src="./images/banner.png"
-            alt="金品生活 飾尚選擇"
-            class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
-          />
-          <img
-            src="./images/banner-border.svg"
-            alt="金品生活 飾尚選擇"
-            class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 start-lg-43 start-15 w-lg-55 w-80"
-          />
-        </div>
-        <div class="col-12 position-lg-absolute bottom-15">
-          <div class="position-relative">
-            <input
-              type="text"
-              class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary"
-              name="products"
-              id="products"
-              placeholder="搜尋想要的商品"
-            />
-            <a
-              href="#"
-              class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
-            >
-              <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <div class="container">
+    <!-- banner -->
+    <section
+    class="mb-8 banner bg-size-contain bg-repeat-none bg-position-center"
+    data-aos="zoom-in"
+    data-aos-duration="1000"
+    style="background-image: url(./images/Accessories.svg)"
+  >
+    <div class="row position-lg-relative gx-4 gy-2">
+      <div class="col-12 col-lg-5">
+        <h2
+          class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
+        >
+          金品生活<span
+            class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
+            >飾尚選擇</span
+          >
+        </h2>
+      </div>
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <img
+          src="./images/banner.png"
+          alt="金品生活 飾尚選擇"
+          class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
+        />
+        <img
+          src="./images/banner-border.svg"
+          alt="金品生活 飾尚選擇"
+          class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 d-lg-block d-none w-55"
+        />
+      </div>
+      <div class="col-12 position-lg-absolute bottom-15">
+        <div class="position-relative">
+          <input
+            type="text"
+            class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary search-input"
+            name="products"
+            id="products"
+            placeholder="搜尋想要的商品"
+          />
+          <a
+            href="#"
+            class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle search-btn"
+          >
+            <i class="fa-solid fa-magnifying-glass fs-6"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
       <!-- 今日價格 -->
-      <section class="mb-md-8 mb-7">
+      <section class="mb-md-8 mb-7" data-aos="fade-up" data-aos-duration="2000">
         <h3
           class="fw-bold text-center d-flex align-items-center justify-content-center"
         >
@@ -332,7 +332,7 @@
     <footer class="py-lg-8 py-7 bg-footer">
       <div class="container">
         <div class="row gx-0 gy-lg-0 gy-6">
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">關於我們</h4></li>
               <li class="mb-2">
@@ -343,17 +343,14 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">品牌故事</a>
-              </li>
-              <li class="mb-2">
-                <a href="#" class="text-decoration-none">聯絡我們</a>
+                <a href="aboutus.html" class="text-decoration-none">品牌故事</a>
               </li>
               <li>
                 <a href="faq.html" class="text-decoration-none">常見問題</a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">服務項目</h4></li>
               <li class="mb-2">
@@ -364,13 +361,10 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">黃金商品</a>
+                <a href="products.html" class="text-decoration-none">黃金商品</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">舊金收購</a>
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none">飾品客製</a>
+                <a href="priceInformation.html" class="text-decoration-none">舊金收購</a>
               </li>
             </ul>
           </div>
@@ -393,7 +387,7 @@
             </ul>
           </div> -->
           <div class="col-lg-2 d-lg-block d-none"></div>
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-md-6 col-12">
             <ul class="list-unstyled mb-0">
               <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
@@ -408,7 +402,8 @@
     <!-- copyright -->
     <section>
       <p class="mb-0 bg-copyright py-4 text-center">
-        Copyright ©yimanchwun All Rights Reserved.
+        Copyright © 2022 by 億滿春 - All right reserved.<br class="d-md-none d-block">
+        僅作為學習作品使用無商業行為
       </p>
     </section>
 
@@ -426,6 +421,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Sweet Alert JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./javascript/all.js"></script>
     <script src="./javascript/priceInformation.js"></script>
   </body>

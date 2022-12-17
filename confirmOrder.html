@@ -40,58 +40,6 @@
     <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
 
     <div class="container">
-      <!-- banner -->
-      <section
-        class="container mb-8 banner"
-        style="
-          background-image: url(./images/Accessories.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center center;
-        "
-      >
-        <div class="row position-lg-relative gx-4 gy-2">
-          <div class="col-12 col-lg-5">
-            <h2
-              class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
-            >
-              金品生活<span
-                class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
-                >飾尚選擇</span
-              >
-            </h2>
-          </div>
-          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-            <img
-              src="./images/banner.png"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
-            />
-            <img
-              src="./images/banner-border.svg"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 start-lg-43 start-15 w-lg-55 w-80"
-            />
-          </div>
-          <div class="col-12 position-lg-absolute bottom-15">
-            <div class="position-relative">
-              <input
-                type="text"
-                class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary"
-                name="products"
-                id="products"
-                placeholder="搜尋想要的商品"
-              />
-              <a
-                href="#"
-                class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
-              >
-                <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- 流程 -->
       <section class="mb-6">
@@ -134,8 +82,8 @@
                       <th scope="col" class="px-3 py-2 text-nowrap" width="20%">小計</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody class="cart-list">
+                    <!-- <tr>
                       <th scope="row" class="d-flex align-items-center p-3">
                         <img
                           src="./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg"
@@ -176,7 +124,7 @@
                       </th>
                       <td class="p-3">1</td>
                       <td class="p-3">NT$7,980</td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
               </div>
@@ -184,8 +132,8 @@
               <div
                 class="card-footer bg-brown text-end fw-bold border-0 px-3 py-4"
               >
-                <p class="mb-2">運費：NT$60</p>
-                <p class="mb-0">總金額：NT$29,820</p>
+                <p class="mb-2 cart-total-num">商品數量：總共 3件</p>
+                <p class="mb-0 cart-total-price">總金額：NT$29,820</p>
               </div>
             </div>
           </div>
@@ -198,39 +146,39 @@
                 <table class="table mb-0 text-dark">
                   <tr>
                     <th scope="row" class="text-nowrap">下單日期</th>
-                    <td>2022/1010 10:10</td>
+                    <td class="time">2022/1010 10:10</td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <th scope="row" class="text-nowrap">訂單編號</th>
                     <td>CC001010</td>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <th scope="row" class="text-nowrap">訂購人姓名</th>
-                    <td>王小明</td>
+                    <td class="name">王小明</td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">電子信箱</th>
-                    <td>mingwang@gmail.com</td>
+                    <td class="email">mingwang@gmail.com</td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">聯絡電話</th>
-                    <td>0912-345-678</td>
+                    <td class="tel">0912-345-678</td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">收件地址</th>
-                    <td>新北市板橋區中山路一段161號</td>
+                    <td class="address">新北市板橋區中山路一段161號</td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">付款方式</th>
-                    <td>Line Pay</td>
+                    <td class="pay">Line Pay</td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">備註說明</th>
-                    <td></td>
+                    <td class="remark"></td>
                   </tr>
                   <tr>
                     <th scope="row" class="text-nowrap">總金額</th>
-                    <td class="fw-bold">NT$29,880</td>
+                    <td class="fw-bold total">NT$29,880</td>
                   </tr>
                 </table>
               </div>
@@ -242,7 +190,7 @@
                 >
                 <a
                   href="pay.html"
-                  class="btn btn-dark rounded-pill py-2 w-50"
+                  class="btn btn-dark rounded-pill py-2 w-50 pay-btn"
                   >確認付款</a
                 >
               </div>
@@ -251,7 +199,7 @@
         </div>
       </section>
     </div>
-
+    
     <!-- 四大保證 -->
     <section class="border-top border-bottom border-primary border-3">
       <div class="container">
@@ -283,8 +231,8 @@
             <div>
               <h4 class="mb-3">售後服務</h4>
               <p class="mb-0 lh-md">
-                配戴久了我們幫您清潔<br />
-                損壞了我們幫您想辦法
+                配戴久我們幫您清潔<br />
+                損壞我們幫您想辦法
               </p>
             </div>
           </div>
@@ -300,7 +248,7 @@
               <h4 class="mb-3">安心出貨</h4>
               <p class="mb-0 lh-md">
                 出貨全程錄影<br />
-                我們用心只為讓您放心
+                我們用心讓您安心
               </p>
             </div>
           </div>
@@ -328,7 +276,7 @@
     <footer class="py-lg-8 py-7 bg-footer">
       <div class="container">
         <div class="row gx-0 gy-lg-0 gy-6">
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">關於我們</h4></li>
               <li class="mb-2">
@@ -339,17 +287,14 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">品牌故事</a>
-              </li>
-              <li class="mb-2">
-                <a href="#" class="text-decoration-none">聯絡我們</a>
+                <a href="aboutus.html" class="text-decoration-none">品牌故事</a>
               </li>
               <li>
                 <a href="faq.html" class="text-decoration-none">常見問題</a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">服務項目</h4></li>
               <li class="mb-2">
@@ -360,18 +305,33 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">黃金商品</a>
+                <a href="products.html" class="text-decoration-none">黃金商品</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">舊金收購</a>
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none">飾品客製</a>
+                <a href="priceInformation.html" class="text-decoration-none">舊金收購</a>
               </li>
             </ul>
           </div>
+          <!-- <div class="col-lg-2 col-4">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><h4 class="h5">常見問題</h4></li>
+              <li class="mb-2">
+                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-80" />
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none"
+                  >付款與配送</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >退換貨說明</a
+                >
+              </li>
+            </ul>
+          </div> -->
           <div class="col-lg-2 d-lg-block d-none"></div>
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-md-6 col-12">
             <ul class="list-unstyled mb-0">
               <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
@@ -386,7 +346,8 @@
     <!-- copyright -->
     <section>
       <p class="mb-0 bg-copyright py-4 text-center">
-        Copyright ©yimanchwun All Rights Reserved.
+        Copyright © 2022 by 億滿春 - All right reserved.<br class="d-md-none d-block">
+        僅作為學習作品使用無商業行為
       </p>
     </section>
 
@@ -407,6 +368,6 @@
     <!-- Sweet Alert JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./javascript/all.js"></script>
-    <script src="./javascript/customerInfo.js"></script>
+    <script src="./javascript/confrimOrder.js"></script>
   </body>
 </html>

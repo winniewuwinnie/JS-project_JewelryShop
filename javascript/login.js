@@ -57,10 +57,13 @@ function login(loginData) {
     .post(`${baseUrl}login`, loginData)
     .then(function (response) {
       console.log(response);
+      console.log(response.data.user.id)
       let token=response.data.accessToken;
       localStorage.setItem("token",token);
+      let userId=response.data.user.id;
+      localStorage.setItem("userId",userId)
       swal({
-        title: "登入成功!",
+        title: "歡迎回來!",
         text: "3秒後返回首頁",
         icon: "success",
       });
@@ -70,11 +73,18 @@ function login(loginData) {
     .catch(function (error) {
       // console.log(error)
       if(error.response.data==="Incorrect password"){
-        alert("密碼輸入錯誤");
+        swal({
+          title: "密碼錯誤",
+          text: "請重新輸入",
+          icon: "error",
+        });
         password.value="";
       }else if(error.response.data==="Cannot find user"){
-        alert("此帳號尚未註冊，請先註冊");
-        location.href="register.html";
+        swal({
+          text: "帳號尚未註冊，請先註冊會員",
+          icon: "info"});
+          // setTimeout(function(){
+          //   location.href="register.html"},3000);
       };
     });
 }

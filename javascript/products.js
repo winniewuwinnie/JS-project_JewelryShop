@@ -1,49 +1,133 @@
 const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
 
+AOS.init();
 
 let userId=parseInt(localStorage.getItem("userId"));
+
+//取得當天日期
+let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
+let year = today.getFullYear(); //年
+let month = today.getMonth() + 1; //月
+let date = today.getDate(); //日
+if (date.toString().length === 1) {
+  date = `0${date}`;
+}
+let todayStr=`${year}-${month}-${date}`;//2022-12-13
+
 //初始化畫面
-function init() {
-  getAllProductsData();
+function init() {  
+  getGoldPrice();
+  getExchangeRate();
 }
 init();
 
 const menu = document.querySelector(".menu");
 const productsList = document.querySelector(".products-list");
 
-//判斷網址是否從首頁熱門分類過來
-const category = location.href.split("=")[1];
-if (location.href.split("=")[1]) {
+
+//取得最新黃金價格(美元)
+let goldPriceData;
+let goldPrice;
+function getGoldPrice() {
+  axios.get(
+    `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=2022-12-12&end_date=${todayStr}`
+  )
+  .then(function(response){
+    goldPriceData=response.data.data;
+    goldPrice=goldPriceData[goldPriceData.length-2].Price;
+    renderGoldPrice(goldPrice,exchangeRate)
+  })
+  .catch(function(error){
+    console.log(error)
+  })
+}
+
+//取得最新的美金兌換台幣匯率
+let exchangeRateData;
+let exchangeRate;
+function getExchangeRate() {
   axios
-    .get(`${baseUrl}products?category=${category}`)
+    .get(
+      "https://api.finmindtrade.com/api/v3/data?dataset=TaiwanExchangeRate&data_id=USD&date=2022-12-01"
+    )
     .then(function (response) {
-      renderProductsData(response.data);
+      exchangeRateData = response.data.data;
+      exchangeRate = exchangeRateData[exchangeRateData.length - 1].spot_buy;
+      renderGoldPrice(goldPrice,exchangeRate)
     })
     .catch(function (error) {
       console.log(error);
     });
-} else {
-  getAllProductsData();
 }
+
+
 
 
 //取得全部商品
 let allProductsData;
 function getAllProductsData() {
   axios
-    .get(`${baseUrl}products`)
+  .get(`${baseUrl}products`)
     .then(function (response) {
       allProductsData = response.data;
-      renderProductsData(allProductsData);
+      renderProductsData(allProductsData,soldPrice);
     })
     .catch(function (error) {
       console.log(error);
     });
-}
+  }
+  
 
-//渲染商品
-function renderProductsData(data) {
+
+//關鍵字搜尋
+const searchInput = document.querySelector(".search-input");
+const searchBtn = document.querySelector(".search-btn");
+searchBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  let productsTitle = [];
+  let searchProductsData = [];
+  if (searchInput.value === "") {
+    swal({
+      text:"請輸入搜尋內容",
+      icon:"info"});
+    return;
+  } else {
+    allProductsData.forEach(function (item) {
+      productsTitle.push(item.title);
+    });
+    productsTitle.forEach(function (title) {
+      if (title.match(searchInput.value.trim())) {
+        allProductsData.forEach(function (item) {
+          if (item.title === title) {
+            searchProductsData.push(item);
+          }
+        });
+      } 
+    });
+    if(searchProductsData.length===0){
+      swal({
+        title: "查無此商品",
+        icon: "error",
+      });
+    }else{
+      renderProductsData(searchProductsData);
+    }
+    searchInput.value = "";
+  }
+});
+
+  //渲染最新金價
+  let soldPrice="";
+  function renderGoldPrice(goldPrice,exchangeRate){
+    if(goldPrice&&exchangeRate){ 
+    soldPrice=((goldPrice*exchangeRate/8.29426).toFixed()/10).toFixed()*10+360;
+    renderProductsData(allProductsData,soldPrice)
+  }
+}
+  
+  //渲染商品
+  function renderProductsData(data,soldPrice) {
   let str = "";
   data.forEach(function (item) {
     if (item.remark === "") {
@@ -69,10 +153,10 @@ function renderProductsData(data) {
       </h4>
       <div class="d-flex justify-content-between align-items-end">
         <div>
-          <span class="fs-6 text-start fw-bold me-1">NT$${item.price}</span>
+          <span class="fs-6 text-start fw-bold me-1">NT$${((item.price+item.weight*6930).toFixed()/10).toFixed()*10}</span>
           <span
             class="text-decoration-line-through text-originalPrice text-start mb-2"
-            >NT$${item.originPrice}</span
+            >NT$${((item.originPrice+item.weight*6930).toFixed()/10).toFixed()*10}</span
           >
         </div>
         <button
@@ -109,10 +193,10 @@ function renderProductsData(data) {
       </h4>
       <div class="d-flex justify-content-between align-items-end">
         <div>
-          <span class="fs-6 text-start fw-bold me-1">NT$${item.price}</span>
+          <span class="fs-6 text-start fw-bold me-1">NT$${((item.price+item.weight*6930).toFixed()/10).toFixed()*10}</span>
           <span
             class="text-decoration-line-through text-originalPrice text-start mb-2"
-            >NT$${item.originPrice}</span
+            >NT$${((item.originPrice+item.weight*6930).toFixed()/10).toFixed()*10}</span
           >
         </div>
         <button
@@ -149,10 +233,10 @@ function renderProductsData(data) {
       </h4>
       <div class="d-flex justify-content-between align-items-end">
         <div>
-          <span class="fs-6 text-start fw-bold me-1">NT$${item.price}</span>
+          <span class="fs-6 text-start fw-bold me-1">NT$${((item.price+item.weight*6930).toFixed()/10).toFixed()*10}</span>
           <span
             class="text-decoration-line-through text-originalPrice text-start mb-2"
-            >NT$${item.originPrice}</span
+            >NT$${((item.originPrice+item.weight*6930).toFixed()/10).toFixed()*10}</span
           >
         </div>
         <button
@@ -173,45 +257,124 @@ menu.addEventListener("click", function (e) {
   let targetText = e.target.textContent;
   if (targetText === "全部") {
     getAllProductsData();
-  } else if (targetText === "熱銷商品") {
+  } else if (targetText === "熱銷商品") {    
+    // location.href="products.html?remark=熱銷";
     let hotSalesProductsData = allProductsData.filter(function (item) {
       return item.remark === "熱銷";
     });
-    renderProductsData(hotSalesProductsData);
+    renderProductsData(hotSalesProductsData,soldPrice);
   } else if (targetText === "最新商品") {
+    // location.href="products.html?remark=新品";
     let newProductsData = allProductsData.filter(function (item) {
       return item.remark === "新品";
     });
-    renderProductsData(newProductsData);
+    renderProductsData(newProductsData,soldPrice);
   } else if (targetText === "日常配戴") {
     return;
   } else if (targetText === "項鍊") {
+    // location.href="products.html?category=necklace";
     let necklacesData = allProductsData.filter(function (item) {
       return item.category === "necklace";
     });
-    renderProductsData(necklacesData);
+    renderProductsData(necklacesData,soldPrice);
   } else if (targetText === "耳環") {
+    // location.href="products.html?category=earing";
     let earingsData = allProductsData.filter(function (item) {
       return item.category === "earing";
     });
-    renderProductsData(earingsData);
+    renderProductsData(earingsData,soldPrice);
   } else if (targetText === "戒指") {
+    // location.href="products.html?category=ring";
     let ringsData = allProductsData.filter(function (item) {
       return item.category === "ring";
     });
-    renderProductsData(ringsData);
+    renderProductsData(ringsData,soldPrice);
   } else if (targetText === "墜飾") {
+    // location.href="products.html?category=pendant";
     let pendantsData = allProductsData.filter(function (item) {
       return item.category === "pendant";
     });
-    renderProductsData(pendantsData);
+    renderProductsData(pendantsData,soldPrice);
   } else if (targetText === "手鍊") {
+    // location.href="products.html?category=bracelet";
     let braceletsData = allProductsData.filter(function (item) {
       return item.category === "bracelet";
     });
-    renderProductsData(braceletsData);
+    renderProductsData(braceletsData,soldPrice);
   }
 });
+
+//判斷網址
+let categoryData;
+if(location.href.split("=")[1]===undefined){
+  getAllProductsData();}
+  else if (location.href.split("=")[1]) {
+    let category = location.href.split("=")[1];
+    let type=location.href.split("?")[1].split("=")[0];
+    axios
+    .get(`${baseUrl}products?${type}=${category}`)
+    .then(function (response) {
+      categoryData=response.data;
+      console.log(categoryData)
+      renderProductsData(categoryData,soldPrice);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+// let category = location.href.split("=")[1];
+// let type=location.href.split("?")[1].split("=")[0];
+// //網址為products.html時
+// if(location.href.split("?")[1]===undefined){
+//   getAllProductsData();
+// //網址為products.html?xx=xx時
+// }else if(location.href.split("?")[1].split("=")[1]){
+//   //新品或熱銷
+//   if(location.href.split("?")[1].split("=")[0]==="remark"){
+//     axios
+//     .get(`${baseUrl}products?${type}=${category}`)
+//     .then(function (response) {
+//       categoryData=response.data;
+//       console.log(categoryData)
+//       renderProductsData(categoryData);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+//     //產品類別
+//   }else if(location.href.split("?")[1].split("=")[0]==="category"){
+//     axios
+//     .get(`${baseUrl}products?${type}=${category}`)
+//     .then(function (response) {
+//       categoryData=response.data;
+//       console.log(categoryData)
+//       renderProductsData(categoryData);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+//   }
+//   //關鍵字搜尋
+//   else if(location.href.split("?")[1].split("=")[0]==="title"){
+//   let productsTitle = [];
+//   let searchProductsData = [];
+//   allProductsData.forEach(function (item) {
+//     productsTitle.push(item.title);
+//   });
+//   productsTitle.forEach(function (title) {
+//     if (title.match(searchInput.value.trim())) {
+//       allProductsData.forEach(function (item) {
+//         if (item.title === title) {
+//           searchProductsData.push(item);
+//         } 
+//       });
+//       renderProductsData(searchProductsData);
+//     } 
+//   });
+//   }
+// }
+
 
 //收藏商品
 productsList.addEventListener("click",function(e){
@@ -337,6 +500,9 @@ function addCart(cartItem) {
       console.log(error);
     });
 }
+
+
+
 
 // //修改購物車內產品數量
 // function patchCart(quantity) {

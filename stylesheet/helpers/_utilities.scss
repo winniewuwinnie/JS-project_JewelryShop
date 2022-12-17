@@ -198,6 +198,7 @@ $utilities: map-merge(
           50: 50%,
           75: 75%,
           80: 80%,
+          95: 95%,
           100: 100%,
           auto: auto,
         ),
@@ -804,6 +805,13 @@ $utilities: map-merge(
       class:bg-repeat,
       values:(
         none:no-repeat,
+      )
+    ),
+    "resize":(
+      property:resize,
+      class:resize,
+      values:(
+        none:none,
       )
     )
   ),

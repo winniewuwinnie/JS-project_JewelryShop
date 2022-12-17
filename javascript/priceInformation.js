@@ -1,3 +1,6 @@
+AOS.init();
+
+
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
 let year = today.getFullYear(); //年
@@ -151,4 +154,34 @@ unit.addEventListener("keyup", function (e) {
   }
 });
 
+//關鍵字搜尋
+const searchInput = document.querySelector(".search-input");
+const searchBtn = document.querySelector(".search-btn");
+searchBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  let productsTitle = [];
+  let searchProductsData = [];
+  if (searchInput.value === "") {
+    swal({
+      text:"請輸入搜尋內容",
+      icon:"info"});
+    return;
+  } else {
+    location.href=`products.html?title=${searchInput.value}`;
+    // productsData.forEach(function (item) {
+    //   productsTitle.push(item.title);
+    // });
+    // productsTitle.forEach(function (title) {
+    //   if (title.match(searchInput.value.trim().toLowerCase())) {
+    //     productsData.forEach(function (item) {
+    //       if (item.title === title) {
+    //         searchProductsData.push(item);
+    //       } 
+    //     });
+    //     renderProductsData(searchProductsData);
+    //   } 
+    // });
+    searchInput.value = "";
+  }
+});
 

@@ -27,7 +27,7 @@ let goldPrice;
 function getGoldPrice() {
   axios
     .get(
-      `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=2022-12-01&end_date=${todayStr}`
+      `https://api.finmindtrade.com/api/v4/data?dataset=GoldPrice&start_date=2022-12-08&end_date=${todayStr}`
     )
     .then(function (response) {
       goldPriceData = response.data.data;
@@ -59,6 +59,7 @@ function getExchangeRate() {
 
 //取得購物車資料
 let cartsData;
+let cartIdAry=[];
 function getCartsData() {
   axios
     .get(`${baseUrl}carts?_expand=product`)
@@ -68,6 +69,9 @@ function getCartsData() {
         return item.userId === userId;
       });
       renderCartsData(cartsData);
+      cartsData.forEach(function(item){
+        cartIdAry.push(item.id)
+      })
     })
     .catch(function (error) {
       console.log(error);
@@ -81,7 +85,7 @@ function renderGoldPrice(goldPrice, exchangeRate) {
     soldPrice =
       (((goldPrice * exchangeRate) / 8.29426).toFixed() / 10).toFixed() * 10 +
       360;
-    // renderCartsData(cartsData,soldPrice);
+    renderCartsData(cartsData,soldPrice);
   }
 }
 
@@ -89,6 +93,7 @@ function renderGoldPrice(goldPrice, exchangeRate) {
 const cartList = document.querySelector(".cart-list");
 const cartTotalNum = document.querySelector(".cart-total-num");
 const cartTotalPrice = document.querySelector(".cart-total-price");
+const total=document.querySelector(".total");
 let totalNum = 0;
 let totalPrice = 0;
 function renderCartsData(data) {
@@ -110,115 +115,53 @@ function renderCartsData(data) {
       <td class="p-3">${((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity}</td>
     </tr>`;
     // totalNum += item.quantity/2;
-    // if(item.product.weight*soldPrice===0){
+    // if(item.product.weight*6930===0){
     //   return;
     // }else{
-    //   totalPrice += ((item.product.price+item.product.weight*soldPrice).toFixed()/10).toFixed()*10 * item.quantity ;
+    //   totalPrice += ((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity ;
     // }
-    totalNum += item.quantity;
+        totalNum += item.quantity;
         totalPrice += ((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity ;
     });
   cartList.innerHTML = str;
   //計算商品總數量
   cartTotalNum.textContent = `商品數量：總共 ${totalNum} 件`;
   cartTotalPrice.textContent = `總金額：NT$${totalPrice}`;
+  total.textContent=`NT$${totalPrice}`;
 }
+
 
 //顧客資料
-//validate
-let constraints = {
-  訂購人姓名: {
-    presence: {
-      message: "必填",
-    },
-  },
-  電子信箱: {
-    presence: {
-      message: "必填",
-    },
-    email: {
-      message: "格式有誤",
-    },
-  },
-  聯絡電話: {
-    presence: {
-      message: "必填",
-    },
-    length: {
-      minimum: 8,
-      message: "號碼需超過 8 碼",
-    },
-  },
-  收件地址: {
-    presence: {
-      message: "必填",
-    },
-  }
-};
-
-const form = document.querySelector("form");
-const name = document.querySelector(".name");
-const email = document.querySelector(".email");
+const time=document.querySelector(".time");
+const name=document.querySelector(".name");
+const email=document.querySelector(".email");
 const tel=document.querySelector(".tel");
-const address = document.querySelector(".address");
+const address=document.querySelector(".address");
 const pay=document.querySelector(".pay");
 const remark=document.querySelector(".remark");
-const confirmBtn=document.querySelector(".confirm-btn");
-const errorMessage = document.querySelectorAll(".error-message");
-let hour=today.getHours();//時
-let minute=today.getMinutes();//分
+time.textContent=localStorage.getItem("time");
+name.textContent=localStorage.getItem("name");
+email.textContent=localStorage.getItem("email");
+tel.textContent=localStorage.getItem("tel");
+address.textContent=localStorage.getItem("address");
+pay.textContent=localStorage.getItem("pay");
+remark.textContent=localStorage.getItem("remark");
 
-confirmBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  let error = validate(form, constraints);
-  if (error) {
-    showErrors(error);
-  } else {
-    location.href="confirmOrder.html";
-    localStorage.setItem("time",`${year}/${month}/${date} ${hour}:${minute}`);
-    localStorage.setItem("name",name.value.trim());
-    localStorage.setItem("email",email.value.trim());
-    localStorage.setItem("tel",tel.value.trim());
-    localStorage.setItem("pay",pay.value);
-    localStorage.setItem("remark",remark.value.trim());
-  }
-});
-
-
-function showErrors(errors) {
-  errorMessage.forEach(function (item) {
-    if (errors[item.dataset.msg] === undefined) {
-      return;
-    } else if (errors[item.dataset.msg]) {
-      item.innerHTML = `<i class="bi bi-exclamation-circle me-1"></i>${
-        errors[item.dataset.msg]
-      }`;
-    }
-  });
+//確認付款則將購物車清空
+const payBtn=document.querySelector(".pay-btn");
+payBtn.addEventListener("click",function(e){
+  // e.preventDefault();
+  deleteAllCarts();
+})
+function deleteAllCarts(){
+  console.log(cartIdAry)
+  cartIdAry.forEach(function(item){
+    axios.delete(`${baseUrl}carts/${item}`)
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(error){
+      console.log(error)
+    })
+  })
 }
-
-
-//收件地址
-const twzipcode = new TWzipcode(".twzipcode");
-confirmBtn.addEventListener("click", foo, false);
-
-function foo() {
-	let county = twzipcode.get("county");
-	let get = twzipcode.get();
-  localStorage.setItem("address",`${get[0].zipcode} ${get[0].county}${get[0].district}${address.value}`);
-}
-
-// twzipcode.set({
-//   // 縣市
-//   county: {
-//     label: 縣市, // (string) 預設 `縣市`
-//     css: (width:50%,) // (string)
-//     required: true,// 是否為表單必須
-//   },
-//   // 鄉鎮市區
-//   district: {
-//     label: 鄉鎮市區, // (string) 預設 `鄉鎮市區`
-//     css: "CSS 樣式", // (string)
-//     required: true, // 是否為表單必須
-//     },
-// });

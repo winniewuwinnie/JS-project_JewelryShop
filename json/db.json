@@ -9,10 +9,10 @@
       "id": 1
     },
     {
-      "email": "mingwang@gmail.com",
-      "password": "$2a$10$izTRzOMouJ6Wemv3CVOGxeiHGSOUqXb6Avl7foSYA0552Avttv9o.",
-      "username": "王大明",
-      "tel": "0912-345-678",
+      "email": "user@gmail.com",
+      "password": "$2a$10$Pln0vJSV1vDZEb0vpt7LXuk9AyKHFYpKKl8SFVdYHC7ztNAN5p0FS",
+      "username": "user",
+      "tel": "0912345678",
       "address": "新北市板橋區中山路一段161號",
       "id": 2
     }
@@ -22,79 +22,19 @@
       "id": 1,
       "title": "深沈盛夏多層次頸鏈",
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "necklace"
-    },
-    {
-      "id": 2,
-      "title": "愛的輪廓鎖鏈手鍊",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "bracelet"
-    },
-    {
-      "id": 3,
-      "title": "流淌時光戒指組合",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "ring"
-    },
-    {
-      "id": 4,
-      "title": "簡約麻花圈形耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "earing"
-    },
-    {
-      "id": 5,
-      "title": "淡雅扁細鎖骨鍊",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/cat-han-Ks6wd1Zyf1o-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "necklace"
-    },
-    {
-      "id": 6,
-      "title": "閃爍星光耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "category": "earing"
-    }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "title": "深沈盛夏多層次頸鏈",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
+      "originPrice": 580,
+      "price": 380,
+      "weight": 1.6,
       "category": "necklace",
       "remark": "熱銷"
     },
     {
       "id": 2,
-      "title": "愛的輪廓鎖鏈手鍊",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
-      "category": "bracelet",
-      "remark": "熱銷"
-    },
-    {
-      "id": 3,
       "title": "流淌時光戒指組合",
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
+      "originPrice": 520,
+      "price": 320,
+      "weight": 0.9,
       "category": "ring",
       "remark": "熱銷"
     },
@@ -102,69 +42,291 @@
       "id": 4,
       "title": "簡約麻花圈形耳環",
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
-      "category": "earing",
-      "remark": "熱銷"
-    },
-    {
-      "id": 5,
-      "title": "淡雅扁細鎖骨鍊",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/cat-han-Ks6wd1Zyf1o-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
-      "category": "necklace",
-      "remark": "熱銷"
-    },
-    {
-      "id": 6,
-      "title": "閃爍星光耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
-      "weight": 1,
+      "originPrice": 420,
+      "price": 220,
+      "weight": 0.36,
       "category": "earing",
       "remark": "熱銷"
     },
     {
       "id": 7,
-      "title": "閃爍星光耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/alyssa-strohmann-qOIGvGoVNtc-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
+      "title": "情深守護戒指",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/angelica-echeverry-mI82mfLu538-unsplash.jpg?raw=true",
+      "originPrice": 560,
+      "price": 360,
+      "weight": 0.6,
+      "category": "ring",
+      "remark": "熱銷"
+    },
+    {
+      "id": 10,
+      "title": "愛的輪廓鎖鏈手鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
+      "originPrice": 420,
+      "price": 220,
+      "weight": 0.85,
+      "category": "bracelet",
+      "remark": "熱銷"
+    },
+    {
+      "id": 16,
+      "title": "菱格紋路吊墜項鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/jasmin-chew-MIyo2hqbAzk-unsplash.jpg?raw=true",
+      "originPrice": 350,
+      "price": 250,
       "weight": 1,
+      "category": "necklace",
+      "remark": "熱銷"
+    },
+    {
+      "id": 17,
+      "title": "閃爍星光耳環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg?raw=true",
+      "originPrice": 380,
+      "price": 180,
+      "weight": 0.38,
+      "category": "earing",
+      "remark": "熱銷"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "深沈盛夏多層次頸鏈",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg?raw=true",
+      "originPrice": 580,
+      "price": 380,
+      "weight": 1.6,
+      "category": "necklace",
+      "remark": "熱銷"
+    },
+    {
+      "id": 2,
+      "title": "流淌時光戒指組合",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kateryna-hliznitsova-pjrPWwwYx1I-unsplash.jpg?raw=true",
+      "originPrice": 520,
+      "price": 320,
+      "weight": 0.9,
+      "category": "ring",
+      "remark": "熱銷"
+    },
+    {
+      "id": 3,
+      "title": "靜謐光圈耳環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/sandi-benedicta-D3LxjsY8qKs-unsplash.jpg?raw=true",
+      "originPrice": 360,
+      "price": 160,
+      "weight": 0.2,
       "category": "earing",
       "remark": "新品"
     },
     {
-      "id": 8,
-      "title": "閃爍星光耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/jasmin-chew-MIyo2hqbAzk-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
+      "id": 4,
+      "title": "簡約麻花圈形耳環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-Ki7TPcA9204-unsplash.jpg?raw=true",
+      "originPrice": 420,
+      "price": 220,
+      "weight": 0.36,
+      "category": "earing",
+      "remark": "熱銷"
+    },
+    {
+      "id": 5,
+      "title": "串珠編織手環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/tania-mousinho-h7lrfoSave0-unsplash.jpg?raw=true",
+      "originPrice": 460,
+      "price": 260,
       "weight": 1,
-      "category": "pendant",
+      "category": "bracelet",
       "remark": "新品"
     },
     {
-      "id": 9,
-      "title": "閃爍星光耳環",
-      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/natalie-sysko-0IOY1_3d-r0-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
+      "id": 6,
+      "title": "輕奢鎖骨項鍊項鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/kateryna-hliznitsova-FjfqwnC04vQ-unsplash.jpg?raw=true",
+      "originPrice": 480,
+      "price": 280,
       "weight": 1,
+      "category": "necklace",
+      "remark": ""
+    },
+    {
+      "id": 7,
+      "title": "情深守護戒指",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/angelica-echeverry-mI82mfLu538-unsplash.jpg?raw=true",
+      "originPrice": 560,
+      "price": 360,
+      "weight": 0.6,
+      "category": "ring",
+      "remark": "熱銷"
+    },
+    {
+      "id": 8,
+      "title": "點點圓牌墜飾",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/natalie-sysko-0IOY1_3d-r0-unsplash.jpg?raw=true",
+      "originPrice": 380,
+      "price": 180,
+      "weight": 0.3,
       "category": "pendant",
       "remark": ""
     },
     {
-      "id": 10,
-      "title": "閃爍星光耳環",
+      "id": 9,
+      "title": "魅光圖騰墜飾",
       "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/jasmin-chew-WKD2vIe8Rb0-unsplash.jpg?raw=true",
-      "originPrice": 9980,
-      "price": 7980,
+      "originPrice": 520,
+      "price": 320,
+      "weight": 0.52,
+      "category": "pendant",
+      "remark": "新品"
+    },
+    {
+      "id": 10,
+      "title": "愛的輪廓鎖鏈手鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/nati-melnychuk-oO0JAOJhquk-unsplash.jpg?raw=true",
+      "originPrice": 420,
+      "price": 220,
+      "weight": 0.85,
+      "category": "bracelet",
+      "remark": "熱銷"
+    },
+    {
+      "id": 11,
+      "title": "極簡故事手鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg?raw=true",
+      "originPrice": 380,
+      "price": 180,
+      "weight": 0.6,
+      "category": "bracelet",
+      "remark": ""
+    },
+    {
+      "id": 12,
+      "title": "雙色雙環戒指",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/alexis-antoine-GBpKfFfJhgw-unsplash.jpg?raw=true",
+      "originPrice": 420,
+      "price": 220,
+      "weight": 0.6,
+      "category": "ring",
+      "remark": ""
+    },
+    {
+      "id": 13,
+      "title": "工業風扣環手鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Bracelets/sama-hosseini-h_ssRPj8UZo-unsplash.jpg?raw=true",
+      "originPrice": 360,
+      "price": 160,
+      "weight": 0.7,
+      "category": "bracelet",
+      "remark": ""
+    },
+    {
+      "id": 14,
+      "title": "U型扣鏈條項鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/natalie-sysko-HJHWDLUIV5w-unsplash.jpg?raw=true",
+      "originPrice": 420,
+      "price": 220,
+      "weight": 1.1,
+      "category": "necklace",
+      "remark": "新品"
+    },
+    {
+      "id": 15,
+      "title": "纏綿悱惻耳環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/alyssa-strohmann-qOIGvGoVNtc-unsplash.jpg?raw=true",
+      "originPrice": 460,
+      "price": 260,
+      "weight": 0.26,
+      "category": "earing",
+      "remark": ""
+    },
+    {
+      "id": 16,
+      "title": "菱格紋路吊墜項鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/jasmin-chew-MIyo2hqbAzk-unsplash.jpg?raw=true",
+      "originPrice": 350,
+      "price": 250,
       "weight": 1,
+      "category": "necklace",
+      "remark": "熱銷"
+    },
+    {
+      "id": 17,
+      "title": "閃爍星光耳環",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg?raw=true",
+      "originPrice": 380,
+      "price": 180,
+      "weight": 0.38,
+      "category": "earing",
+      "remark": "熱銷"
+    },
+    {
+      "id": 18,
+      "title": "藤蔓葉墜飾",
+      "imgUrl": " https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/juan-burgos-3_XeNGVbTQA-unsplash.jpg?raw=true",
+      "originPrice": 480,
+      "price": 280,
+      "weight": 0.38,
+      "category": "pendant",
+      "remark": ""
+    },
+    {
+      "id": 19,
+      "title": "甜美愛戀鑽沙戒指",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/jesus-eca-q3XlqdHb-fg-unsplash.jpg?raw=true",
+      "originPrice": 580,
+      "price": 380,
+      "weight": 0.5,
+      "category": "ring",
+      "remark": "新品"
+    },
+    {
+      "id": 20,
+      "title": "獨特率性粗戒指",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Rings/kolya-korzh-EO_5VqM03IA-unsplash.jpg?raw=true",
+      "originPrice": 360,
+      "price": 160,
+      "weight": 0.8,
+      "category": "ring",
+      "remark": "新品"
+    },
+    {
+      "id": 21,
+      "title": "旖旎春光流蘇項鍊",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Necklaces/mathilde-langevin-QgK0yj6kc6k-unsplash.jpg?raw=true",
+      "originPrice": 480,
+      "price": 280,
+      "weight": 1.15,
+      "category": "necklace",
+      "remark": "新品"
+    },
+    {
+      "id": 22,
+      "title": "心動瞬間墜飾",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/gabrielle-henderson-Z0KoI2aysro-unsplash.jpg?raw=true",
+      "originPrice": 300,
+      "price": 100,
+      "weight": 0.3,
+      "category": "pendant",
+      "remark": ""
+    },
+    {
+      "id": 23,
+      "title": "幾何式進行曲墜飾",
+      "imgUrl": " https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/sama-hosseini-uesvB32vC6U-unsplash.jpg?raw=true",
+      "originPrice": 550,
+      "price": 350,
+      "weight": 0.56,
+      "category": "pendant",
+      "remark": "新品"
+    },
+    {
+      "id": 24,
+      "title": "幸福小時光信封墜飾",
+      "imgUrl": "https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/Pendants/sama-hosseini-02X9tIJPLC0-unsplash.jpg?raw=true",
+      "originPrice": 500,
+      "price": 300,
+      "weight": 0.6,
       "category": "pendant",
       "remark": ""
     }
@@ -172,57 +334,66 @@
   "bookmarks": [
     {
       "userId": 1,
-      "productId": 2,
+      "productId": 7,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 3,
       "id": 2
     },
     {
-      "userId": 1,
-      "productId": 3,
+      "userId": 2,
+      "productId": 4,
       "id": 3
     },
     {
-      "userId": 1,
-      "productId": 1,
+      "userId": 2,
+      "productId": 6,
       "id": 4
-    },
-    {
-      "userId": 1,
-      "productId": 1,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "productId": 2,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "productId": 3,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "productId": 2,
-      "id": 8
     }
   ],
   "carts": [
     {
       "quantity": 1,
-      "productId": 1,
+      "productId": 2,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "productId": 4,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "quantity": 2,
+      "productId": 7,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "quantity": 1,
+      "productId": 10,
       "userId": 1,
       "id": 5
     },
     {
-      "quantity": 3,
-      "productId": 5,
+      "quantity": 2,
+      "productId": 6,
       "userId": 1,
       "id": 6
     },
     {
       "quantity": 1,
-      "productId": 8,
-      "userId": 1,
+      "productId": 2,
+      "userId": 2,
       "id": 7
     }
   ]

@@ -37,12 +37,9 @@
     <div class="container">
       <!-- banner -->
       <section
-        class="mb-8 banner"
+        class="mb-8 banner bg-size-contain bg-repeat-none bg-position-center" data-aos="zoom-in" data-aos-duration="1000"
         style="
           background-image: url(./images/Accessories.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center center;
         "
       >
         <div class="row position-lg-relative gx-4 gy-2">
@@ -65,7 +62,7 @@
             <img
               src="./images/banner-border.svg"
               alt="金品生活 飾尚選擇"
-              class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 start-lg-43 start-15 w-lg-55 w-80"
+              class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 d-lg-block d-none w-55 "
             />
           </div>
           <div class="col-12 position-lg-absolute bottom-15">
@@ -95,7 +92,7 @@
             <div class="accordion-item text-dark">
               <h3 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark"
+                  class="accordion-button text-dark fw-bold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -119,7 +116,7 @@
             <div class="accordion-item text-dark">
               <h3 class="accordion-header" id="headingTwo">
                 <button
-                  class="accordion-button collapsed text-dark"
+                  class="accordion-button collapsed text-dark fw-bold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -136,29 +133,27 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <ol>
+                    <li>先將金飾分類磅重初步估價</li>
+                    <li>向客戶確認是否賣出黃金</li>
+                    <li>當客戶的面用火燒檢驗，真金不怕火煉</li>
+                    <li>依照當日黃金收價格回收</li>
+                    <li>黃金回收完成，當場兌現</li>
+                  </ol>
                 </div>
               </div>
             </div>
             <div class="accordion-item text-dark">
               <h3 class="accordion-header" id="headingThree">
                 <button
-                  class="accordion-button collapsed text-dark"
+                  class="accordion-button collapsed text-dark fw-bold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  Q：金價近期會上漲還是下跌呢？
+                  Q：金價每天的價格都不一樣嗎？
                 </button>
               </h3>
               <div
@@ -168,15 +163,55 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  因黃金價格依造牌價每日所波動，依據國際盤影響每日商品價格基本計算方式：金價*金重+工資 = 商品價格）。每日金價可以至<a href="priceInformation.html" class="link-dark text-decoration-none">金價查詢</a>查看，購物前請先詢問當日價格在進行下單購買。
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item text-dark">
+              <h3 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed text-dark fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Q：黃金金飾可以以舊換新嗎？
+                </button>
+              </h3>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  是的，就算黃金飾品已經有壞的部分，只要純度、淨重以及稀有度適當地符合黃金金品比重都可以以舊換新或賣掉換取現金。
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item text-dark">
+              <h3 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed text-dark fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Q：有提供金飾清潔服務嗎？
+                </button>
+              </h3>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  當然！我們的清潔服務提供給您完整而又安全的金飾清潔保養，以確保金飾性能及外表如新。
                 </div>
               </div>
             </div>
@@ -184,12 +219,12 @@
         </div>
       </div>
     </div>
-
+    
     <!-- footer -->
     <footer class="py-lg-8 py-7 bg-footer">
       <div class="container">
         <div class="row gx-0 gy-lg-0 gy-6">
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">關於我們</h4></li>
               <li class="mb-2">
@@ -200,17 +235,14 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="#" class="text-decoration-none">品牌故事</a>
-              </li>
-              <li class="mb-2">
-                <a href="#" class="text-decoration-none">聯絡我們</a>
+                <a href="aboutus.html" class="text-decoration-none">品牌故事</a>
               </li>
               <li>
                 <a href="faq.html" class="text-decoration-none">常見問題</a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-4">
+          <div class="col-md-3 col-6">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><h4 class="h5">服務項目</h4></li>
               <li class="mb-2">
@@ -221,37 +253,33 @@
                 />
               </li>
               <li class="mb-2">
-                <a href="products.html" class="text-decoration-none"
-                  >黃金商品</a
-                >
+                <a href="products.html" class="text-decoration-none">黃金商品</a>
               </li>
               <li class="mb-2">
-                <a href="priceInformation.html" class="text-decoration-none"
-                  >舊金收購</a
-                >
+                <a href="priceInformation.html" class="text-decoration-none">舊金收購</a>
               </li>
             </ul>
           </div>
           <!-- <div class="col-lg-2 col-4">
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><h4 class="h5">常見問題</h4></li>
-          <li class="mb-2">
-            <img src="./images/arrow.png" alt="arrow" class="img-fluid w-80" />
-          </li>
-          <li class="mb-2">
-            <a href="#" class="text-decoration-none"
-              >付款與配送</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-decoration-none"
-              >退換貨說明</a
-            >
-          </li>
-        </ul>
-      </div> -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><h4 class="h5">常見問題</h4></li>
+              <li class="mb-2">
+                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-80" />
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none"
+                  >付款與配送</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >退換貨說明</a
+                >
+              </li>
+            </ul>
+          </div> -->
           <div class="col-lg-2 d-lg-block d-none"></div>
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-md-6 col-12">
             <ul class="list-unstyled mb-0">
               <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
@@ -266,7 +294,8 @@
     <!-- copyright -->
     <section>
       <p class="mb-0 bg-copyright py-4 text-center">
-        Copyright ©yimanchwun All Rights Reserved.
+        Copyright © 2022 by 億滿春 - All right reserved.<br class="d-md-none d-block">
+        僅作為學習作品使用無商業行為
       </p>
     </section>
 
