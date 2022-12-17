@@ -7,11 +7,10 @@
       "tel": "0912345678",
       "address": "新北市板橋區中山路一段161號",
       "id": 1
-    },
-    {
-      "email": "user@gmail.com",
-      "password": "$2a$10$Pln0vJSV1vDZEb0vpt7LXuk9AyKHFYpKKl8SFVdYHC7ztNAN5p0FS",
-      "username": "user",
+    },{
+      "email": "demo@gmail.com",
+      "password": "000000",
+      "username": "demo",
       "tel": "0912345678",
       "address": "新北市板橋區中山路一段161號",
       "id": 2
