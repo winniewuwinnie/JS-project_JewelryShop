@@ -7,9 +7,10 @@
       "tel": "0912345678",
       "address": "新北市板橋區中山路一段161號",
       "id": 1
-    },{
+    },
+    {
       "email": "demo@gmail.com",
-      "password": "000000",
+      "password": "$2a$10$gs6uDTdGEdmW5FZUuO/VJ.W86TYtEj4bMOyclbljmVgeOvOIgMymW",
       "username": "demo",
       "tel": "0912345678",
       "address": "新北市板橋區中山路一段161號",
@@ -340,16 +341,6 @@
       "userId": 1,
       "productId": 3,
       "id": 2
-    },
-    {
-      "userId": 2,
-      "productId": 4,
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "productId": 6,
-      "id": 4
     }
   ],
   "carts": [
@@ -388,12 +379,6 @@
       "productId": 6,
       "userId": 1,
       "id": 6
-    },
-    {
-      "quantity": 1,
-      "productId": 2,
-      "userId": 2,
-      "id": 7
     }
   ]
 }
