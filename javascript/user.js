@@ -22,6 +22,7 @@ const name = document.querySelector(".name");
 const email = document.querySelector(".email");
 const tel = document.querySelector(".tel");
 const address = document.querySelector(".address");
+const password=document.querySelector(".password");
 function renderUserData(userData) {
   name.value = userData.username.trim();
   email.value = userData.email.trim();
@@ -36,7 +37,14 @@ reviseBtn.addEventListener("click", function (e) {
   e.preventDefault();
   let target = e.target.dataset.btn;
   if (target === "revise") {
-    updateUserData();
+    if(password.value===""){
+      swal({
+        title: "帳號密碼必填",
+        icon: "info",
+      });
+    }else{
+      updateUserData();
+    }
   } else if (target === "no-revise") {
     renderUserData(userData);
   }
@@ -50,7 +58,7 @@ function updateUserData() {
         email: email.value.trim(),
         tel: tel.value.trim(),
         address: address.value.trim(),
-        password:address.value.trim(),
+        password:password.value.trim(),
       },
       // { headers: `Bearer ${token}` }
     )
