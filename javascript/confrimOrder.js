@@ -85,7 +85,7 @@ function renderGoldPrice(goldPrice, exchangeRate) {
     soldPrice =
       (((goldPrice * exchangeRate) / 8.29426).toFixed() / 10).toFixed() * 10 +
       360;
-    renderCartsData(cartsData,soldPrice);
+    // renderCartsData(cartsData,soldPrice);
   }
 }
 

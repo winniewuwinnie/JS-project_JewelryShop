@@ -82,7 +82,7 @@ calGoldWeight.addEventListener("keyup", function (e) {
     calGoldWeight.value = "";
     return;
   } else {
-    calGoldPrice.value = (Number(calGoldWeight.value) * (newestPrice-240)).toFixed();
+    calGoldPrice.value = (Number(calGoldWeight.value) * (newestPrice-240)*0.95).toFixed();
   }
 });
 

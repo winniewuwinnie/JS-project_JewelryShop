@@ -50,7 +50,7 @@ function updateUserData() {
         email: email.value.trim(),
         tel: tel.value.trim(),
         address: address.value.trim(),
-        password:"12345678"
+        password:address.value.trim(),
       },
       // { headers: `Bearer ${token}` }
     )
