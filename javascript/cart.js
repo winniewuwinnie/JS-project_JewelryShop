@@ -186,6 +186,7 @@ cartList.addEventListener("click", function (e) {
             reviseQuantity--;
           }
         }
+        alert("已為您修改數量");
         patchProductNum(cartId, reviseQuantity);
       })
       .catch(function (error) {
