@@ -22,13 +22,13 @@
 * 我是後臺使用者，我想要上架新產品。
 
 ## 網站地圖連結：
-[網站地圖 whimsical](https://whimsical.com/W6PbuquQYRGymFus3Woq2r)
+[網站地圖|whimsical](https://whimsical.com/W6PbuquQYRGymFus3Woq2r)
 
 ## 線稿圖連結：
-[線稿圖 Figma](https://www.figma.com/file/WaZNYXYSyuT3grD27DihNw/%E9%87%91%E9%A3%BE%E5%BA%97%E5%AE%B6%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99-%7C-%E7%B7%9A%E7%A8%BF?node-id=0%3A1)
+[線稿圖|Figma](https://www.figma.com/file/WaZNYXYSyuT3grD27DihNw/%E9%87%91%E9%A3%BE%E5%BA%97%E5%AE%B6%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99-%7C-%E7%B7%9A%E7%A8%BF?node-id=0%3A1)
 
 ## 設計圖連結：
-[設計圖 Figma](https://www.figma.com/file/6z9TAApY7Z2KeaJxGHTu2q/%E9%87%91%E9%A3%BE%E5%BA%97%E5%AE%B6%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99?node-id=0%3A1)\
+[設計圖|Figma](https://www.figma.com/file/6z9TAApY7Z2KeaJxGHTu2q/%E9%87%91%E9%A3%BE%E5%BA%97%E5%AE%B6%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99?node-id=0%3A1)\
 設計師：yin-yu,Huang
 
 ## 技術工具：
