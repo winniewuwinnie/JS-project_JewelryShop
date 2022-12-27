@@ -1,8 +1,6 @@
 const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
 // const baseUrl = "http://localhost:3000/";
 
-AOS.init();
-
 let userId=parseInt(localStorage.getItem("userId"));
 
 const productSection=document.querySelector("#product-section")

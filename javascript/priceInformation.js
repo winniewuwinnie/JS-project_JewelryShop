@@ -1,5 +1,3 @@
-AOS.init();
-
 const priceInfoSection=document.querySelector("#price-info-section")
 window.addEventListener("load",function(e){
   priceInfoSection.scrollIntoView({
