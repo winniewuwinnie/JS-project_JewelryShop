@@ -5,6 +5,13 @@ AOS.init();
 
 let userId=parseInt(localStorage.getItem("userId"));
 
+const productSection=document.querySelector("#product-section")
+window.addEventListener("load",function(e){
+  productSection.scrollIntoView({
+    behavior: "smooth",
+  });
+})
+
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
 let year = today.getFullYear(); //年
