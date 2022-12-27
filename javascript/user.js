@@ -1,5 +1,5 @@
-// const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
-const baseUrl = "http://localhost:3000/";
+const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
+// const baseUrl = "http://localhost:3000/";
 
 //取得用戶資料
 let userId = localStorage.getItem("userId");
