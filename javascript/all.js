@@ -1,23 +1,24 @@
-let lastPos = 0;
 const navbar = document.querySelector(".navbar");
-const moblieMenu=document.querySelector(".navbar-toggler");
+const section = document.querySelector(".section");
+// 2. 換顏色
 
-// 監聽scroll事件
-document.addEventListener("scroll", function () {
-  let currentPos = window.scrollY;
-  //   往下滑
-  if (currentPos > lastPos) {
-    navbar.style.top = "-520px"; //讓nav bar消失
-  } else {
-    navbar.style.top = "0px"; //讓nav bar出現
-  }
-  lastPos = currentPos; //再記住現在位置，跟未來的位置做比較
-});
+const changeColor = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+};
+
+let observer = new IntersectionObserver(changeColor);
+observer.observe(section);
 
 //登入登出狀態改變nav
-let str="";
-if(localStorage.getItem("token")===null){
-  str=`<div class="container-fluid border-bottom border-primary mx-3">
+let str = "";
+if (localStorage.getItem("token") === null) {
+  str = `<div class="container-fluid border-bottom border-primary mx-3">
   <a class="navbar-brand fw-bold link-primary letter-spacing-sm" href="index.html"><h1>億滿春</h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-white"></span>
@@ -46,7 +47,7 @@ if(localStorage.getItem("token")===null){
           </ul>
         </li>
         <li class="nav-item bg-white bg-lg-transparent">
-          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark mx-3" href="priceInformation.html">價格資訊</a>
+          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark" href="priceInformation.html">價格資訊</a>
         </li>
         <li class="nav-item bg-white bg-lg-transparent rounded-bottom">
           <a class="nav-link fw-bold btn btn-outline-primary rounded-pill fs-7 px-4 d-none d-lg-block" href="login.html">登入</a>
@@ -55,10 +56,9 @@ if(localStorage.getItem("token")===null){
       </ul>
     </div>
   </div>`;
-}
-else if(localStorage.getItem("token")){
+} else if (localStorage.getItem("token")) {
   // console.log("登入狀態");
-  str=`<div class="container-fluid border-bottom border-primary mx-3">
+  str = `<div class="container-fluid border-bottom border-primary mx-3">
   <a class="navbar-brand fw-bold link-primary letter-spacing-sm" href="index.html"><h1>億滿春</h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-white"></span>
@@ -87,7 +87,7 @@ else if(localStorage.getItem("token")){
           </ul>
         </li>
         <li class="nav-item bg-white bg-lg-transparent">
-          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark mx-3" href="priceInformation.html">價格資訊</a>
+          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark" href="priceInformation.html">價格資訊</a>
         </li>  
         <li class="nav-item bg-white bg-lg-transparent">
           <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark mx-1 d-lg-block d-none" href="user.html"><i class="fa-solid fa-user"></i></a>
@@ -98,11 +98,11 @@ else if(localStorage.getItem("token")){
         <li class="nav-item bg-white bg-lg-transparent">
           <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 border-lg-0 border-bottom border-dark mx-3 d-lg-none" href="user.html">會員中心</a>
         </li>             
-        <li class="nav-item bg-white bg-lg-transparent">
-          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom border-dark mx-3 d-lg-none" href="cart.html">購物清單</a>
+        <li class="nav-item bg-white bg-lg-transparent rounded-bottom">
+          <a class="nav-link fw-bold text-lg-primary text-dark text-lg-start text-center fs-7 me-lg-4 border-lg-0 border-bottom mx-3 d-lg-none" href="cart.html">購物清單</a>
         </li>
       </ul>
     </div>
   </div>`;
-};
-navbar.innerHTML=str;
+}
+navbar.innerHTML = str;
