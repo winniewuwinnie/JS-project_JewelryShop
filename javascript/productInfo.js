@@ -1,15 +1,8 @@
-const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 let productId = location.href.split("=")[1];
 let userId=parseInt(localStorage.getItem("userId"));
-
-const productInfoSection=document.querySelector("#product-info-section")
-window.addEventListener("load",function(e){
-  productInfoSection.scrollIntoView({
-    behavior: "smooth",
-  });
-})
 
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)

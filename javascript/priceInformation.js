@@ -1,10 +1,3 @@
-const priceInfoSection=document.querySelector("#price-info-section")
-window.addEventListener("load",function(e){
-  priceInfoSection.scrollIntoView({
-    behavior: "smooth",
-  });
-})
-
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
 let year = today.getFullYear(); //年

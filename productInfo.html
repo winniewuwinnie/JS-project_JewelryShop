@@ -33,60 +33,13 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="stylesheet/all.css" />
-    <title>商品專區｜億滿春銀樓</title>
+    <title>商品資訊｜億滿春銀樓</title>
   </head>
   <body style="background-image: url('./images/bg.jpg')">
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top pb-0" style="position: fixed;"></nav>
 
-    <div class="container">
-      <!-- banner -->
-      <section
-        class="mb-8 banner bg-size-contain bg-repeat-none bg-position-center"
-        style="background-image: url(./images/Accessories.svg)"
-      >
-        <div class="row position-lg-relative gx-4 gy-2">
-          <div class="col-12 col-lg-5">
-            <h2
-              class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
-            >
-              金品生活<span
-                class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
-                >飾尚選擇</span
-              >
-            </h2>
-          </div>
-          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-            <img
-              src="./images/banner.png"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
-            />
-            <img
-              src="./images/banner-border.svg"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 d-lg-block d-none w-55"
-            />
-          </div>
-          <div class="col-12 position-lg-absolute bottom-15">
-            <div class="position-relative">
-              <input
-                type="text"
-                class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary"
-                name="products"
-                id="products"
-                placeholder="搜尋想要的商品"
-              />
-              <a
-                href="#"
-                class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
-              >
-                <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="container" style="margin-top: 120px;">
       <section class="mb-8" id="product-info-section">
         <h3
           class="fw-bold mb-4 text-center d-flex align-items-center justify-content-center"
@@ -94,154 +47,85 @@
           <span class="border rounded-pill fs-2 px-2 py-3 me-2">商</span>
           <span class="letter-spacing-lg fs-2">品資訊</span>
         </h3>
-        <!-- breadcrumb -->
-        <!-- <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#" class="text-decoration-none">日常配戴</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#" class="text-decoration-none">耳環</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              深沈盛夏多層次頸鏈
-            </li>
-          </ol>
-        </nav> -->
         <!-- productInfo -->
         <div
           class="card bg-transparent border-0 shadow-lg rounded-3 p-5 product-info"
         >
-          <!-- <div class="row gy-0">
-            <div
-              class="col-md-5 col-12 bg-position-center bg-size-cover"
-              style="
-                background-image: url(./images/products/Bracelets/lena-mytchyk-aNaSyhDRghY-unsplash.jpg);
-                height: 425px;
-              "
-            ></div>
-            <div class="col-md-7 col-12">
-              <div class="card-body py-5 px-0 px-md-3">
-                <h4 class="h3 card-title fw-bold text-primary mb-3">
-                  深沈盛夏多層次頸鏈
-                </h4>
-                <p class="mb-0 text-primary fs-6 mb-2">黃金重量：約0.7-0.8錢</p>
-                <p class="text-primary fs-6 mb-1">數量：</p>
-                <div class="input-group w-md-50 mb-3 order-num">
-                  <button type="button" class="btn btn-outline-primary" data-btn="plus">
-                    <i class="bi bi-plus fw-bold fs-6" data-btn="plus"></i>
-                  </button>
-                  <input
-                    type="text"
-                    class="form-control border-primary bg-transparent text-primary text-center order-num-input"
-                    placeholder="0"
-                    aria-label="Input group example"
-                    aria-describedby="btnGroupAddon"
-                  />
-                  <button type="button" class="btn btn-outline-primary" data-btn="minus">
-                    <i class="bi bi-dash fw-bold fs-6" data-btn="minus"></i>
-                  </button>
-                </div>
-                <div class="mb-8">
-                  <span class="fs-4 text-start fw-bold me-2 text-primary"
-                  >NT$7,980</span
-                  >
-                  <span
-                  class="fs-6 text-decoration-line-through text-primary text-start"
-                  >NT$9,880</span
-                  >
-                </div>
-                <div class="d-flex flex-column flex-md-row">
-                  <a
-                    href="#"
-                    class="btn btn-outline-primary rounded-pill me-3 w-md-50 w-100 fs-6 mb-3 mb-md-0"
-                    >加入收藏<i class="fa-regular fa-heart ms-1"></i
-                  ></a>
-                  <a
-                    href="#"
-                    class="btn btn-outline-primary rounded-pill w-md-50 w-100 fs-6 add-cart"
-                    title="心動不如馬上行動！"
-                    >加入購物車<i class="bi bi-bag ms-1"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </section>
     </div>
 
-    <!-- 四大保證 -->
-    <section class="border-top border-bottom border-primary border-3">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 gy-3 gy-md-0">
-          <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-5"
-          >
-            <img
-              src="./images/品質保證.png"
-              alt="品質保證"
-              class="img-fluid mb-md-4"
-            />
-            <div>
-              <h4 class="mb-3">品質保證</h4>
-              <p class="mb-0 lh-md">
-                9999純金保證<br />
-                購買商品即附有保單
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
-          >
-            <img
-              src="./images/售後服務.png"
-              alt="售後服務"
-              class="img-fluid mb-md-4"
-            />
-            <div>
-              <h4 class="mb-3">售後服務</h4>
-              <p class="mb-0 lh-md">
-                配戴久我們幫您清潔<br />
-                損壞我們幫您想辦法
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
-          >
-            <img
-              src="./images/安心出貨.png"
-              alt="安心出貨"
-              class="img-fluid mb-md-4"
-            />
-            <div>
-              <h4 class="mb-3">安心出貨</h4>
-              <p class="mb-0 lh-md">
-                出貨全程錄影<br />
-                我們用心讓您安心
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
-          >
-            <img
-              src="./images/實體店面.png"
-              alt="實體店面"
-              class="img-fluid mb-md-4"
-            />
-            <div>
-              <h4 class="mb-3">實體店面</h4>
-              <p class="mb-0 lh-md">
-                售後不怕找不到人<br />
-                實體店面隨時歡迎您
-              </p>
-            </div>
-          </div>
+<!-- 四大保證 -->
+<section class="border-top border-bottom border-primary border-3">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 gy-3 gy-md-0">
+      <div
+        class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-lg-5 py-3"
+      >
+        <img
+          src="./images/品質保證.png"
+          alt="品質保證"
+          class="img-fluid mb-md-4"
+        />
+        <div>
+          <h4 class="mb-3">品質保證</h4>
+          <p class="mb-0 lh-md">
+            9999純金保證<br />
+            購買商品即附有保單
+          </p>
         </div>
       </div>
-    </section>
+      <div
+        class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-1"
+      >
+        <img
+          src="./images/售後服務.png"
+          alt="售後服務"
+          class="img-fluid mb-md-4"
+        />
+        <div>
+          <h4 class="mb-3">售後服務</h4>
+          <p class="mb-0 lh-md">
+            配戴久我們幫您清潔<br />
+            損壞我們幫您想辦法
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-1"
+      >
+        <img
+          src="./images/安心出貨.png"
+          alt="安心出貨"
+          class="img-fluid mb-md-4"
+        />
+        <div>
+          <h4 class="mb-3">安心出貨</h4>
+          <p class="mb-0 lh-md">
+            出貨全程錄影<br />
+            我們用心讓您安心
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-3"
+      >
+        <img
+          src="./images/實體店面.png"
+          alt="實體店面"
+          class="img-fluid mb-md-4"
+        />
+        <div>
+          <h4 class="mb-3">實體店面</h4>
+          <p class="mb-0 lh-md">
+            售後不怕找不到人<br />
+            實體店面隨時歡迎您
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- footer -->
     <footer class="py-lg-8 py-7 bg-footer">
@@ -287,31 +171,13 @@
               </li>
             </ul>
           </div>
-          <!-- <div class="col-lg-2 col-4">
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><h4 class="h5">常見問題</h4></li>
-              <li class="mb-2">
-                <img src="./images/arrow.png" alt="arrow" class="img-fluid w-80" />
-              </li>
-              <li class="mb-2">
-                <a href="#" class="text-decoration-none"
-                  >付款與配送</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none"
-                  >退換貨說明</a
-                >
-              </li>
-            </ul>
-          </div> -->
           <div class="col-lg-2 d-lg-block d-none"></div>
           <div class="col-lg-4 col-md-6 col-12">
             <ul class="list-unstyled mb-0">
               <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
               <li class="mb-1">聯絡電話：(02)2957-1961</li>
-              <li class="mb-1">店家地址：235新北市中和區德光路86號</li>
+              <li class="mb-1">店家地址：220新北市板橋區中山路五段161號</li>
             </ul>
           </div>
         </div>

@@ -179,6 +179,7 @@ confirmBtn.addEventListener("click", function (e) {
     localStorage.setItem("name",name.value.trim());
     localStorage.setItem("email",email.value.trim());
     localStorage.setItem("tel",tel.value.trim());
+    localStorage.setItem("address",address.value.trim());
     localStorage.setItem("pay",pay.value);
     localStorage.setItem("remark",remark.value.trim());
   }
@@ -196,29 +197,3 @@ function showErrors(errors) {
     }
   });
 }
-
-
-//收件地址
-const twzipcode = new TWzipcode(".twzipcode");
-confirmBtn.addEventListener("click", foo, false);
-
-function foo() {
-	let county = twzipcode.get("county");
-	let get = twzipcode.get();
-  localStorage.setItem("address",`${get[0].zipcode} ${get[0].county}${get[0].district}${address.value}`);
-}
-
-// twzipcode.set({
-//   // 縣市
-//   county: {
-//     label: 縣市, // (string) 預設 `縣市`
-//     css: (width:50%,) // (string)
-//     required: true,// 是否為表單必須
-//   },
-//   // 鄉鎮市區
-//   district: {
-//     label: 鄉鎮市區, // (string) 預設 `鄉鎮市區`
-//     css: "CSS 樣式", // (string)
-//     required: true, // 是否為表單必須
-//     },
-// });

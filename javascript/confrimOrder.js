@@ -85,7 +85,6 @@ function renderGoldPrice(goldPrice, exchangeRate) {
     soldPrice =
       (((goldPrice * exchangeRate) / 8.29426).toFixed() / 10).toFixed() * 10 +
       360;
-    // renderCartsData(cartsData,soldPrice);
   }
 }
 
@@ -114,12 +113,6 @@ function renderCartsData(data) {
       <td class="p-3 text-nowrap">${item.quantity}</td>
       <td class="p-3">${((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity}</td>
     </tr>`;
-    // totalNum += item.quantity/2;
-    // if(item.product.weight*6930===0){
-    //   return;
-    // }else{
-    //   totalPrice += ((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity ;
-    // }
         totalNum += item.quantity;
         totalPrice += ((item.product.price+item.product.weight*6930).toFixed()/10).toFixed()*10 * item.quantity ;
     });

@@ -31,66 +31,13 @@
     <title>首頁｜億滿春銀樓</title>
   </head>
   <body style="background-image: url('./images/bg.jpg')">
-    <!-- loading -->
-    <!-- <div id="preloader">
-      <div id="status" class="d-flex flex-column align-items-center justify-content-center">
-        <img src="./images/loading.gif" width="100px" height="100px" />
-        <p class="text-dark fw-bold text-center">loading...</p>
-      </div>
-    </div> -->
-
     <!-- navbar -->
-    <div class="container-fluid px-md-5 mb-lg-8 mb-5 nav-bar"></div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top pb-0"
+      style="position: fixed"
+    ></nav>
 
-    <div class="container">
-      <!-- banner -->
-      <section
-        class="mb-8 banner bg-size-contain bg-repeat-none bg-position-center"
-        style="background-image: url(./images/Accessories.svg)"
-      >
-        <div class="row position-lg-relative gx-4 gy-2">
-          <div class="col-12 col-lg-5">
-            <h2
-              class="letter-spacing-lg display-lg-7 display-1 fw-bold text-shadow position-lg-absolute z-10 text-center text-lg-start"
-            >
-              金品生活<span
-                class="display-lg-5 fs-1 fs-lg-1 d-block mt-2 mt-md-3 mt-lg-4 letter-spacing-none text-shadow-none fw-bold"
-                >飾尚選擇</span
-              >
-            </h2>
-          </div>
-          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-            <img
-              src="./images/banner.png"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid rounded-pill w-75 w-lg-100 d-flex mx-auto"
-            />
-            <img
-              src="./images/banner-border.svg"
-              alt="金品生活 飾尚選擇"
-              class="img-fluid position-absolute bottom-lg-0 bottom-md-10 bottom-18 d-lg-block d-none w-55"
-            />
-          </div>
-          <div class="col-12 position-lg-absolute bottom-15">
-            <div class="position-relative">
-              <input
-                type="text"
-                class="form-control bg-transparent w-100 w-lg-40 py-lg-10 ps-lg-4 text-white fs-7 border-primary"
-                name="products"
-                id="products"
-                placeholder="搜尋想要的商品"
-              />
-              <a
-                href="#"
-                class="position-absolute top-50 top-lg-50 end-2 end-lg-61 translate-middle"
-              >
-                <img src="./images/search.svg" alt="搜尋" class="img-fluid" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <div class="container" style="margin-top: 120px">
       <!-- 品牌故事 -->
       <section class="mb-8" id="about-section">
         <h3
@@ -101,16 +48,23 @@
         </h3>
         <div class="row align-items-center gy-3">
           <div class="col-lg-4 col-12">
-            <img src="https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/anastasia-anastasia-cTM8psdeOTQ-unsplash.jpg?raw=true" alt="品牌故事" class="img-fluid rounded-3">
+            <img
+              src="https://github.com/winniewuwinnie/JS-project_JewelryShop/blob/main/images/products/EarRings/anastasia-anastasia-cTM8psdeOTQ-unsplash.jpg?raw=true"
+              alt="品牌故事"
+              class="img-fluid rounded-3"
+            />
           </div>
           <div class="col-lg-8 col-12">
             <p class="lh-lg fs-6 mb-0">
-              <strong>億滿春銀樓</strong>位於新北市中和區，在地經營已經近30年<br>
-              以<strong> "誠信、品質、服務" </strong>為經營宗旨<br>
-              價格經濟實惠且為顧客提供量身打造的優惠，以滿足客戶的多樣需求<br>
-              老闆由金飾工藝學徒起家，經驗豐富且擁有獨家的設計和技術<br>
-              對於尋找最專業、最完美的金飾、珠寶和銀飾的顧客來說<br>
-              <strong>傳統、專業、深受市場和顧客歡迎的億滿春銀樓是您的最佳選擇</strong><br>
+              <strong>億滿春銀樓</strong
+              >位於新北市中和區，在地經營已經近30年<br />
+              以<strong> "誠信、品質、服務" </strong>為經營宗旨<br />
+              價格經濟實惠且為顧客提供量身打造的優惠，以滿足客戶的多樣需求<br />
+              老闆由金飾工藝學徒起家，經驗豐富且擁有獨家的設計和技術<br />
+              對於尋找最專業、最完美的金飾、珠寶和銀飾的顧客來說<br />
+              <strong
+                >傳統、專業、深受市場和顧客歡迎的億滿春銀樓是您的最佳選擇</strong
+              ><br />
             </p>
           </div>
         </div>
@@ -122,7 +76,7 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-md-4 gy-3 gy-md-0">
           <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-5"
+            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-start-md border-end-md border-primary py-lg-5 py-3"
           >
             <img
               src="./images/品質保證.png"
@@ -138,7 +92,7 @@
             </div>
           </div>
           <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-1"
           >
             <img
               src="./images/售後服務.png"
@@ -154,7 +108,7 @@
             </div>
           </div>
           <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+            class="col-md-3 col-11 d-flex mx-auto flex-row flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-1"
           >
             <img
               src="./images/安心出貨.png"
@@ -170,7 +124,7 @@
             </div>
           </div>
           <div
-            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-5"
+            class="col-md-3 col-11 d-flex mx-auto flex-row-reverse flex-md-column align-items-center justify-content-between text-center border-end-md border-primary py-lg-5 py-3"
           >
             <img
               src="./images/實體店面.png"
@@ -239,7 +193,7 @@
               <li class="mb-3"><h4 class="h5">億滿春銀樓</h4></li>
               <li class="mb-1">營業時間：周一至周六 09:30-21:30</li>
               <li class="mb-1">聯絡電話：(02)2957-1961</li>
-              <li class="mb-1">店家地址：235新北市中和區德光路86號</li>
+              <li class="mb-1">店家地址：220新北市板橋區中山路五段161號</li>
             </ul>
           </div>
         </div>

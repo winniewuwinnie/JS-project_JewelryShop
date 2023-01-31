@@ -1,14 +1,7 @@
-const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
-// const baseUrl = "http://localhost:3000/";
+// const baseUrl = "https://json-server-vercel-teal-seven.vercel.app/";
+const baseUrl = "http://localhost:3000/";
 
 let userId=parseInt(localStorage.getItem("userId"));
-
-const productSection=document.querySelector("#product-section")
-window.addEventListener("load",function(e){
-  productSection.scrollIntoView({
-    behavior: "smooth",
-  });
-})
 
 //取得當天日期
 let today = new Date(); //Tue Dec 13 2022 15:10:45 GMT+0800 (台北標準時間)
@@ -328,57 +321,6 @@ if(location.href.split("=")[1]===undefined){
     });
 }
 
-// let category = location.href.split("=")[1];
-// let type=location.href.split("?")[1].split("=")[0];
-// //網址為products.html時
-// if(location.href.split("?")[1]===undefined){
-//   getAllProductsData();
-// //網址為products.html?xx=xx時
-// }else if(location.href.split("?")[1].split("=")[1]){
-//   //新品或熱銷
-//   if(location.href.split("?")[1].split("=")[0]==="remark"){
-//     axios
-//     .get(`${baseUrl}products?${type}=${category}`)
-//     .then(function (response) {
-//       categoryData=response.data;
-//       console.log(categoryData)
-//       renderProductsData(categoryData);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//     //產品類別
-//   }else if(location.href.split("?")[1].split("=")[0]==="category"){
-//     axios
-//     .get(`${baseUrl}products?${type}=${category}`)
-//     .then(function (response) {
-//       categoryData=response.data;
-//       console.log(categoryData)
-//       renderProductsData(categoryData);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//   }
-//   //關鍵字搜尋
-//   else if(location.href.split("?")[1].split("=")[0]==="title"){
-//   let productsTitle = [];
-//   let searchProductsData = [];
-//   allProductsData.forEach(function (item) {
-//     productsTitle.push(item.title);
-//   });
-//   productsTitle.forEach(function (title) {
-//     if (title.match(searchInput.value.trim())) {
-//       allProductsData.forEach(function (item) {
-//         if (item.title === title) {
-//           searchProductsData.push(item);
-//         } 
-//       });
-//       renderProductsData(searchProductsData);
-//     } 
-//   });
-//   }
-// }
 
 
 //收藏商品
@@ -506,18 +448,3 @@ function addCart(cartItem) {
     });
 }
 
-
-
-
-// //修改購物車內產品數量
-// function patchCart(quantity) {
-//   axios
-//     .patch(`${baseUrl}carts/1`, {"quantity":quantity})
-//     .then(function (response) {
-//       console.log(response);
-//       alert("成功加入購物車")
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// }
