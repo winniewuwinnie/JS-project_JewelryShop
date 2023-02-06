@@ -33,5 +33,5 @@
 
 ## 技術工具：
 * 技術：Bootstrap 、JavaScript
-* 套件：json-server、Swiper、TWzipcode、SweetAlert2、AOS
+* 套件：json-server、Swiper、SweetAlert2、AOS
 
